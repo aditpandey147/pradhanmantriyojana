@@ -1,785 +1,871 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Government Schemes Portal
+        Government Schemes Portal
     </title>
-    <script src="https://cdn.tailwindcss.com">
-    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  
-  <body class="bg-slate-50 text-slate-900">
-    <header class="bg-white shadow-md sticky top-0 z-50">
-      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <!-- Logo -->
-        <div class="flex items-center space-x-2">
-          <img src="https://placehold.co/50x50/FF9933/FFFFFF/png?text=Ashoka+Chakra"
-          alt="Government of India emblem - Ashoka Chakra" class="h-10 w-10">
-          <h1 class="text-xl font-bold text-blue-800">
-            <span class="text-orange-600">
-              प्रधानमंत्री
-            </span>
-            <span class="text-green-600">
-              योजना
-            </span>
-          </h1>
-        </div>
-        <!-- Actions -->
-        <div class="flex items-center space-x-4">
-          <nav class="hidden md:flex space-x-8">
-            <a href="index.html" class="hover:text-blue-600 font-medium">
-              Home
-            </a>
-            <a href="index.html" class="hover:text-blue-600 font-medium">
-              Schemes
-            </a>
-          </nav>
-            <a href="faq.html" class="hover:text-blue-600 font-medium">
-              Faq
-            </a>
-            <a href="#/admin" class=" hidden md:block py-2 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-md font-medium transition">
-             Admin
-          </a>
+        rel="stylesheet">
+</head>
+<style>
+    :root {
+        --card: #ffffff;
+        --muted: #f5f6f8;
+    }
 
-          <!-- Mobile Menu Button -->
-          <button id="mobileMenuBtn" class="md:hidden text-gray-700 focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+    html,
+    body {
+        height: 100%;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+            "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    .container-max {
+        max-width: 1100px;
+    }
+
+    .safe-shadow {
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .chip {
+        @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700;
+    }
+
+    .btn {
+        @apply inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800 active:scale-[.99] transition;
+    }
+
+    .btn-soft {
+        @apply inline-flex items-center justify-center rounded-xl px-3 py-2 text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200;
+    }
+
+    .input {
+        @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-300;
+    }
+
+    .label {
+        @apply block text-xs font-medium text-slate-600 mb-1;
+    }
+
+    .card {
+        @apply bg-white rounded-2xl safe-shadow;
+    }
+
+    .hidden-route {
+        display: none;
+    }
+
+    /* optional: smooth snapping */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+
+<body class="bg-slate-50 text-slate-900">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="https://placehold.co/50x50/FF9933/FFFFFF/png?text=Ashoka+Chakra"
+                    alt="Government of India emblem - Ashoka Chakra" class="h-10 w-10">
+                <h1 class="text-xl font-bold text-blue-800">
+                    <span class="text-orange-600">
+                        प्रधानमंत्री
+                    </span>
+                    <span class="text-green-600">
+                        योजना
+                    </span>
+                </h1>
+            </div>
+            <!-- Actions -->
+            <div class="flex items-center space-x-4">
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-blue-600 font-medium">
+                        Home
+                    </a>
+                    <a href="index.html" class="hover:text-blue-600 font-medium">
+                        Schemes
+                    </a>
+                </nav>
+                <a href="faq.html" class="hover:text-blue-600 font-medium">
+                    Faq
+                </a>
+                <a href="#/admin"
+                    class=" hidden md:block py-2 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-md font-medium transition">
+                    Admin
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </div>
-      </div>
-      <!-- Mobile Nav -->
-      <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden bg-white border-t">
-        <nav class="flex flex-col space-y-2 px-4 py-3">
-          <a href="index.html" class="hover:text-blue-600 font-medium">
-            Schemes
-          </a>
-             <a href="faq.html" class="hover:text-blue-600 font-medium">
-              Faq
-            </a>
-            <a href="#/admin" class=" hidden md:block py-2 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-md font-medium transition">
-             Admin
-          </a>
-        </nav>
-      </div>
+        <!-- Mobile Nav -->
+        <div id="mobileMenu"
+            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden bg-white border-t">
+            <nav class="flex flex-col space-y-2 px-4 py-3">
+                <a href="index.html" class="hover:text-blue-600 font-medium">
+                    Schemes
+                </a>
+                <a href="faq.html" class="hover:text-blue-600 font-medium">
+                    Faq
+                </a>
+                <a href="#/admin"
+                    class=" hidden md:block py-2 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-md font-medium transition">
+                    Admin
+                </a>
+            </nav>
+        </div>
     </header>
 
 
     <!-- HERO SLIDER -->
     <section class="relative">
-      <!-- Track -->
-      <div id="slider" class="relative h-[70vh] sm:h-[75vh] lg:h-[70vh] w-full overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth flex">
-        <!-- Slide 1 -->
-        <article class="relative w-full shrink-0 snap-center bg-orange-500">
-          <div class="relative z-10 h-full max-w-6xl mx-auto px-6 flex items-center">
-            <div class="text-white">
-              <span class="inline-block text-xs uppercase tracking-wider bg-white/10 backdrop-blur px-3 py-1 rounded-full">
-                Govt. Scheme
-              </span>
-              <h1 class="mt-4 text-3xl sm:text-5xl font-extrabold leading-tight">
-                PM-KISAN: Support to Small & Marginal Farmers
-              </h1>
-              <p class="mt-3 text-slate-100/90 max-w-2xl">
-                Income support to eligible farmer families to supplement financial needs
-                for procurement of inputs.
-              </p>
-              <div class="mt-6 flex gap-3">
-                <a href="#learn" class="bg-white hover:bg-white px-6 py-3 rounded-2xl font-semibold shadow transition text-black">
-                  Know More
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <!-- Slide 2 -->
-        <article class="relative w-full shrink-0 snap-center bg-indigo-500">
-          <div class="relative z-10 h-full max-w-6xl mx-auto px-6 flex items-center">
-            <div class="text-white">
-              <span class="inline-block text-xs uppercase tracking-wider bg-white/10 backdrop-blur px-3 py-1 rounded-full">
-                Health
-              </span>
-              <h2 class="mt-4 text-3xl sm:text-5xl font-extrabold leading-tight">
-                Ayushman Bharat: Healthcare Coverage
-              </h2>
-              <p class="mt-3 text-slate-100/90 max-w-2xl">
-                Cashless health cover at empanelled hospitals for eligible families across
-                India.
-              </p>
-              <div class="mt-6 flex gap-3">
-                <a href="#learn" class="bg-white hover:bg-white px-6 py-3 rounded-2xl font-semibold shadow transition text-black">
-                  Know More
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <!-- Slide 3 -->
-        <article class="relative w-full shrink-0 snap-center bg-purple-500">
-          <div class="relative z-10 h-full max-w-6xl mx-auto px-6 flex items-center">
-            <div class="text-white">
-              <span class="inline-block text-xs uppercase tracking-wider bg-white/10 backdrop-blur px-3 py-1 rounded-full">
-                Housing
-              </span>
-              <h3 class="mt-4 text-3xl sm:text-5xl font-extrabold leading-tight">
-                PMAY: Affordable Housing for All
-              </h3>
-              <p class="mt-3 text-slate-100/90 max-w-2xl">
-                Subsidies and assistance for urban & rural housing to eligible beneficiaries.
-              </p>
-              <div class="mt-6 flex gap-3">
-                <a href="#learn" class="bg-white hover:bg-white px-6 py-3 rounded-2xl font-semibold shadow transition text-black">
-                  Know More
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-      <!-- Controls -->
-      <button id="prevBtn" class="absolute left-3 top-1/2 -translate-y-1/2 grid place-items-center h-12 w-12 rounded-full bg-white/80 backdrop-blur hover:bg-white shadow">
-        <span class="sr-only">
-          Previous
-        </span>
-        &#10094;
-      </button>
-      <button id="nextBtn" class="absolute right-3 top-1/2 -translate-y-1/2 grid place-items-center h-12 w-12 rounded-full bg-white/80 backdrop-blur hover:bg-white shadow">
-        <span class="sr-only">
-          Next
-        </span>
-        &#10095;
-      </button>
-      <!-- Dots -->
-      <div id="dots" class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
-        <button class="h-2.5 w-2.5 rounded-full bg-white/50 hover:bg-white transition"
-        aria-label="Slide 1">
+        <!-- Track -->
+        <div id="slider"
+            class="relative h-[70vh] sm:h-[75vh] lg:h-[70vh] w-full overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth flex">
+            <!-- Slide 1 -->
+            <article class="relative w-full shrink-0 snap-center bg-orange-500">
+                <div class="relative z-10 h-full max-w-6xl mx-auto px-6 flex items-center">
+                    <div class="text-white">
+                        <span
+                            class="inline-block text-xs uppercase tracking-wider bg-white/10 backdrop-blur px-3 py-1 rounded-full">
+                            Govt. Scheme
+                        </span>
+                        <h1 class="mt-4 text-3xl sm:text-5xl font-extrabold leading-tight">
+                            PM-KISAN: Support to Small & Marginal Farmers
+                        </h1>
+                        <p class="mt-3 text-slate-100/90 max-w-2xl">
+                            Income support to eligible farmer families to supplement financial needs
+                            for procurement of inputs.
+                        </p>
+                        <div class="mt-6 flex gap-3">
+                            <a href="#learn"
+                                class="bg-white hover:bg-white px-6 py-3 rounded-2xl font-semibold shadow transition text-black">
+                                Know More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- Slide 2 -->
+            <article class="relative w-full shrink-0 snap-center bg-indigo-500">
+                <div class="relative z-10 h-full max-w-6xl mx-auto px-6 flex items-center">
+                    <div class="text-white">
+                        <span
+                            class="inline-block text-xs uppercase tracking-wider bg-white/10 backdrop-blur px-3 py-1 rounded-full">
+                            Health
+                        </span>
+                        <h2 class="mt-4 text-3xl sm:text-5xl font-extrabold leading-tight">
+                            Ayushman Bharat: Healthcare Coverage
+                        </h2>
+                        <p class="mt-3 text-slate-100/90 max-w-2xl">
+                            Cashless health cover at empanelled hospitals for eligible families across
+                            India.
+                        </p>
+                        <div class="mt-6 flex gap-3">
+                            <a href="#learn"
+                                class="bg-white hover:bg-white px-6 py-3 rounded-2xl font-semibold shadow transition text-black">
+                                Know More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- Slide 3 -->
+            <article class="relative w-full shrink-0 snap-center bg-purple-500">
+                <div class="relative z-10 h-full max-w-6xl mx-auto px-6 flex items-center">
+                    <div class="text-white">
+                        <span
+                            class="inline-block text-xs uppercase tracking-wider bg-white/10 backdrop-blur px-3 py-1 rounded-full">
+                            Housing
+                        </span>
+                        <h3 class="mt-4 text-3xl sm:text-5xl font-extrabold leading-tight">
+                            PMAY: Affordable Housing for All
+                        </h3>
+                        <p class="mt-3 text-slate-100/90 max-w-2xl">
+                            Subsidies and assistance for urban & rural housing to eligible beneficiaries.
+                        </p>
+                        <div class="mt-6 flex gap-3">
+                            <a href="#learn"
+                                class="bg-white hover:bg-white px-6 py-3 rounded-2xl font-semibold shadow transition text-black">
+                                Know More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!-- Controls -->
+        <button id="prevBtn"
+            class="absolute left-3 top-1/2 -translate-y-1/2 grid place-items-center h-12 w-12 rounded-full bg-white/80 backdrop-blur hover:bg-white shadow">
+            <span class="sr-only">
+                Previous
+            </span>
+            &#10094;
         </button>
-        <button class="h-2.5 w-2.5 rounded-full bg-white/40 hover:bg-white transition"
-        aria-label="Slide 2">
+        <button id="nextBtn"
+            class="absolute right-3 top-1/2 -translate-y-1/2 grid place-items-center h-12 w-12 rounded-full bg-white/80 backdrop-blur hover:bg-white shadow">
+            <span class="sr-only">
+                Next
+            </span>
+            &#10095;
         </button>
-        <button class="h-2.5 w-2.5 rounded-full bg-white/40 hover:bg-white transition"
-        aria-label="Slide 3">
-        </button>
-      </div>
+        <!-- Dots -->
+        <div id="dots" class="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
+            <button class="h-2.5 w-2.5 rounded-full bg-white/50 hover:bg-white transition" aria-label="Slide 1">
+            </button>
+            <button class="h-2.5 w-2.5 rounded-full bg-white/40 hover:bg-white transition" aria-label="Slide 2">
+            </button>
+            <button class="h-2.5 w-2.5 rounded-full bg-white/40 hover:bg-white transition" aria-label="Slide 3">
+            </button>
+        </div>
     </section>
 
     <!-- ROUTES -->
     <main class="mx-auto container-max px-4 py-6">
-      <!-- HOME -->
-      <section id="route-home" class="route">
-        <!-- Hero/Search -->
-        <div class="mb-6 mt-10 ">
-          <div class="text-center mb-6">
-            <h1 class="text-2xl sm:text-3xl font-extrabold">
-              Explore Government Schemes
-            </h1>
-            <p class="text-slate-600 mt-1">
-              Browse central & state schemes. Click
-              <strong>
-                Learn more
-              </strong>
-              for details.
-            </p>
-          </div>
-          <!-- Search Field -->
-          <!-- Filter + Search Row -->
-          <div class="flex flex-wrap items-center gap-4 bg-white shadow-md rounded-2xl p-4 border border-gray-200 mb-8">
-            <!-- Search Box -->
-            <div class="relative flex-1 min-w-[200px]">
-              <span class="absolute inset-y-0 left-3 flex items-center text-gray-400">
-                <i class="fa-solid fa-magnifying-glass">
-                </i>
-              </span>
-              <input type="text" id="searchInput" placeholder="Search schemes..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-500 outline-none"
-              />
-            </div>
-            <!-- Type Filter -->
-            <div class="flex items-center gap-2">
-              <label for="type" class="text-sm font-medium text-gray-700">
-                Type:
-              </label>
-              <select id="filterType" class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-500 outline-none">
-                <option value="ALL">
-                  All
-                </option>
-                <option value="Central">
-                  Central
-                </option>
-                <option value="State">
-                  State
-                </option>
-              </select>
-            </div>
-            <!-- Category Filter -->
-            <div class="flex items-center gap-2">
-              <label for="category" class="text-sm font-medium text-gray-700">
-                Category:
-              </label>
-              <select id="filterCategory" class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-500 outline-none">
-                <option value="ALL">
-                  All
-                </option>
-                <option>
-                  Education
-                </option>
-                <option>
-                  Healthcare
-                </option>
-                <option>
-                  Agriculture
-                </option>
-                <option>
-                  Women & Child
-                </option>
-                <option>
-                  Finance
-                </option>
-                <option>
-                  Employment
-                </option>
-              </select>
-            </div>
-            <!-- Clear Button -->
-            <button id="clearFiltersBtn" class="ml-auto bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl shadow transition">
-              Clear Filters
-            </button>
-          </div>
-          <!-- Cards Grid -->
-          <div id="cardsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          </div>
-          <!-- Empty State -->
-          <div id="emptyState" class="hidden mt-10 text-center text-slate-600">
-            No schemes found. Try adjusting filters.
-          </div>
-      </section>
+        <!-- HOME -->
+        <section id="route-home" class="route">
+            <!-- Hero/Search -->
+            <div class="mb-6 mt-10 ">
+                <div class="text-center mb-6">
+                    <h1 class="text-2xl sm:text-3xl font-extrabold">
+                        Explore Government Schemes
+                    </h1>
+                    <p class="text-slate-600 mt-1">
+                        Browse central & state schemes. Click
+                        <strong>
+                            Learn more
+                        </strong>
+                        for details.
+                    </p>
+                </div>
+                <!-- Search Field -->
+                <!-- Filter + Search Row -->
+                <div
+                    class="flex flex-wrap items-center gap-4 bg-white shadow-md rounded-2xl p-4 border border-gray-200 mb-8">
+                    <!-- Search Box -->
+                    <div class="relative flex-1 min-w-[200px]">
+                        <span class="absolute inset-y-0 left-3 flex items-center text-gray-400">
+                            <i class="fa-solid fa-magnifying-glass">
+                            </i>
+                        </span>
+                        <input type="text" id="searchInput" placeholder="Search schemes..."
+                            class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-500 outline-none" />
+                    </div>
+                    <!-- Type Filter -->
+                    <div class="flex items-center gap-2">
+                        <label for="type" class="text-sm font-medium text-gray-700">
+                            Type:
+                        </label>
+                        <select id="filterType"
+                            class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-500 outline-none">
+                            <option value="ALL">
+                                All
+                            </option>
+                            <option value="Central">
+                                Central
+                            </option>
+                            <option value="State">
+                                State
+                            </option>
+                        </select>
+                    </div>
+                    <!-- Category Filter -->
+                    <div class="flex items-center gap-2">
+                        <label for="category" class="text-sm font-medium text-gray-700">
+                            Category:
+                        </label>
+                        <select id="filterCategory"
+                            class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-400 focus:border-blue-500 outline-none">
+                            <option value="ALL">
+                                All
+                            </option>
+                            <option>
+                                Education
+                            </option>
+                            <option>
+                                Healthcare
+                            </option>
+                            <option>
+                                Agriculture
+                            </option>
+                            <option>
+                                Women & Child
+                            </option>
+                            <option>
+                                Finance
+                            </option>
+                            <option>
+                                Employment
+                            </option>
+                        </select>
+                    </div>
+                    <!-- Clear Button -->
+                    <button id="clearFiltersBtn"
+                        class="ml-auto bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl shadow transition">
+                        Clear Filters
+                    </button>
+                </div>
+                <!-- Cards Grid -->
+                <div id="cardsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                </div>
+                <!-- Empty State -->
+                <div id="emptyState" class="hidden mt-10 text-center text-slate-600">
+                    No schemes found. Try adjusting filters.
+                </div>
+        </section>
 
 
-      <!-- DETAILS -->
-      <section id="route-details" class="route hidden-route mt-8">
-        <div id="detailsContainer" class="grid lg:grid-cols-3 gap-6">
-          <div class="lg:col-span-2 card overflow-hidden">
-            <img id="detailsImage" alt="Scheme image" class="w-full h-80 object-cover">
-            <div class="p-5">
-              <div class="flex flex-wrap items-center gap-2 mb-3">
-                <span id="detailsType" class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">
-                </span>
-                <span id="detailsCategory" class="px-3 py-1 bg-green-100 text-green-700 rounded-full">
-                </span>
-                <span id="detailsUpdated" class="font-semibold text-gray-700">
-                </span>
-              </div>
-              <h2 id="detailsTitle" class="text-2xl font-extrabold">
-              </h2>
-              <p id="detailsShort" class="text-slate-700 mt-2">
-              </p>
-              <div class="mt-5">
-                <h3 class="font-bold mb-2">
-                  Overview
-                </h3>
-                <p id="detailsLong" class="text-slate-700">
+        <!-- DETAILS -->
+        <section id="route-details" class="route hidden-route mt-8">
+            <div id="detailsContainer" class="grid lg:grid-cols-3 gap-6">
+                <div class="lg:col-span-2 card overflow-hidden">
+                    <img id="detailsImage" alt="Scheme image" class="w-full h-80 object-cover">
+                    <div class="p-5">
+                        <div class="flex flex-wrap items-center gap-2 mb-3">
+                            <span id="detailsType" class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full">
+                            </span>
+                            <span id="detailsCategory" class="px-3 py-1 bg-green-100 text-green-700 rounded-full">
+                            </span>
+                            <span id="detailsUpdated" class="font-semibold text-gray-700">
+                            </span>
+                        </div>
+                        <h2 id="detailsTitle" class="text-2xl font-extrabold">
+                        </h2>
+                        <p id="detailsShort" class="text-slate-700 mt-2">
+                        </p>
+                        <div class="mt-5">
+                            <h3 class="font-bold mb-2">
+                                Overview
+                            </h3>
+                            <p id="detailsLong" class="text-slate-700">
+                            </p>
+                        </div>
+                        <div class="mt-5 grid sm:grid-cols-2 gap-4">
+                            <div class="card p-4">
+                                <h3 class="font-bold mb-2">
+                                    Eligibility
+                                </h3>
+                                <ul id="detailsEligibility" class="list-disc list-inside text-slate-700 space-y-1">
+                                </ul>
+                            </div>
+                            <div class="card p-4">
+                                <h3 class="font-bold mb-2">
+                                    Benefits
+                                </h3>
+                                <ul id="detailsBenefits" class="list-disc list-inside text-slate-700 space-y-1">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex gap-2">
+                            <a id="detailsApply" target="_blank"
+                                class="px-5 py-2 bg-gray-800 text-white rounded-xl shadow-md hover:bg-gray-900 transition"
+                                href="#">
+                                Official / Apply
+                            </a>
+                            <a href="#/home"
+                                class="px-5 py-2 bg-orange-600 text-white rounded-xl shadow-md hover:bg-orange-700 transition">
+                                Back to list
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <aside class="card p-5">
+                    <h3 class="font-bold">
+                        Quick facts
+                    </h3>
+                    <ul class="mt-3 text-sm text-slate-700 space-y-1" id="detailsFacts">
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+
+        <!-- ADMIN -->
+        <section id="route-admin" class="route hidden-route">
+            <div class="mb-4">
+                <h2 class="text-2xl font-extrabold">
+                    Admin Panel
+                </h2>
+                <p class="text-slate-600">
+                    Add, edit, delete schemes. Data is saved in your browser (localStorage).
                 </p>
-              </div>
-              <div class="mt-5 grid sm:grid-cols-2 gap-4">
-                <div class="card p-4">
-                  <h3 class="font-bold mb-2">
-                    Eligibility
-                  </h3>
-                  <ul id="detailsEligibility" class="list-disc list-inside text-slate-700 space-y-1">
-                  </ul>
+            </div>
+            <div class="grid lg:grid-cols-1 gap-6">
+                <!-- Form -->
+                <div class="lg:row-span-5 card p-6 w-full bg-white rounded-2xl shadow-md">
+                    <h3 id="formTitle" class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">
+                        Add Scheme
+                    </h3>
+                    <form id="schemeForm" class="space-y-4">
+                        <input type="hidden" id="id" />
+                        <!-- Scheme Name -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" for="name">
+                                Scheme Name
+                            </label>
+                            <input
+                                class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                                id="name" required />
+                        </div>
+                        <!-- Type -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" for="type">
+                                Type
+                            </label>
+                            <select
+                                class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                                id="type" required>
+                                <option>
+                                    Central
+                                </option>
+                                <option>
+                                    State
+                                </option>
+                            </select>
+                        </div>
+                        <!-- Category -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" for="category">
+                                Category
+                            </label>
+                            <select
+                                class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                                id="category" required>
+                                <option>
+                                    Education
+                                </option>
+                                <option>
+                                    Healthcare
+                                </option>
+                                <option>
+                                    Agriculture
+                                </option>
+                                <option>
+                                    Women & Child
+                                </option>
+                                <option>
+                                    Finance
+                                </option>
+                                <option>
+                                    Employment
+                                </option>
+                            </select>
+                        </div>
+                        <!-- Short Description -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" for="shortDesc">
+                                Short Description
+                            </label>
+                            <textarea
+                                class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                                id="shortDesc" rows="2" required>
+                </textarea>
+                        </div>
+                        <!-- Long Description -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" for="longDesc">
+                                Long Description
+                            </label>
+                            <textarea
+                                class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                                id="longDesc" rows="4">
+                </textarea>
+                        </div>
+                        <!-- Eligibility -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" for="eligibility">
+                                Eligibility (one per line)
+                            </label>
+                            <textarea
+                                class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                                id="eligibility" rows="3">
+                </textarea>
+                        </div>
+                        <!-- Benefits -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" for="benefits">
+                                Benefits (one per line)
+                            </label>
+                            <textarea
+                                class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                                id="benefits" rows="3">
+                </textarea>
+                        </div>
+                        <!-- Apply URL -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" for="applyLink">
+                                Official/Apply URL
+                            </label>
+                            <input
+                                class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                                id="applyLink" type="url" placeholder="https://..." />
+                        </div>
+                        <!-- Image URL -->
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" for="imageUrl">
+                                Image URL
+                            </label>
+                            <input
+                                class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                                id="imageUrl" type="url" placeholder="https://..." />
+                        </div>
+                        <!-- Active -->
+                        <div class="flex items-center gap-2">
+                            <input id="active" type="checkbox"
+                                class="rounded border-slate-300 text-blue-600 focus:ring-blue-500" checked />
+                            <label for="active" class="text-sm text-slate-700">
+                                Active
+                            </label>
+                        </div>
+                        <!-- Buttons -->
+                        <div class="flex gap-3 pt-3">
+                            <button
+                                class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md transition"
+                                type="submit">
+                                Save
+                            </button>
+                            <button id="resetBtn"
+                                class="px-5 py-2 bg-gray-500 hover:bg-gray-600 text-white font-semibold rounded-lg shadow-md transition"
+                                type="reset">
+                                Reset
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="card p-4">
-                  <h3 class="font-bold mb-2">
-                    Benefits
-                  </h3>
-                  <ul id="detailsBenefits" class="list-disc list-inside text-slate-700 space-y-1">
-                  </ul>
+                <!-- List -->
+                <div class="lg:col-span-2 card p-5 overflow-x-auto">
+                    <!-- Header -->
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-bold text-lg text-slate-800">
+                            Schemes
+                        </h3>
+                        <button id="exportBtn"
+                            class="px-4 py-2 text-sm font-semibold border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg shadow-sm transition">
+                            Export JSON
+                        </button>
+                    </div>
+                    <!-- Table -->
+                    <div class="overflow-hidden rounded-xl border border-slate-200 shadow-sm">
+                        <table class="min-w-full text-sm text-left">
+                            <thead class="bg-slate-100 text-slate-700 uppercase text-xs font-semibold">
+                                <tr>
+                                    <th class="px-4 py-3">
+                                        Name
+                                    </th>
+                                    <th class="px-4 py-3">
+                                        Type
+                                    </th>
+                                    <th class="px-4 py-3">
+                                        Category
+                                    </th>
+                                    <th class="px-4 py-3">
+                                        Updated
+                                    </th>
+                                    <th class="px-4 py-3">
+                                        Active
+                                    </th>
+                                    <th class="px-4 py-3 text-center">
+                                        Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminTable" class="divide-y divide-slate-200">
+                                <!-- Example Row -->
+                                <tr class="hover:bg-slate-50 transition">
+                                    <td class="px-4 py-3 font-medium text-slate-800">
+                                        Ayushman Bharat
+                                    </td>
+                                    <td class="px-4 py-3">
+                                        Central
+                                    </td>
+                                    <td class="px-4 py-3">
+                                        Healthcare
+                                    </td>
+                                    <td class="px-4 py-3 text-slate-500">
+                                        24 Aug 2025
+                                    </td>
+                                    <td class="px-4 py-3">
+                                        <span
+                                            class="px-2 py-1 text-xs font-medium bg-green-100 text-green-700 rounded-full">
+                                            Yes
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-3 flex justify-center gap-2">
+                                        <button
+                                            class="px-3 py-1 text-xs border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded transition">
+                                            Edit
+                                        </button>
+                                        <button
+                                            class="px-3 py-1 text-xs border border-red-600 text-red-600 hover:bg-red-600 hover:text-white rounded transition">
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- More rows injected dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-              </div>
-              <div class="mt-6 flex gap-2">
-                <a id="detailsApply" target="_blank" class="px-5 py-2 bg-gray-800 text-white rounded-xl shadow-md hover:bg-gray-900 transition"
-                href="#">
-                  Official / Apply
-                </a>
-                <a href="#/home" class="px-5 py-2 bg-orange-600 text-white rounded-xl shadow-md hover:bg-orange-700 transition">
-                  Back to list
-                </a>
-              </div>
             </div>
-          </div>
-          <aside class="card p-5">
-            <h3 class="font-bold">
-              Quick facts
-            </h3>
-            <ul class="mt-3 text-sm text-slate-700 space-y-1" id="detailsFacts">
-            </ul>
-          </aside>
-        </div>
-      </section>
-
-
-      <!-- ADMIN -->
-      <section id="route-admin" class="route hidden-route">
-        <div class="mb-4">
-          <h2 class="text-2xl font-extrabold">
-            Admin Panel
-          </h2>
-          <p class="text-slate-600">
-            Add, edit, delete schemes. Data is saved in your browser (localStorage).
-          </p>
-        </div>
-        <div class="grid lg:grid-cols-1 gap-6">
-          <!-- Form -->
-          <div class="lg:row-span-5 card p-6 w-full bg-white rounded-2xl shadow-md">
-            <h3 id="formTitle" class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">
-              Add Scheme
-            </h3>
-            <form id="schemeForm" class="space-y-4">
-              <input type="hidden" id="id" />
-              <!-- Scheme Name -->
-              <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1" for="name">
-                  Scheme Name
-                </label>
-                <input class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                id="name" required />
-              </div>
-              <!-- Type -->
-              <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1" for="type">
-                  Type
-                </label>
-                <select class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                id="type" required>
-                  <option>
-                    Central
-                  </option>
-                  <option>
-                    State
-                  </option>
-                </select>
-              </div>
-              <!-- Category -->
-              <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1" for="category">
-                  Category
-                </label>
-                <select class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                id="category" required>
-                  <option>
-                    Education
-                  </option>
-                  <option>
-                    Healthcare
-                  </option>
-                  <option>
-                    Agriculture
-                  </option>
-                  <option>
-                    Women & Child
-                  </option>
-                  <option>
-                    Finance
-                  </option>
-                  <option>
-                    Employment
-                  </option>
-                </select>
-              </div>
-              <!-- Short Description -->
-              <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1" for="shortDesc">
-                  Short Description
-                </label>
-                <textarea class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                id="shortDesc" rows="2" required>
-                </textarea>
-              </div>
-              <!-- Long Description -->
-              <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1" for="longDesc">
-                  Long Description
-                </label>
-                <textarea class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                id="longDesc" rows="4">
-                </textarea>
-              </div>
-              <!-- Eligibility -->
-              <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1" for="eligibility">
-                  Eligibility (one per line)
-                </label>
-                <textarea class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                id="eligibility" rows="3">
-                </textarea>
-              </div>
-              <!-- Benefits -->
-              <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1" for="benefits">
-                  Benefits (one per line)
-                </label>
-                <textarea class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                id="benefits" rows="3">
-                </textarea>
-              </div>
-              <!-- Apply URL -->
-              <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1" for="applyLink">
-                  Official/Apply URL
-                </label>
-                <input class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                id="applyLink" type="url" placeholder="https://..." />
-              </div>
-              <!-- Image URL -->
-              <div>
-                <label class="block text-sm font-medium text-slate-700 mb-1" for="imageUrl">
-                  Image URL
-                </label>
-                <input class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
-                id="imageUrl" type="url" placeholder="https://..." />
-              </div>
-              <!-- Active -->
-              <div class="flex items-center gap-2">
-                <input id="active" type="checkbox" class="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
-                checked />
-                <label for="active" class="text-sm text-slate-700">
-                  Active
-                </label>
-              </div>
-              <!-- Buttons -->
-              <div class="flex gap-3 pt-3">
-                <button class="px-5 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-md transition"
-                type="submit">
-                  Save
-                </button>
-                <button id="resetBtn" class="px-5 py-2 bg-gray-500 hover:bg-gray-600 text-white font-semibold rounded-lg shadow-md transition"
-                type="reset">
-                  Reset
-                </button>
-              </div>
-            </form>
-          </div>
-          <!-- List -->
-          <div class="lg:col-span-2 card p-5 overflow-x-auto">
-            <!-- Header -->
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="font-bold text-lg text-slate-800">
-                Schemes
-              </h3>
-              <button id="exportBtn" class="px-4 py-2 text-sm font-semibold border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg shadow-sm transition">
-                Export JSON
-              </button>
-            </div>
-            <!-- Table -->
-            <div class="overflow-hidden rounded-xl border border-slate-200 shadow-sm">
-              <table class="min-w-full text-sm text-left">
-                <thead class="bg-slate-100 text-slate-700 uppercase text-xs font-semibold">
-                  <tr>
-                    <th class="px-4 py-3">
-                      Name
-                    </th>
-                    <th class="px-4 py-3">
-                      Type
-                    </th>
-                    <th class="px-4 py-3">
-                      Category
-                    </th>
-                    <th class="px-4 py-3">
-                      Updated
-                    </th>
-                    <th class="px-4 py-3">
-                      Active
-                    </th>
-                    <th class="px-4 py-3 text-center">
-                      Actions
-                    </th>
-                  </tr>
-                </thead>
-                <tbody id="adminTable" class="divide-y divide-slate-200">
-                  <!-- Example Row -->
-                  <tr class="hover:bg-slate-50 transition">
-                    <td class="px-4 py-3 font-medium text-slate-800">
-                      Ayushman Bharat
-                    </td>
-                    <td class="px-4 py-3">
-                      Central
-                    </td>
-                    <td class="px-4 py-3">
-                      Healthcare
-                    </td>
-                    <td class="px-4 py-3 text-slate-500">
-                      24 Aug 2025
-                    </td>
-                    <td class="px-4 py-3">
-                      <span class="px-2 py-1 text-xs font-medium bg-green-100 text-green-700 rounded-full">
-                        Yes
-                      </span>
-                    </td>
-                    <td class="px-4 py-3 flex justify-center gap-2">
-                      <button class="px-3 py-1 text-xs border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded transition">
-                        Edit
-                      </button>
-                      <button class="px-3 py-1 text-xs border border-red-600 text-red-600 hover:bg-red-600 hover:text-white rounded transition">
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                  <!-- More rows injected dynamically -->
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer class="bg-black text-white pt-12 pb-6 mt-16">
-      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <!-- Logo & Tagline -->
-        <div>
-          <h2 class="text-2xl font-bold text-orange-400">
-            GovSchemes
-          </h2>
-          <p class="mt-3 text-gray-400 text-sm leading-relaxed">
-            One-stop portal to explore and apply for Central & State Government welfare
-            schemes.
-          </p>
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Logo & Tagline -->
+            <div>
+                <h2 class="text-2xl font-bold text-orange-400">
+                    GovSchemes
+                </h2>
+                <p class="mt-3 text-gray-400 text-sm leading-relaxed">
+                    One-stop portal to explore and apply for Central & State Government welfare
+                    schemes.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-3 text-green-400">
+                    Quick Links
+                </h3>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#schemes" class="hover:text-orange-400 transition">
+                            Browse Schemes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="hover:text-orange-400 transition">
+                            About Us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="hover:text-orange-400 transition">
+                            Contact
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/admin" class="hover:text-orange-400 transition">
+                            Admin Panel
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Resources -->
+            <div>
+                <h3 class="text-lg font-semibold mb-3 text-green-400">
+                    Resources
+                </h3>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#" class="hover:text-orange-400 transition">
+                            FAQs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-orange-400 transition">
+                            Help Center
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-orange-400 transition">
+                            Terms & Conditions
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-orange-400 transition">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Social -->
+            <div>
+                <h3 class="text-lg font-semibold mb-3 text-green-400">
+                    Follow Us
+                </h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-orange-400 hover:text-black transition">
+                        🌐
+                    </a>
+                    <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-orange-400 hover:text-black transition">
+                        📘
+                    </a>
+                    <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-orange-400 hover:text-black transition">
+                        🐦
+                    </a>
+                    <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-orange-400 hover:text-black transition">
+                        ▶️
+                    </a>
+                </div>
+            </div>
         </div>
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-lg font-semibold mb-3 text-green-400">
-            Quick Links
-          </h3>
-          <ul class="space-y-2">
-            <li>
-              <a href="#schemes" class="hover:text-orange-400 transition">
-                Browse Schemes
-              </a>
-            </li>
-            <li>
-              <a href="#about" class="hover:text-orange-400 transition">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="#contact" class="hover:text-orange-400 transition">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a href="#/admin" class="hover:text-orange-400 transition">
-                Admin Panel
-              </a>
-            </li>
-          </ul>
+        <!-- Bottom -->
+        <div class="border-t border-white/10 mt-10 pt-5 text-center text-sm text-gray-400">
+            © 2025 GovSchemes Portal. All Rights Reserved.
         </div>
-        <!-- Resources -->
-        <div>
-          <h3 class="text-lg font-semibold mb-3 text-green-400">
-            Resources
-          </h3>
-          <ul class="space-y-2">
-            <li>
-              <a href="#" class="hover:text-orange-400 transition">
-                FAQs
-              </a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-orange-400 transition">
-                Help Center
-              </a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-orange-400 transition">
-                Terms & Conditions
-              </a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-orange-400 transition">
-                Privacy Policy
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!-- Social -->
-        <div>
-          <h3 class="text-lg font-semibold mb-3 text-green-400">
-            Follow Us
-          </h3>
-          <div class="flex space-x-4">
-            <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-orange-400 hover:text-black transition">
-              🌐
-            </a>
-            <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-orange-400 hover:text-black transition">
-              📘
-            </a>
-            <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-orange-400 hover:text-black transition">
-              🐦
-            </a>
-            <a href="#" class="p-2 bg-white/10 rounded-full hover:bg-orange-400 hover:text-black transition">
-              ▶️
-            </a>
-          </div>
-        </div>
-      </div>
-      <!-- Bottom -->
-      <div class="border-t border-white/10 mt-10 pt-5 text-center text-sm text-gray-400">
-        © 2025 GovSchemes Portal. All Rights Reserved.
-      </div>
     </footer>
     <script>
-       // ------------------ Data Layer ------------------
-    const STORAGE_KEY = 'gov_schemes_v1';
+        // ------------------ Data Layer ------------------
+        const STORAGE_KEY = 'gov_schemes_v1';
 
-    const seedSchemes = [
-      {
-        id: cryptoRandomId(),
-        name: 'Pradhan Mantri Jan Arogya Yojana (PM-JAY) — Ayushman Bharat',
-        type: 'Central',
-        category: 'Healthcare',
-        shortDesc: 'Health insurance cover of up to ₹5 lakh per family per year for secondary and tertiary care hospitalization.',
-        longDesc: 'PM-JAY provides cashless health coverage at empanelled hospitals for poor and vulnerable families. It covers nearly all secondary and many tertiary procedures with pre- and post-hospitalization expenses.',
-        eligibility: ['Identified poor & vulnerable families as per SECC/other criteria', 'No cap on family size or age', 'Covers most pre-existing diseases'],
-        benefits: ['₹5 lakh per family per year', 'Cashless & paperless treatment', 'Pan-India portability'],
-        applyLink: 'https://pmjay.gov.in',
-        imageUrl: 'https://images.unsplash.com/photo-1580281658627-766b2e9e8a3f?q=80&w=1400&auto=format&fit=crop',
-        active: true,
-        lastUpdated: new Date().toISOString()
-      },
-      {
-        id: cryptoRandomId(),
-        name: 'Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)',
-        type: 'Central',
-        category: 'Agriculture',
-        shortDesc: 'Income support of ₹6,000 per year to farmer families, payable in three equal installments.',
-        longDesc: 'PM-KISAN provides direct income support to small and marginal farmer families to supplement their financial needs for procuring inputs for crop health and appropriate yields.',
-        eligibility: ['All landholding farmer families, subject to exclusions', 'Institutional landholders excluded'],
-        benefits: ['₹2,000 every four months', 'Direct benefit transfer (DBT) to bank account'],
-        applyLink: 'https://pmkisan.gov.in',
-        imageUrl: 'https://unsplash.com/photos/woman-harvesting-rice-5NGTf4oD8RA',
-        active: true,
-        lastUpdated: new Date().toISOString()
-      },
-      {
-        id: cryptoRandomId(),
-        name: 'Mukhyamantri Kanya Vivah Yojana (Example – State)',
-        type: 'State',
-        category: 'Women & Child',
-        shortDesc: 'Financial assistance for marriage of eligible daughters from economically weaker sections (state example).',
-        longDesc: 'State-run assistance scheme to support families during the marriage of daughters through a grant, subject to state-specific criteria.',
-        eligibility: ['Domicile of the respective state', 'Income and age criteria as per guidelines'],
-        benefits: ['One-time financial assistance (amount varies by state)'],
-        applyLink: '#',
-        imageUrl: 'https://images.unsplash.com/photo-1604881991720-f91add269bed?q=80&w=1400&auto=format&fit=crop',
-        active: true,
-        lastUpdated: new Date().toISOString()
-      },
-      {
-        id: cryptoRandomId(),
-        name: 'National Means-cum-Merit Scholarship (NMMSS)',
-        type: 'Central',
-        category: 'Education',
-        shortDesc: 'Scholarship to meritorious students of economically weaker sections to reduce drop-outs at Class VIII and encourage secondary education.',
-        longDesc: 'NMMSS awards scholarships to bright students from low-income families to continue education at the secondary stage. Selection via state-level examinations and eligibility criteria.',
-        eligibility: ['Family income below notified threshold', 'Minimum academic performance as per scheme'],
-        benefits: ['Annual scholarship credited to bank account'],
-        applyLink: 'https://scholarships.gov.in',
-        imageUrl: 'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1400&auto=format&fit=crop',
-        active: true,
-        lastUpdated: new Date().toISOString()
-      }
-     {
-    id: cryptoRandomId(),
-    name: 'Pradhan Mantri Jan Dhan Yojana (PMJDY)',
-    type: 'Central',
-    category: 'Employment',
-    shortDesc: 'Basic bank accounts with no minimum balance, debit card, and insurance.',
-    longDesc: 'Pradhan Mantri Jan-Dhan Yojana (PMJDY) is National Mission for Financial Inclusion to ensure access to financial services, namely, a basic savings & deposit accounts, remittance, credit, insurance, pension in an affordable manner. Under the scheme, a basic savings bank deposit (BSBD) account can be opened in any bank branch or Business Correspondent (Bank Mitra) outlet, by persons not having any other account.',
-    eligibility: ['Family income below notified threshold', 'Minimum academic performance as per scheme'],
-    benefits: ['One basic savings bank account is opened for unbanked person. There is no requirement to maintain any minimum balance in PMJDY accounts. Interest is earned on the deposit in PMJDY accounts. Rupay Debit card is provided to PMJDY account holder. Accident Insurance Cover of Rs.1 lakh (enhanced to Rs. 2 lakh to new PMJDY accounts opened after 28.8.2018) is available with RuPay card issued to the PMJDY account holders. An overdraft (OD) facility up to Rs. 10,000 to eligible account holders is available. PMJDY accounts are eligible for Direct Benefit Transfer (DBT), Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY), Pradhan Mantri Suraksha Bima Yojana (PMSBY), Atal Pension Yojana (APY), Micro Units Development & Refinance Agency Bank (MUDRA) scheme.'],
-    applyLink: 'https://www.pmjdy.gov.in/home',
-    imageUrl: 'https://tennews.in/wp-content/uploads/2023/08/PMJDY.jpg',
-    active: true,
-    lastUpdated: new Date().toISOString()
-  }
-    ];
+        const seedSchemes = [
+            {
+                id: cryptoRandomId(),
+                name: 'Pradhan Mantri Jan Arogya Yojana (PM-JAY) — Ayushman Bharat',
+                type: 'Central',
+                category: 'Healthcare',
+                shortDesc: 'Health insurance cover of up to ₹5 lakh per family per year for secondary and tertiary care hospitalization.',
+                longDesc: 'PM-JAY provides cashless health coverage at empanelled hospitals for poor and vulnerable families. It covers nearly all secondary and many tertiary procedures with pre- and post-hospitalization expenses.',
+                eligibility: ['Identified poor & vulnerable families as per SECC/other criteria', 'No cap on family size or age', 'Covers most pre-existing diseases'],
+                benefits: ['₹5 lakh per family per year', 'Cashless & paperless treatment', 'Pan-India portability'],
+                applyLink: 'https://pmjay.gov.in',
+                imageUrl: 'https://images.unsplash.com/photo-1580281658627-766b2e9e8a3f?q=80&w=1400&auto=format&fit=crop',
+                active: true,
+                lastUpdated: new Date().toISOString()
+            },
+            {
+                id: cryptoRandomId(),
+                name: 'Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)',
+                type: 'Central',
+                category: 'Agriculture',
+                shortDesc: 'Income support of ₹6,000 per year to farmer families, payable in three equal installments.',
+                longDesc: 'PM-KISAN provides direct income support to small and marginal farmer families to supplement their financial needs for procuring inputs for crop health and appropriate yields.',
+                eligibility: ['All landholding farmer families, subject to exclusions', 'Institutional landholders excluded'],
+                benefits: ['₹2,000 every four months', 'Direct benefit transfer (DBT) to bank account'],
+                applyLink: 'https://pmkisan.gov.in',
+                imageUrl: 'https://unsplash.com/photos/woman-harvesting-rice-5NGTf4oD8RA',
+                active: true,
+                lastUpdated: new Date().toISOString()
+            },
+            {
+                id: cryptoRandomId(),
+                name: 'Mukhyamantri Kanya Vivah Yojana (Example – State)',
+                type: 'State',
+                category: 'Women & Child',
+                shortDesc: 'Financial assistance for marriage of eligible daughters from economically weaker sections (state example).',
+                longDesc: 'State-run assistance scheme to support families during the marriage of daughters through a grant, subject to state-specific criteria.',
+                eligibility: ['Domicile of the respective state', 'Income and age criteria as per guidelines'],
+                benefits: ['One-time financial assistance (amount varies by state)'],
+                applyLink: '#',
+                imageUrl: 'https://images.unsplash.com/photo-1604881991720-f91add269bed?q=80&w=1400&auto=format&fit=crop',
+                active: true,
+                lastUpdated: new Date().toISOString()
+            },
+            {
+                id: cryptoRandomId(),
+                name: 'National Means-cum-Merit Scholarship (NMMSS)',
+                type: 'Central',
+                category: 'Education',
+                shortDesc: 'Scholarship to meritorious students of economically weaker sections to reduce drop-outs at Class VIII and encourage secondary education.',
+                longDesc: 'NMMSS awards scholarships to bright students from low-income families to continue education at the secondary stage. Selection via state-level examinations and eligibility criteria.',
+                eligibility: ['Family income below notified threshold', 'Minimum academic performance as per scheme'],
+                benefits: ['Annual scholarship credited to bank account'],
+                applyLink: 'https://scholarships.gov.in',
+                imageUrl: 'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1400&auto=format&fit=crop',
+                active: true,
+                lastUpdated: new Date().toISOString()
+            },
+            {
+                id: cryptoRandomId(),
+                name: 'Pradhan Mantri Jan Dhan Yojana (PMJDY)',
+                type: 'Central',
+                category: 'Employment',
+                shortDesc: 'Basic bank accounts with no minimum balance, debit card, and insurance.',
+                longDesc: 'Pradhan Mantri Jan-Dhan Yojana (PMJDY) is National Mission for Financial Inclusion to ensure access to financial services, namely, a basic savings & deposit accounts, remittance, credit, insurance, pension in an affordable manner. Under the scheme, a basic savings bank deposit (BSBD) account can be opened in any bank branch or Business Correspondent (Bank Mitra) outlet, by persons not having any other account.',
+                eligibility: ['Family income below notified threshold', 'Minimum academic performance as per scheme'],
+                benefits: ['One basic savings bank account is opened for unbanked person. There is no requirement to maintain any minimum balance in PMJDY accounts. Interest is earned on the deposit in PMJDY accounts. Rupay Debit card is provided to PMJDY account holder. Accident Insurance Cover of Rs.1 lakh (enhanced to Rs. 2 lakh to new PMJDY accounts opened after 28.8.2018) is available with RuPay card issued to the PMJDY account holders. An overdraft (OD) facility up to Rs. 10,000 to eligible account holders is available. PMJDY accounts are eligible for Direct Benefit Transfer (DBT), Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY), Pradhan Mantri Suraksha Bima Yojana (PMSBY), Atal Pension Yojana (APY), Micro Units Development & Refinance Agency Bank (MUDRA) scheme.'],
+                applyLink: 'https://www.pmjdy.gov.in/home',
+                imageUrl: 'https://tennews.in/wp-content/uploads/2023/08/PMJDY.jpg',
+                active: true,
+                lastUpdated: new Date().toISOString()
+            }
+        ];
 
-    function cryptoRandomId() {
-      // Compact random id
-      const bytes = crypto.getRandomValues(new Uint8Array(10));
-      return Array.from(bytes, b => b.toString(16).padStart(2,'0')).join('');
-    }
+        function cryptoRandomId() {
+            // Compact random id
+            const bytes = crypto.getRandomValues(new Uint8Array(10));
+            return Array.from(bytes, b => b.toString(16).padStart(2, '0')).join('');
+        }
 
-    function loadSchemes() {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(seedSchemes));
-        return seedSchemes;
-      }
-      try { return JSON.parse(raw); } catch { return []; }
-    }
+        function loadSchemes() {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(seedSchemes));
+                return seedSchemes;
+            }
+            try { return JSON.parse(raw); } catch { return []; }
+        }
 
-    function saveSchemes(list) { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); }
-    function getSchemeById(id) { return loadSchemes().find(s => s.id === id); }
+        function saveSchemes(list) { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); }
+        function getSchemeById(id) { return loadSchemes().find(s => s.id === id); }
 
-    // ------------------ UI Helpers ------------------
-    const $ = sel => document.querySelector(sel);
-    const $$ = sel => Array.from(document.querySelectorAll(sel));
+        // ------------------ UI Helpers ------------------
+        const $ = sel => document.querySelector(sel);
+        const $$ = sel => Array.from(document.querySelectorAll(sel));
 
-    function renderChips(container, items) {
-      container.innerHTML = '';
-      for (const txt of items) {
-        const li = document.createElement('li');
-        li.textContent = txt;
-        container.appendChild(li);
-      }
-    }
+        function renderChips(container, items) {
+            container.innerHTML = '';
+            for (const txt of items) {
+                const li = document.createElement('li');
+                li.textContent = txt;
+                container.appendChild(li);
+            }
+        }
 
-    function truncate(text, n=120) {
-      if (!text) return '';
-      return text.length > n ? text.slice(0, n-1) + '…' : text;
-    }
+        function truncate(text, n = 120) {
+            if (!text) return '';
+            return text.length > n ? text.slice(0, n - 1) + '…' : text;
+        }
 
-    // ------------------ Home (Cards) ------------------
-    function renderHome() {
-      showRoute('home');
-      const grid = $('#cardsGrid');
-      const empty = $('#emptyState');
+        // ------------------ Home (Cards) ------------------
+        function renderHome() {
+            showRoute('home');
+            const grid = $('#cardsGrid');
+            const empty = $('#emptyState');
 
-      const q = $('#searchInput').value.trim().toLowerCase();
-      const type = $('#filterType').value;
-      const cat = $('#filterCategory').value;
+            const q = $('#searchInput').value.trim().toLowerCase();
+            const type = $('#filterType').value;
+            const cat = $('#filterCategory').value;
 
-      const list = loadSchemes().filter(s => {
-        if (!s.active) return false;
-        const matchesQ = !q || `${s.name} ${s.category} ${s.shortDesc}`.toLowerCase().includes(q);
-        const matchesType = type === 'ALL' || s.type === type;
-        const matchesCat = cat === 'ALL' || s.category === cat;
-        return matchesQ && matchesType && matchesCat;
-      });
+            const list = loadSchemes().filter(s => {
+                if (!s.active) return false;
+                const matchesQ = !q || `${s.name} ${s.category} ${s.shortDesc}`.toLowerCase().includes(q);
+                const matchesType = type === 'ALL' || s.type === type;
+                const matchesCat = cat === 'ALL' || s.category === cat;
+                return matchesQ && matchesType && matchesCat;
+            });
 
-      grid.innerHTML = '';
-      if (list.length === 0) { empty.classList.remove('hidden'); return; }
-      empty.classList.add('hidden');
+            grid.innerHTML = '';
+            if (list.length === 0) { empty.classList.remove('hidden'); return; }
+            empty.classList.add('hidden');
 
-      for (const s of list) {
-        const card = document.createElement('article');
-        card.className = '"max-w-sm bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl transition';
-        card.innerHTML = `
+            for (const s of list) {
+                const card = document.createElement('article');
+                card.className = '"max-w-sm bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-2xl transition';
+                card.innerHTML = `
           <!-- Scheme Card -->
                 <!-- Image -->
                 <div class="h-60 w-full">
@@ -805,52 +891,52 @@
             
 
         `;
-        grid.appendChild(card);
-      }
-    }
+                grid.appendChild(card);
+            }
+        }
 
-    // ------------------ Details ------------------
-    function renderDetails(id) {
-      const s = getSchemeById(id);
-      if (!s) { location.hash = '#/home'; return; }
-      showRoute('details');
+        // ------------------ Details ------------------
+        function renderDetails(id) {
+            const s = getSchemeById(id);
+            if (!s) { location.hash = '#/home'; return; }
+            showRoute('details');
 
-      $('#detailsImage').src = s.imageUrl || 'https://images.unsplash.com/photo-1519682577862-22b62b24e493?q=80&w=1400&auto=format&fit=crop';
-      $('#detailsTitle').textContent = s.name;
-      $('#detailsType').textContent = s.type;
-      $('#detailsCategory').textContent = s.category;
-      $('#detailsUpdated').textContent = 'Updated ' + new Date(s.lastUpdated || Date.now()).toLocaleDateString();
-      $('#detailsShort').textContent = s.shortDesc || '';
-      $('#detailsLong').textContent = s.longDesc || '';
-      $('#detailsApply').href = s.applyLink || '#';
+            $('#detailsImage').src = s.imageUrl || 'https://images.unsplash.com/photo-1519682577862-22b62b24e493?q=80&w=1400&auto=format&fit=crop';
+            $('#detailsTitle').textContent = s.name;
+            $('#detailsType').textContent = s.type;
+            $('#detailsCategory').textContent = s.category;
+            $('#detailsUpdated').textContent = 'Updated ' + new Date(s.lastUpdated || Date.now()).toLocaleDateString();
+            $('#detailsShort').textContent = s.shortDesc || '';
+            $('#detailsLong').textContent = s.longDesc || '';
+            $('#detailsApply').href = s.applyLink || '#';
 
-      const elig = $('#detailsEligibility');
-      const bene = $('#detailsBenefits');
-      elig.innerHTML = '';
-      bene.innerHTML = '';
-      (s.eligibility || []).forEach(e => elig.appendChild(li(e)));
-      (s.benefits || []).forEach(b => bene.appendChild(li(b)));
+            const elig = $('#detailsEligibility');
+            const bene = $('#detailsBenefits');
+            elig.innerHTML = '';
+            bene.innerHTML = '';
+            (s.eligibility || []).forEach(e => elig.appendChild(li(e)));
+            (s.benefits || []).forEach(b => bene.appendChild(li(b)));
 
-      const facts = $('#detailsFacts');
-      facts.innerHTML = '';
-      facts.appendChild(li('Type: ' + s.type));
-      facts.appendChild(li('Category: ' + s.category));
-      facts.appendChild(li('Active: ' + (s.active ? 'Yes' : 'No')));
-      facts.appendChild(li('ID: ' + s.id.slice(0,8)));
+            const facts = $('#detailsFacts');
+            facts.innerHTML = '';
+            facts.appendChild(li('Type: ' + s.type));
+            facts.appendChild(li('Category: ' + s.category));
+            facts.appendChild(li('Active: ' + (s.active ? 'Yes' : 'No')));
+            facts.appendChild(li('ID: ' + s.id.slice(0, 8)));
 
-      function li(t){ const x=document.createElement('li'); x.textContent=t; return x; }
-    }
+            function li(t) { const x = document.createElement('li'); x.textContent = t; return x; }
+        }
 
-    // ------------------ Admin ------------------
-    function renderAdmin() {
-      showRoute('admin');
-      const tbody = $('#adminTable');
-      const list = loadSchemes();
-      tbody.innerHTML = '';
-      for (const s of list) {
-        const tr = document.createElement('tr');
-        tr.className = 'border-b';
-        tr.innerHTML = `
+        // ------------------ Admin ------------------
+        function renderAdmin() {
+            showRoute('admin');
+            const tbody = $('#adminTable');
+            const list = loadSchemes();
+            tbody.innerHTML = '';
+            for (const s of list) {
+                const tr = document.createElement('tr');
+                tr.className = 'border-b';
+                tr.innerHTML = `
           <td class="py-2 pr-2">${s.name}</td>
           <td class="py-2 pr-2">${s.type}</td>
           <td class="py-2 pr-2">${s.category}</td>
@@ -861,249 +947,250 @@
             <button class="btn-soft" data-action="delete" data-id="${s.id}">Delete</button>
             <a class="btn-soft" href="#/details/${s.id}">Preview</a>
           </td>`;
-        tbody.appendChild(tr);
-      }
-    }
-
-    // Fill form for edit
-    function fillForm(s) {
-      $('#formTitle').textContent = 'Edit Scheme';
-      $('#id').value = s.id;
-      $('#name').value = s.name;
-      $('#type').value = s.type;
-      $('#category').value = s.category;
-      $('#shortDesc').value = s.shortDesc || '';
-      $('#longDesc').value = s.longDesc || '';
-      $('#eligibility').value = (s.eligibility || []).join('\n');
-      $('#benefits').value = (s.benefits || []).join('\n');
-      $('#applyLink').value = s.applyLink || '';
-      $('#imageUrl').value = s.imageUrl || '';
-      $('#active').checked = !!s.active;
-    }
-
-    function resetForm() {
-      $('#formTitle').textContent = 'Add Scheme';
-      $('#schemeForm').reset();
-      $('#id').value = '';
-      $('#active').checked = true;
-    }
-
-    // ------------------ Router ------------------
-    function showRoute(name) {
-      $$('.route').forEach(sec => sec.classList.add('hidden-route'));
-      $('#route-' + name).classList.remove('hidden-route');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function router() {
-      const h = location.hash || '#/home';
-      const [_, route, param] = h.split('/');
-      if (route === 'details' && param) return renderDetails(param);
-      if (route === 'admin') return renderAdmin();
-      return renderHome();
-    }
-
-    // ------------------ Event Listeners ------------------
-    // Filters
-    $('#searchInput').addEventListener('input', () => renderHome());
-    $('#filterType').addEventListener('change', () => renderHome());
-    $('#filterCategory').addEventListener('change', () => renderHome());
-    $('#clearFiltersBtn').addEventListener('click', () => {
-      $('#searchInput').value = '';
-      $('#filterType').value = 'ALL';
-      $('#filterCategory').value = 'ALL';
-      renderHome();
-    });
-
-    // Admin table actions
-    document.addEventListener('click', (e) => {
-      const btn = e.target.closest('button');
-      if (!btn) return;
-      const action = btn.dataset.action;
-      const id = btn.dataset.id;
-      if (!action) return;
-
-      if (action === 'edit') {
-        const s = getSchemeById(id);
-        if (s) {
-          location.hash = '#/admin';
-          setTimeout(() => fillForm(s), 0);
+                tbody.appendChild(tr);
+            }
         }
-      }
-      if (action === 'delete') {
-        if (!confirm('Delete this scheme?')) return;
-        const list = loadSchemes().filter(x => x.id !== id);
-        saveSchemes(list);
-        renderAdmin();
-      }
-    });
 
-    // Form submit
-    $('#schemeForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const list = loadSchemes();
-      const payload = {
-        id: $('#id').value || cryptoRandomId(),
-        name: $('#name').value.trim(),
-        type: $('#type').value,
-        category: $('#category').value,
-        shortDesc: $('#shortDesc').value.trim(),
-        longDesc: $('#longDesc').value.trim(),
-        eligibility: $('#eligibility').value.split('\n').map(s=>s.trim()).filter(Boolean),
-        benefits: $('#benefits').value.split('\n').map(s=>s.trim()).filter(Boolean),
-        applyLink: $('#applyLink').value.trim(),
-        imageUrl: $('#imageUrl').value.trim(),
-        active: $('#active').checked,
-        lastUpdated: new Date().toISOString()
-      };
+        // Fill form for edit
+        function fillForm(s) {
+            $('#formTitle').textContent = 'Edit Scheme';
+            $('#id').value = s.id;
+            $('#name').value = s.name;
+            $('#type').value = s.type;
+            $('#category').value = s.category;
+            $('#shortDesc').value = s.shortDesc || '';
+            $('#longDesc').value = s.longDesc || '';
+            $('#eligibility').value = (s.eligibility || []).join('\n');
+            $('#benefits').value = (s.benefits || []).join('\n');
+            $('#applyLink').value = s.applyLink || '';
+            $('#imageUrl').value = s.imageUrl || '';
+            $('#active').checked = !!s.active;
+        }
 
-      const existingIdx = list.findIndex(x => x.id === payload.id);
-      if (existingIdx >= 0) list[existingIdx] = payload; else list.unshift(payload);
+        function resetForm() {
+            $('#formTitle').textContent = 'Add Scheme';
+            $('#schemeForm').reset();
+            $('#id').value = '';
+            $('#active').checked = true;
+        }
 
-      saveSchemes(list);
-      alert('Saved!');
-      resetForm();
-      renderAdmin();
-    });
+        // ------------------ Router ------------------
+        function showRoute(name) {
+            $$('.route').forEach(sec => sec.classList.add('hidden-route'));
+            $('#route-' + name).classList.remove('hidden-route');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-    $('#resetBtn').addEventListener('click', () => resetForm());
+        function router() {
+            const h = location.hash || '#/home';
+            const [_, route, param] = h.split('/');
+            if (route === 'details' && param) return renderDetails(param);
+            if (route === 'admin') return renderAdmin();
+            return renderHome();
+        }
 
-    // Export JSON
-    $('#exportBtn').addEventListener('click', () => {
-      const data = JSON.stringify(loadSchemes(), null, 2);
-      const blob = new Blob([data], { type: 'application/json' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = 'schemes.json'; a.click();
-      URL.revokeObjectURL(url);
-    });
-
-    // Initialize
-    window.addEventListener('hashchange', router);
-    // Ensure seeds are initialized once
-    loadSchemes();
-    router();
-
-    const slider = document.getElementById('slider');
-    const slides = Array.from(slider.children);
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const dotsWrap = document.getElementById('dots');
-    const dots = Array.from(dotsWrap.children);
-
-    let index = 0;
-    let autoTimer = null;
-    const DURATION = 5000; // 5s autoplay
-
-    function goTo(i) {
-      index = (i + slides.length) % slides.length;
-      const x = slides[index].offsetLeft;
-      slider.scrollTo({ left: x, behavior: 'smooth' });
-      dots.forEach((d, di) => {
-        d.classList.toggle('bg-white', di === index);
-        d.classList.toggle('bg-white/50', di !== index);
-      });
-    }
-
-    function next() { goTo(index + 1); }
-    function prev() { goTo(index - 1); }
-
-    // buttons
-    nextBtn.addEventListener('click', next);
-    prevBtn.addEventListener('click', prev);
-
-    // dots
-    dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
-
-    // sync index on manual scroll (snap)
-    slider.addEventListener('scroll', () => {
-      const mid = slider.scrollLeft + slider.clientWidth / 2;
-      const si = slides.reduce((best, el, i) => {
-        const center = el.offsetLeft + el.clientWidth / 2;
-        const dist = Math.abs(center - mid);
-        return dist < best.dist ? { i, dist } : best;
-      }, { i: 0, dist: Infinity }).i;
-      if (si !== index) { index = si; dots.forEach((d, di) => {
-        d.classList.toggle('bg-white', di === index);
-        d.classList.toggle('bg-white/50', di !== index);
-      });}
-    }, { passive: true });
-
-    // autoplay + pause on hover/touch
-    function startAuto() { stopAuto(); autoTimer = setInterval(next, DURATION); }
-    function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
-    slider.addEventListener('mouseenter', stopAuto);
-    slider.addEventListener('mouseleave', startAuto);
-    slider.addEventListener('touchstart', stopAuto, { passive: true });
-    slider.addEventListener('touchend', startAuto, { passive: true });
-
-    // keyboard
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') next();
-      if (e.key === 'ArrowLeft') prev();
-    });
-
-    // init
-    goTo(0);
-    startAuto();
-
-    // Toggle mobile nav
-    const btn = document.getElementById("mobileMenuBtn");
-  const menu = document.getElementById("mobileMenu");
-
-  btn.addEventListener("click", () => {
-    if (menu.classList.contains("max-h-0")) {
-      menu.classList.remove("max-h-0");
-      menu.classList.add("max-h-40"); // adjust depending on menu size
-    } else {
-      menu.classList.remove("max-h-40");
-      menu.classList.add("max-h-0");
-    }
-  });
-
-    function openLogin() {
-      document.getElementById("loginModal").classList.remove("hidden");
-    }
-    function closeLogin() {
-      document.getElementById("loginModal").classList.add("hidden");
-    }
-    function login() {
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
-
-      if(user === "admin" && pass === "1234") {
-        closeLogin();
-        document.getElementById("adminPanel").classList.remove("hidden");
-
-        // ✅ Redirect (scroll) to adminPanel by ID
-        document.getElementById("route-admin").scrollIntoView({ 
-          behavior: "smooth" 
+        // ------------------ Event Listeners ------------------
+        // Filters
+        $('#searchInput').addEventListener('input', () => renderHome());
+        $('#filterType').addEventListener('change', () => renderHome());
+        $('#filterCategory').addEventListener('change', () => renderHome());
+        $('#clearFiltersBtn').addEventListener('click', () => {
+            $('#searchInput').value = '';
+            $('#filterType').value = 'ALL';
+            $('#filterCategory').value = 'ALL';
+            renderHome();
         });
-      } else {
-        alert("Invalid credentials! Try admin / 1234");
-      }
-    }
-    function logout() {
-      document.getElementById("admin").classList.add("hidden");
-}
-    
 
-function toggleFAQ(button) {
-      const content = button.nextElementSibling;
-      const icon = button.querySelector(".faq-icon");
+        // Admin table actions
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('button');
+            if (!btn) return;
+            const action = btn.dataset.action;
+            const id = btn.dataset.id;
+            if (!action) return;
 
-      if (content.classList.contains("max-h-40")) {
-        content.classList.remove("max-h-40", "py-3");
-        icon.textContent = "+";
-      } else {
-        document.querySelectorAll(".faq-content").forEach(c => c.classList.remove("max-h-40", "py-3"));
-        document.querySelectorAll(".faq-icon").forEach(i => i.textContent = "+");
-        content.classList.add("max-h-40", "py-3");
-        icon.textContent = "−";
-      }
+            if (action === 'edit') {
+                const s = getSchemeById(id);
+                if (s) {
+                    location.hash = '#/admin';
+                    setTimeout(() => fillForm(s), 0);
+                }
+            }
+            if (action === 'delete') {
+                if (!confirm('Delete this scheme?')) return;
+                const list = loadSchemes().filter(x => x.id !== id);
+                saveSchemes(list);
+                renderAdmin();
+            }
+        });
 
-    }
+        // Form submit
+        $('#schemeForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const list = loadSchemes();
+            const payload = {
+                id: $('#id').value || cryptoRandomId(),
+                name: $('#name').value.trim(),
+                type: $('#type').value,
+                category: $('#category').value,
+                shortDesc: $('#shortDesc').value.trim(),
+                longDesc: $('#longDesc').value.trim(),
+                eligibility: $('#eligibility').value.split('\n').map(s => s.trim()).filter(Boolean),
+                benefits: $('#benefits').value.split('\n').map(s => s.trim()).filter(Boolean),
+                applyLink: $('#applyLink').value.trim(),
+                imageUrl: $('#imageUrl').value.trim(),
+                active: $('#active').checked,
+                lastUpdated: new Date().toISOString()
+            };
+
+            const existingIdx = list.findIndex(x => x.id === payload.id);
+            if (existingIdx >= 0) list[existingIdx] = payload; else list.unshift(payload);
+
+            saveSchemes(list);
+            alert('Saved!');
+            resetForm();
+            renderAdmin();
+        });
+
+        $('#resetBtn').addEventListener('click', () => resetForm());
+
+        // Export JSON
+        $('#exportBtn').addEventListener('click', () => {
+            const data = JSON.stringify(loadSchemes(), null, 2);
+            const blob = new Blob([data], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url; a.download = 'schemes.json'; a.click();
+            URL.revokeObjectURL(url);
+        });
+
+        // Initialize
+        window.addEventListener('hashchange', router);
+        // Ensure seeds are initialized once
+        loadSchemes();
+        router();
+
+        const slider = document.getElementById('slider');
+        const slides = Array.from(slider.children);
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotsWrap = document.getElementById('dots');
+        const dots = Array.from(dotsWrap.children);
+
+        let index = 0;
+        let autoTimer = null;
+        const DURATION = 5000; // 5s autoplay
+
+        function goTo(i) {
+            index = (i + slides.length) % slides.length;
+            const x = slides[index].offsetLeft;
+            slider.scrollTo({ left: x, behavior: 'smooth' });
+            dots.forEach((d, di) => {
+                d.classList.toggle('bg-white', di === index);
+                d.classList.toggle('bg-white/50', di !== index);
+            });
+        }
+
+        function next() { goTo(index + 1); }
+        function prev() { goTo(index - 1); }
+
+        // buttons
+        nextBtn.addEventListener('click', next);
+        prevBtn.addEventListener('click', prev);
+
+        // dots
+        dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+        // sync index on manual scroll (snap)
+        slider.addEventListener('scroll', () => {
+            const mid = slider.scrollLeft + slider.clientWidth / 2;
+            const si = slides.reduce((best, el, i) => {
+                const center = el.offsetLeft + el.clientWidth / 2;
+                const dist = Math.abs(center - mid);
+                return dist < best.dist ? { i, dist } : best;
+            }, { i: 0, dist: Infinity }).i;
+            if (si !== index) {
+                index = si; dots.forEach((d, di) => {
+                    d.classList.toggle('bg-white', di === index);
+                    d.classList.toggle('bg-white/50', di !== index);
+                });
+            }
+        }, { passive: true });
+
+        // autoplay + pause on hover/touch
+        function startAuto() { stopAuto(); autoTimer = setInterval(next, DURATION); }
+        function stopAuto() { if (autoTimer) clearInterval(autoTimer); }
+        slider.addEventListener('mouseenter', stopAuto);
+        slider.addEventListener('mouseleave', startAuto);
+        slider.addEventListener('touchstart', stopAuto, { passive: true });
+        slider.addEventListener('touchend', startAuto, { passive: true });
+
+        // keyboard
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') next();
+            if (e.key === 'ArrowLeft') prev();
+        });
+
+        // init
+        goTo(0);
+        startAuto();
+
+        // Toggle mobile nav
+        const btn = document.getElementById("mobileMenuBtn");
+        const menu = document.getElementById("mobileMenu");
+
+        btn.addEventListener("click", () => {
+            if (menu.classList.contains("max-h-0")) {
+                menu.classList.remove("max-h-0");
+                menu.classList.add("max-h-40"); // adjust depending on menu size
+            } else {
+                menu.classList.remove("max-h-40");
+                menu.classList.add("max-h-0");
+            }
+        });
+
+        function openLogin() {
+            document.getElementById("loginModal").classList.remove("hidden");
+        }
+        function closeLogin() {
+            document.getElementById("loginModal").classList.add("hidden");
+        }
+        function login() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+
+            if (user === "admin" && pass === "1234") {
+                closeLogin();
+                document.getElementById("adminPanel").classList.remove("hidden");
+
+                // ✅ Redirect (scroll) to adminPanel by ID
+                document.getElementById("route-admin").scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                alert("Invalid credentials! Try admin / 1234");
+            }
+        }
+        function logout() {
+            document.getElementById("admin").classList.add("hidden");
+        }
+
+
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector(".faq-icon");
+
+            if (content.classList.contains("max-h-40")) {
+                content.classList.remove("max-h-40", "py-3");
+                icon.textContent = "+";
+            } else {
+                document.querySelectorAll(".faq-content").forEach(c => c.classList.remove("max-h-40", "py-3"));
+                document.querySelectorAll(".faq-icon").forEach(i => i.textContent = "+");
+                content.classList.add("max-h-40", "py-3");
+                icon.textContent = "−";
+            }
+
+        }
     </script>
-  </body>
+</body>
 </html>
-
