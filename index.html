@@ -801,7 +801,80 @@
                 imageUrl: 'https://tennews.in/wp-content/uploads/2023/08/PMJDY.jpg',
                 active: true,
                 lastUpdated: new Date().toISOString()
-            }
+                
+            },
+            {
+    id: cryptoRandomId(),
+    name: 'Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)',
+    type: 'Central',
+    category: 'Agriculture',
+    shortDesc: 'Income support of ₹6,000 per year to farmer families, payable in three equal installments.',
+    longDesc: 'PM-KISAN provides direct income support to small and marginal farmer families to supplement their financial needs for procuring inputs for crop health and appropriate yields.',
+    eligibility: ['All landholding farmer families, subject to exclusions', 'Institutional landholders excluded'],
+    benefits: ['₹2,000 every four months', 'Direct benefit transfer (DBT) to bank account'],
+    applyLink: 'https://pmkisan.gov.in',
+    imageUrl: 'https://img.jagranjosh.com/images/2024/February/2922024/Pradhan-Mantri-Kisan-Samman-Nidhi-Yojana-all-details-in-hindi.jpg',
+    active: true,
+    lastUpdated: new Date()
+  },
+  {
+    id: cryptoRandomId(),
+    name: 'Pradhan Mantri Fasal Bima Yojana (PMFBY)',
+    type: 'Central',
+    category: 'Agriculture',
+    shortDesc: 'Crop insurance scheme for farmers against natural calamities.',
+    longDesc: 'PMFBY provides insurance coverage and financial support to farmers in the event of crop failure due to natural calamities, pests, and diseases. It covers yield loss, prevented sowing, post-harvest loss, and localized calamities.',
+    eligibility: ['All farmers (loanee and non-loanee)', 'Sharecroppers and tenant farmers growing notified crops'],
+    benefits: ['Risk coverage against crop failure', 'Stabilizes farmer income', 'Promotes modern farming practices'],
+    applyLink: 'https://pmfby.gov.in',
+    imageUrl: 'https://pmfby.gov.in/images/pmfby.jpg',
+    active: true,
+    lastUpdated: new Date()
+  },
+  {
+    id: cryptoRandomId(),
+    name: 'Pradhan Mantri Ujjwala Yojana (PMUY)',
+    type: 'Central',
+    category: 'Welfare',
+    shortDesc: 'Free LPG connections to women from BPL households.',
+    longDesc: 'PMUY aims to provide clean cooking fuel (LPG) to women below the poverty line, reducing health hazards associated with traditional cooking methods.',
+    eligibility: ['Women belonging to BPL households', 'Identified in SECC list'],
+    benefits: ['Free LPG connection', 'Subsidy on refills'],
+    applyLink: 'https://www.pmuy.gov.in',
+    imageUrl: 'https://www.pmuy.gov.in/assets/images/ujjwala-yojana.jpg',
+    active: true,
+    lastUpdated: new Date()
+  },
+  {
+    id: cryptoRandomId(),
+    name: 'Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana (PM-JAY)',
+    type: 'Central',
+    category: 'Healthcare',
+    shortDesc: 'Health insurance cover of ₹5 lakh per family per year.',
+    longDesc: 'PM-JAY provides health insurance coverage up to ₹5 lakh per family per year for secondary and tertiary care hospitalization for poor and vulnerable families.',
+    eligibility: ['Identified poor and vulnerable families as per SECC database'],
+    benefits: ['Cashless treatment at empaneled hospitals', 'Coverage for over 1,500 procedures'],
+    applyLink: 'https://pmjay.gov.in',
+    imageUrl: 'https://pmjay.gov.in/sites/default/files/inline-images/pmjay.jpg',
+    active: true,
+    lastUpdated: new Date()
+  },
+  {
+    id: cryptoRandomId(),
+    name: 'Yuva Nidhi Scheme (Karnataka)',
+    type: 'State',
+    category: 'Employment',
+    shortDesc: 'Monthly financial aid to unemployed youth in Karnataka.',
+    longDesc: 'The scheme provides ₹3,000/month to degree holders and ₹1,500/month to diploma holders for up to two years or until employment, whichever is earlier.',
+    eligibility: ['Permanent residents of Karnataka', 'Completed degree/diploma in 2022-23 onward', 'Unemployed for at least 6 months'],
+    benefits: ['₹3,000/month for graduates', '₹1,500/month for diploma holders'],
+    applyLink: 'https://sevasindhugs.karnataka.gov.in',
+    imageUrl: 'https://sevasindhukarnataka.com/wp-content/uploads/2023/12/Yuva-Nidhi-Scheme.jpg',
+    active: true,
+    lastUpdated: new Date()
+  }
+];
+
         ];
 
         function cryptoRandomId() {
@@ -1194,5 +1267,6 @@
     </script>
 </body>
 </html>
+
 
 
