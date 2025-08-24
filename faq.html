@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ - Government Schemes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="https://placehold.co/50x50/FF9933/FFFFFF/png?text=Ashoka+Chakra"
+          alt="Government of India emblem - Ashoka Chakra" class="h-10 w-10">
+          <h1 class="text-xl font-bold text-blue-800">
+            <span class="text-orange-600">
+              प्रधानमंत्री
+            </span>
+            <span class="text-green-600">
+              योजना
+            </span>
+          </h1>
+        </div>
+        <!-- Actions -->
+        <div class="flex items-center space-x-4">
+          <nav class="hidden md:flex space-x-8">
+            <a href="index.html" class="hover:text-blue-600 font-medium">
+              Home
+            </a>
+            <a href="index.html" class="hover:text-blue-600 font-medium">
+              Schemes
+            </a>
+          </nav>
+            <a href="faq.html" class="hover:text-blue-600 font-medium">
+              Faq
+            </a>
+            <a href="#/admin" class=" hidden md:block py-2 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-md font-medium transition">
+             Admin
+            </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn" class="md:hidden text-gray-700 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Nav -->
+      <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden bg-white border-t">
+        <nav class="flex flex-col space-y-2 px-4 py-3">
+          <a href="/" class="hover:text-blue-600 font-medium">
+            Schemes
+          </a>
+            <a href="faq.html" class="hover:text-blue-600 font-medium">
+              Faq
+            </a>
+            <a href="#/admin" class=" hidden md:block py-2 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-md font-medium transition">
+             Admin
+          </a>
+        </nav>
+      </div>
+    </header>
+
+  <!-- Hero Header 70vh -->
+  <header class="h-[70vh] bg-gradient-to-r from-orange-500 to-green-600 flex items-center justify-center text-center text-white shadow-lg">
+    <div>
+      <h1 class="text-5xl font-bold mb-4">Frequently Asked Questions</h1>
+      <p class="text-lg max-w-2xl mx-auto">
+        Find answers to the most common questions about Government Schemes, eligibility, and application process.
+      </p>
+      <a href="#faq" 
+         class="mt-6 inline-block px-6 py-3 bg-white text-green-700 font-semibold rounded-lg shadow hover:bg-green-100 transition">
+         Explore FAQs
+      </a>
+    </div>
+  </header>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="container mx-auto px-6 py-12">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">FAQs</h2>
+
+      <!-- FAQ 1 -->
+      <div class="mb-4 border border-gray-200 rounded-lg shadow-sm">
+        <button onclick="toggleFAQ(this)" 
+          class="w-full flex justify-between items-center p-4 bg-white rounded-lg text-left font-medium text-gray-700 hover:bg-green-50 transition">
+          <span>What is Ayushman Bharat Yojana?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content bg-gray-50 text-gray-600 px-4 overflow-hidden max-h-0 transition-all duration-500">
+          Ayushman Bharat provides health insurance up to ₹5 lakhs per family per year for hospitalization.
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="mb-4 border border-gray-200 rounded-lg shadow-sm">
+        <button onclick="toggleFAQ(this)" 
+          class="w-full flex justify-between items-center p-4 bg-white rounded-lg text-left font-medium text-gray-700 hover:bg-green-50 transition">
+          <span>Who is eligible for government schemes?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content bg-gray-50 text-gray-600 px-4 overflow-hidden max-h-0 transition-all duration-500">
+          Eligibility depends on the scheme. It may be based on income, occupation, age, or social category.
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="mb-4 border border-gray-200 rounded-lg shadow-sm">
+        <button onclick="toggleFAQ(this)" 
+          class="w-full flex justify-between items-center p-4 bg-white rounded-lg text-left font-medium text-gray-700 hover:bg-green-50 transition">
+          <span>How can I apply for a scheme?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content bg-gray-50 text-gray-600 px-4 overflow-hidden max-h-0 transition-all duration-500">
+          You can apply online through the official portal or offline via designated government offices.
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="mb-4 border border-gray-200 rounded-lg shadow-sm">
+        <button onclick="toggleFAQ(this)" 
+          class="w-full flex justify-between items-center p-4 bg-white rounded-lg text-left font-medium text-gray-700 hover:bg-green-50 transition">
+          <span>Where can I find official scheme details?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content bg-gray-50 text-gray-600 px-4 overflow-hidden max-h-0 transition-all duration-500">
+          Official government websites and portals publish scheme guidelines, application forms, and updates.
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="mb-4 border border-gray-200 rounded-lg shadow-sm">
+        <button onclick="toggleFAQ(this)" 
+          class="w-full flex justify-between items-center p-4 bg-white rounded-lg text-left font-medium text-gray-700 hover:bg-green-50 transition">
+          <span>Are government schemes free or paid?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-content bg-gray-50 text-gray-600 px-4 overflow-hidden max-h-0 transition-all duration-500">
+          Most schemes are free, but some may require minimal contributions or co-payments depending on benefits.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-gray-300 py-6 mt-10 text-center">
+    <p>&copy; 2025 Government Schemes Portal. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
