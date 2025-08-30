@@ -1112,7 +1112,7 @@
             if (!s) { location.hash = '#/home'; return; }
             showRoute('details');
 
-            $('#detailsImage').src = s.imageUrl || 'https://images.unsplash.com/photo-1519682577862-22b62b24e493?q=80&w=1400&auto=format&fit=crop';
+            $('#detailsImage').src = s.imageUrl;
             $('#detailsTitle').textContent = s.name;
             $('#detailsType').textContent = s.type;
             $('#detailsCategory').textContent = s.category;
