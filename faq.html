@@ -1,155 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>FAQ - Government Schemes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradhan Mantri Yojana - FAQs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-gray-100">
-    <header class="bg-white shadow-md sticky top-0 z-50">
-      <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <!-- Logo -->
-        <div class="flex items-center space-x-2">
-          <img src="https://placehold.co/50x50/FF9933/FFFFFF/png?text=Ashoka+Chakra"
-          alt="Government of India emblem - Ashoka Chakra" class="h-10 w-10">
-          <h1 class="text-xl font-bold text-blue-800">
-            <span class="text-orange-600">
-              प्रधानमंत्री
-            </span>
-            <span class="text-green-600">
-              योजना
-            </span>
-          </h1>
-        </div>
-        <!-- Actions -->
-        <div class="flex items-center space-x-4">
-          <nav class="hidden md:flex space-x-8">
-            <a href="index.html" class="hover:text-blue-600 font-medium">
-              Home
+<body class="bg-gray-100 min-h-screen">
+     <!-- Header -->
+    <header class="bg-white text-black shadow-lg shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="#" class="custom-logo">
+              <div class="logo">
+                <img src="img/logo.png" alt="" />
+              </div>
             </a>
-            <a href="index.html" class="hover:text-blue-600 font-medium">
-              Schemes
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-1">
+            <a
+              href="index.html"
+              class="px-4 py-2 rounded-lg hover:bg-orange-500  hover:text-white transition flex items-center"
+            >
+              <i class="fas fa-home mr-2"></i> Home
+            </a>
+            <a
+              href="news.html"
+              class="px-4 py-2 rounded-lg hover:bg-orange-500 hover:text-white transition flex items-center"
+            >
+              <i class="fas fa-newspaper mr-2"></i> News
+            </a>
+            <a
+              href="faq.html"
+              class="px-4 py-2 rounded-lg hover:bg-orange-500 hover:text-white transition flex items-center"
+            >
+              <i class="fas fa-question-circle mr-2"></i> FAQs
             </a>
           </nav>
-            <a href="faq.html" class="hover:text-blue-600 font-medium">
-              Faq
-            </a>
-            <a href="#/admin" class=" hidden md:block py-2 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-md font-medium transition">
-             Admin
-            </a>
 
-          <!-- Mobile Menu Button -->
-          <button id="mobileMenuBtn" class="md:hidden text-gray-700 focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-button"
+            class="md:hidden text-white p-2 rounded-lg bg-orange-500"
+          >
+            <i class="fas fa-bars text-xl"></i>
           </button>
         </div>
-      </div>
-      <!-- Mobile Nav -->
-      <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out md:hidden bg-white border-t">
-        <nav class="flex flex-col space-y-2 px-4 py-3">
-          <a href="/" class="hover:text-blue-600 font-medium">
-            Schemes
-          </a>
-            <a href="faq.html" class="hover:text-blue-600 font-medium">
-              Faq
+
+        <!-- Mobile Navigation -->
+        <div
+          id="mobile-menu"
+          class="mobile-menu hidden md:hidden mt-4 pb-4 transform origin-top scale-95 opacity-0"
+        >
+          <div class="flex flex-col space-y-2">
+            <a
+              href="#"
+              class="px-4 py-2 rounded-lg hover:bg-orange-500 transition flex items-center"
+            >
+              <i class="fas fa-home mr-3 w-5 text-center"></i> Home
             </a>
-            <a href="#/admin" class=" hidden md:block py-2 px-4 bg-orange-500 hover:bg-orange-600 text-white rounded-md font-medium transition">
-             Admin
-          </a>
-        </nav>
+             <a
+              href="news.html"
+              class="px-4 py-2 rounded-lg hover:bg-orange-500 hover:text-white transition flex items-center"
+            >
+              <i class="fas fa-newspaper mr-2"></i> News
+            </a>
+            <a
+              href="#"
+              class="px-4 py-2 rounded-lg hover:bg-orange-500 transition flex items-center"
+            >
+              <i class="fas fa-question-circle mr-3 w-5 text-center"></i> FAQs
+            </a>
+          </div>
+        </div>
       </div>
     </header>
 
-  <!-- Hero Header 70vh -->
-  <header class="h-[70vh] bg-gradient-to-r from-orange-500 to-green-600 flex items-center justify-center text-center text-white shadow-lg">
-    <div>
-      <h1 class="text-5xl font-bold mb-4">Frequently Asked Questions</h1>
-      <p class="text-lg max-w-2xl mx-auto">
-        Find answers to the most common questions about Government Schemes, eligibility, and application process.
-      </p>
-      <a href="#faq" 
-         class="mt-6 inline-block px-6 py-3 bg-white text-green-700 font-semibold rounded-lg shadow hover:bg-green-100 transition">
-         Explore FAQs
-      </a>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Frequently Asked Questions</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Find answers to common questions about Pradhan Mantri Yojana schemes</p>
+            
+            <!-- Search Box -->
+            <div class="max-w-2xl mx-auto">
+                <div class="search-filter bg-white rounded-full shadow-lg p-2 flex">
+                    <input type="text" id="faq-search" placeholder="Search for answers..." class="w-full py-3 px-6 rounded-full text-gray-800 focus:outline-none">
+                    <button id="faq-search-btn" class="btn-green p-3 rounded-full w-14 h-14 flex items-center justify-center">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Breadcrumb -->
+        <div class="flex items-center text-sm text-gray-600 mb-6">
+            <a href="index.html" class="hover:text-orange-600"><i class="fas fa-home mr-2"></i>Home</a>
+            <span class="mx-2">/</span>
+            <span>FAQs</span>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- FAQ Categories -->
+            <div class="lg:w-1/4">
+                <div class="bg-white rounded-xl shadow-lg p-6 sticky top-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Question</h3>
+                    <!-- <div class="space-y-2">
+                        <button class="w-full text-left py-2 px-4 rounded-lg bg-orange-100 text-orange-700 font-medium">General Questions</button>
+                        <button class="w-full text-left py-2 px-4 rounded-lg hover:bg-gray-100 text-gray-700">Eligibility</button>
+                        <button class="w-full text-left py-2 px-4 rounded-lg hover:bg-gray-100 text-gray-700">Application Process</button>
+                        <button class="w-full text-left py-2 px-4 rounded-lg hover:bg-gray-100 text-gray-700">Documents Required</button>
+                        <button class="w-full text-left py-2 px-4 rounded-lg hover:bg-gray-100 text-gray-700">Benefits & Features</button>
+                        <button class="w-full text-left py-2 px-4 rounded-lg hover:bg-gray-100 text-gray-700">Troubleshooting</button>
+                    </div> -->
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-bold text-gray-800 mb-4">Need more help?</h4>
+                        <p class="text-gray-600 mb-4">Can't find the answer you're looking for? Please get in touch with our support team.</p>
+                        <button class="btn-orange w-full py-3 rounded-lg">
+                            <i class="fas fa-envelope mr-2"></i> Contact Support
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Content -->
+            <div class="lg:w-3/4">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- General Questions -->
+                    <div class="p-6 border-b border-gray-200">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">General Questions</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(1)">
+                                <h3 class="text-lg font-medium">What is Pradhan Mantri Yojana?</h3>
+                                <span class="faq-icon" id="icon-1"><i class="fas fa-chevron-down text-orange-600"></i></span>
+                            </div>
+                            <div class="faq-answer" id="answer-1">
+                                <div class="pb-6 text-gray-700">
+                                    <p>Pradhan Mantri Yojana is an umbrella term for various government schemes launched by the Prime Minister of India. These schemes are designed to address specific needs of different sections of society and promote welfare and development across the nation.</p>
+                                    <p class="mt-2">The schemes cover areas such as agriculture, healthcare, housing, education, financial inclusion, and social welfare.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(2)">
+                                <h3 class="text-lg font-medium">How can I check my eligibility for a scheme?</h3>
+                                <span class="faq-icon" id="icon-2"><i class="fas fa-chevron-down text-orange-600"></i></span>
+                            </div>
+                            <div class="faq-answer" id="answer-2">
+                                <div class="pb-6 text-gray-700">
+                                    <p>Eligibility criteria vary for each scheme. You can check your eligibility by:</p>
+                                    <ol class="list-decimal pl-5 mt-2 space-y-2">
+                                        <li>Visiting the official website of the specific scheme</li>
+                                        <li>Using the eligibility checker tool on our website</li>
+                                        <li>Contacting the helpline number provided for each scheme</li>
+                                        <li>Visiting your nearest Common Service Center (CSC)</li>
+                                    </ol>
+                                    <p class="mt-3">Generally, eligibility is based on factors like income, age, gender, occupation, and category.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(3)">
+                                <h3 class="text-lg font-medium">Are these schemes available throughout India?</h3>
+                                <span class="faq-icon" id="icon-3"><i class="fas fa-chevron-down text-orange-600"></i></span>
+                            </div>
+                            <div class="faq-answer" id="answer-3">
+                                <div class="pb-6 text-gray-700">
+                                    <p>Yes, most Pradhan Mantri schemes are available across all states and union territories of India. However, some schemes might have specific implementation patterns or additional benefits in certain regions based on local requirements.</p>
+                                    <p class="mt-2">It's always best to check with local authorities or the scheme's official website for any region-specific variations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Application Process -->
+                    <div class="p-6 border-b border-gray-200">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Application Process</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(4)">
+                                <h3 class="text-lg font-medium">How can I apply for a scheme?</h3>
+                                <span class="faq-icon" id="icon-4"><i class="fas fa-chevron-down text-orange-600"></i></span>
+                            </div>
+                            <div class="faq-answer" id="answer-4">
+                                <div class="pb-6 text-gray-700">
+                                    <p>There are multiple ways to apply for Pradhan Mantri schemes:</p>
+                                    <ol class="list-decimal pl-5 mt-2 space-y-2">
+                                        <li><strong>Online:</strong> Through the official website or mobile app of the scheme</li>
+                                        <li><strong>Offline:</strong> By visiting designated centers like Common Service Centers (CSCs), banks, or government offices</li>
+                                        <li><strong>Through representatives:</strong> Authorized representatives can help with the application process</li>
+                                    </ol>
+                                    <p class="mt-3">Most schemes recommend online application for faster processing and transparency.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(5)">
+                                <h3 class="text-lg font-medium">What documents are required for application?</h3>
+                                <span class="faq-icon" id="icon-5"><i class="fas fa-chevron-down text-orange-600"></i></span>
+                            </div>
+                            <div class="faq-answer" id="answer-5">
+                                <div class="pb-6 text-gray-700">
+                                    <p>While document requirements vary by scheme, commonly required documents include:</p>
+                                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                                        <li>Aadhaar card</li>
+                                        <li>PAN card</li>
+                                        <li>Proof of address (ration card, utility bill, etc.)</li>
+                                        <li>Proof of income</li>
+                                        <li>Bank account details</li>
+                                        <li>Passport-sized photographs</li>
+                                        <li>Caste certificate (if applicable)</li>
+                                        <li>Any scheme-specific documents (e.g., land documents for PM-KISAN)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(6)">
+                                <h3 class="text-lg font-medium">How long does it take to process an application?</h3>
+                                <span class="faq-icon" id="icon-6"><i class="fas fa-chevron-down text-orange-600"></i></span>
+                            </div>
+                            <div class="faq-answer" id="answer-6">
+                                <div class="pb-6 text-gray-700">
+                                    <p>Processing time varies by scheme and the completeness of your application. Generally:</p>
+                                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                                        <li>Simple applications may be processed within 15-30 days</li>
+                                        <li>Schemes requiring verification may take 30-60 days</li>
+                                        <li>Complex applications or those requiring field verification may take longer</li>
+                                    </ul>
+                                    <p class="mt-3">You can usually track your application status online through the scheme's portal using your application reference number.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Benefits & Features -->
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Benefits & Features</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(7)">
+                                <h3 class="text-lg font-medium">What are the benefits of these schemes?</h3>
+                                <span class="faq-icon" id="icon-7"><i class="fas fa-chevron-down text-orange-600"></i></span>
+                            </div>
+                            <div class="faq-answer" id="answer-7">
+                                <div class="pb-6 text-gray-700">
+                                    <p>Pradhan Mantri schemes offer various benefits depending on the specific program:</p>
+                                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                                        <li>Financial assistance and subsidies</li>
+                                        <li>Insurance coverage at nominal premiums</li>
+                                        <li>Access to affordable housing</li>
+                                        <li>Healthcare benefits and insurance</li>
+                                        <li>Skill development and employment opportunities</li>
+                                        <li>Pension benefits</li>
+                                        <li>Support for entrepreneurship and business ventures</li>
+                                        <li>Educational scholarships and support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(8)">
+                                <h3 class="text-lg font-medium">Are there any costs involved in applying?</h3>
+                                <span class="faq-icon" id="icon-8"><i class="fas fa-chevron-down text-orange-600"></i></span>
+                            </div>
+                            <div class="faq-answer" id="answer-8">
+                                <div class="pb-6 text-gray-700">
+                                    <p>Most Pradhan Mantri schemes have no application fees. However:</p>
+                                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                                        <li>Some schemes may require nominal premiums for insurance-based programs</li>
+                                        <li>There might minimal charges if applying through Common Service Centers (CSCs)</li>
+                                        <li>Some schemes may require beneficiaries to contribute a small percentage of the total cost</li>
+                                    </ul>
+                                    <p class="mt-3">Always check the official scheme guidelines for any applicable costs before applying.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(9)">
+                                <h3 class="text-lg font-medium">How will I receive the benefits?</h3>
+                                <span class="faq-icon" id="icon-9"><i class="fas fa-chevron-down text-orange-600"></i></span>
+                            </div>
+                            <div class="faq-answer" id="answer-9">
+                                <div class="pb-6 text-gray-700">
+                                    <p>Benefits are typically delivered through:</p>
+                                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                                        <li><strong>Direct Benefit Transfer (DBT):</strong> Financial benefits are transferred directly to your bank account</li>
+                                        <li><strong>In-kind benefits:</strong> Some schemes provide physical assets like houses, toilets, or LPG connections</li>
+                                        <li><strong>Service delivery:</strong> Services like insurance coverage, healthcare, or skill training are provided directly</li>
+                                        <li><strong>Subsidies:</strong> Applied directly to bills or purchases (e.g., LED bulbs, LPG cylinders)</li>
+                                    </ul>
+                                    <p class="mt-3">Most schemes now use DBT to ensure transparency and prevent leakages.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Still have questions -->
+                <div class="bg-orange-50 border border-orange-200 rounded-lg p-6 mt-8 text-center">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Still have questions?</h3>
+                    <p class="text-gray-700 mb-4">Can't find the answer you're looking for? Please get in touch with our friendly team.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="btn-orange px-6 py-3 rounded-lg">
+                            <i class="fas fa-phone-alt mr-2"></i> Call Helpdesk
+                        </button>
+                        <button class="bg-white text-orange-600 border border-orange-600 hover:bg-orange-50 px-6 py-3 rounded-lg">
+                            <i class="fas fa-envelope mr-2"></i> Email Support
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-b from-green-700 to-green-800 text-white py-12 mt-12"
+    >
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h4 class="text-xl font-bold mb-4">Pradhan Mantri Yojana</h4>
+            <p class="text-green-100">
+              A comprehensive platform to learn about various government
+              initiatives and how they can benefit you.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-green-100 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-green-100 hover:text-white"
+                  >All Schemes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-green-100 hover:text-white"
+                  >Application Process</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-green-100 hover:text-white"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold mb-4">Categories</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-green-100 hover:text-white"
+                  >Agriculture</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-green-100 hover:text-white">Health</a>
+              </li>
+              <li>
+                <a href="#" class="text-green-100 hover:text-white"
+                  >Education</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-green-100 hover:text-white"
+                  >Financial</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold mb-4">Connect With Us</h4>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="bg-green-600 hover:bg-green-500 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-green-600 hover:bg-green-500 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-green-600 hover:bg-green-500 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+            <div class="mt-6">
+              <h5 class="font-bold mb-2">Download App</h5>
+              <div class="flex space-x-2">
+                <button
+                  class="bg-green-600 hover:bg-green-500 px-3 py-2 rounded flex items-center"
+                >
+                  <i class="fab fa-google-play mr-2"></i> Play Store
+                </button>
+                <button
+                  class="bg-green-600 hover:bg-green-500 px-3 py-2 rounded flex items-center"
+                >
+                  <i class="fab fa-apple mr-2"></i> App Store
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-green-600 mt-8 pt-8 text-center text-green-200"
+        >
+          <p>© 2023 Pradhan Mantri Yojana. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp share button (floating) -->
+    <div class="fixed bottom-6 right-6">
+        <a href="#" class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
     </div>
-  </header>
 
-  <!-- FAQ Section -->
-  <section id="faq" class="container mx-auto px-6 py-12">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">FAQs</h2>
-
-      <!-- FAQ 1 -->
-      <div class="mb-4 border border-gray-200 rounded-lg shadow-sm">
-        <button onclick="toggleFAQ(this)" 
-          class="w-full flex justify-between items-center p-4 bg-white rounded-lg text-left font-medium text-gray-700 hover:bg-green-50 transition">
-          <span>What is Ayushman Bharat Yojana?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-content bg-gray-50 text-gray-600 px-4 overflow-hidden max-h-0 transition-all duration-500">
-          Ayushman Bharat provides health insurance up to ₹5 lakhs per family per year for hospitalization.
-        </div>
-      </div>
-
-      <!-- FAQ 2 -->
-      <div class="mb-4 border border-gray-200 rounded-lg shadow-sm">
-        <button onclick="toggleFAQ(this)" 
-          class="w-full flex justify-between items-center p-4 bg-white rounded-lg text-left font-medium text-gray-700 hover:bg-green-50 transition">
-          <span>Who is eligible for government schemes?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-content bg-gray-50 text-gray-600 px-4 overflow-hidden max-h-0 transition-all duration-500">
-          Eligibility depends on the scheme. It may be based on income, occupation, age, or social category.
-        </div>
-      </div>
-
-      <!-- FAQ 3 -->
-      <div class="mb-4 border border-gray-200 rounded-lg shadow-sm">
-        <button onclick="toggleFAQ(this)" 
-          class="w-full flex justify-between items-center p-4 bg-white rounded-lg text-left font-medium text-gray-700 hover:bg-green-50 transition">
-          <span>How can I apply for a scheme?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-content bg-gray-50 text-gray-600 px-4 overflow-hidden max-h-0 transition-all duration-500">
-          You can apply online through the official portal or offline via designated government offices.
-        </div>
-      </div>
-
-      <!-- FAQ 4 -->
-      <div class="mb-4 border border-gray-200 rounded-lg shadow-sm">
-        <button onclick="toggleFAQ(this)" 
-          class="w-full flex justify-between items-center p-4 bg-white rounded-lg text-left font-medium text-gray-700 hover:bg-green-50 transition">
-          <span>Where can I find official scheme details?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-content bg-gray-50 text-gray-600 px-4 overflow-hidden max-h-0 transition-all duration-500">
-          Official government websites and portals publish scheme guidelines, application forms, and updates.
-        </div>
-      </div>
-
-      <!-- FAQ 5 -->
-      <div class="mb-4 border border-gray-200 rounded-lg shadow-sm">
-        <button onclick="toggleFAQ(this)" 
-          class="w-full flex justify-between items-center p-4 bg-white rounded-lg text-left font-medium text-gray-700 hover:bg-green-50 transition">
-          <span>Are government schemes free or paid?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-content bg-gray-50 text-gray-600 px-4 overflow-hidden max-h-0 transition-all duration-500">
-          Most schemes are free, but some may require minimal contributions or co-payments depending on benefits.
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <footer class="bg-gray-900 text-gray-300 py-6 mt-10 text-center">
-    <p>&copy; 2025 Government Schemes Portal. All rights reserved.</p>
-  </footer>
-
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

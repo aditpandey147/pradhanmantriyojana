@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM India News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white text-black shadow-lg shadow-md sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="#" class="custom-logo">
+              <div class="logo">
+                <img src="img/logo.png" alt="" />
+              </div>
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex space-x-1">
+            <a
+              href="index.html"
+              class="px-4 py-2 rounded-lg hover:bg-orange-500 hover:text-white transition flex items-center"
+            >
+              <i class="fas fa-home mr-2"></i> Home
+            </a>
+            <a
+              href="news.html"
+              class="px-4 py-2 rounded-lg hover:bg-orange-500 hover:text-white transition flex items-center"
+            >
+              <i class="fas fa-newspaper mr-2"></i> News
+            </a>
+            <a
+              href="faq.html"
+              class="px-4 py-2 rounded-lg hover:bg-orange-500 hover:text-white transition flex items-center"
+            >
+              <i class="fas fa-question-circle mr-2"></i> FAQs
+            </a>
+          </nav>
+
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-button"
+            class="md:hidden text-white p-2 rounded-lg bg-orange-500"
+          >
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div
+          id="mobile-menu"
+          class="mobile-menu hidden md:hidden mt-4 pb-4 transform origin-top scale-95 opacity-0"
+        >
+          <div class="flex flex-col space-y-2">
+            <a
+              href="#"
+              class="px-4 py-2 rounded-lg hover:bg-orange-500 transition flex items-center"
+            >
+              <i class="fas fa-home mr-3 w-5 text-center"></i> Home
+            </a>
+            <a
+              href="#"
+              class="px-4 py-2 rounded-lg hover:bg-orange-500 transition flex items-center"
+            >
+              <i class="fas fa-question-circle mr-3 w-5 text-center"></i> FAQs
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- News Page Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Breadcrumb -->
+        <div class="flex items-center text-sm text-gray-600 mb-6">
+            <a href="index.html" class="hover:text-orange-600"><i class="fas fa-home mr-2"></i> Home</a>
+            <span class="mx-2">/</span>
+            <span class="text-orange-600">News</span>
+        </div>
+
+        <!-- Page Header -->
+        <div class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">PM India News</h1>
+            <p class="text-gray-600 max-w-3xl mx-auto">Latest news and updates about the Prime Minister of India</p>
+        </div>
+
+        <!-- Date Filter Section -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">Filter News by Date</h2>
+            <div class="flex flex-col md:flex-row gap-4 items-center">
+                <div class="flex-1">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Select Date</label>
+                    <input type="date" id="date-filter" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                </div>
+                <div class="flex items-center">
+                    <span class="text-gray-700 mr-3">Quick filters:</span>
+                    <button class="category-filter active px-4 py-2 rounded-lg bg-orange-100 text-orange-800 font-medium mr-2" data-days="0">Today</button>
+                    <button class="category-filter px-4 py-2 rounded-lg bg-gray-100 text-gray-800 hover:bg-orange-100 hover:text-orange-800 mr-2" data-days="1">Yesterday</button>
+                    <button class="category-filter px-4 py-2 rounded-lg bg-gray-100 text-gray-800 hover:bg-orange-100 hover:text-orange-800" data-days="7">Last 7 Days</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- News Grid -->
+        <div id="news-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- News items will be loaded here -->
+        </div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="hidden text-center py-12">
+            <i class="fas fa-newspaper text-4xl text-gray-300 mb-4"></i>
+            <h3 class="text-xl font-bold text-gray-600">No news found</h3>
+            <p class="text-gray-500">Try selecting a different date or check back later for updates</p>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading-indicator" class="text-center py-12">
+            <div class="inline-flex items-center">
+                <svg class="animate-spin -ml-1 mr-3 h-8 w-8 text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span class="text-lg text-gray-600">Loading news...</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- News Detail Popup -->
+    <div class="popup-overlay" id="news-popup">
+        <div class="popup-content">
+            <div class="popup-close" id="popup-close">
+                <i class="fas fa-times text-xl"></i>
+            </div>
+            <img id="popup-image" src="" alt="" class="popup-image">
+            <div class="popup-body">
+                <div class="flex items-center mb-4">
+                    <span id="popup-category" class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded"></span>
+                    <span id="popup-date" class="text-gray-500 text-sm ml-3"></span>
+                    <span id="popup-source" class="text-gray-500 text-sm ml-auto"></span>
+                </div>
+                <h2 id="popup-title" class="text-2xl font-bold text-gray-800 mb-4"></h2>
+                <div id="popup-content" class="text-gray-700 space-y-4"></div>
+                
+                <div class="share-buttons">
+                    <a href="#" class="share-button facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="share-button twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="share-button whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="share-button linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-b from-green-700 to-green-800 text-white py-12 mt-12"
+    >
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h4 class="text-xl font-bold mb-4">Pradhan Mantri Yojana</h4>
+            <p class="text-green-100">
+              A comprehensive platform to learn about various government
+              initiatives and how they can benefit you.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-green-100 hover:text-white">Home</a>
+              </li>
+              <li>
+                <a href="#" class="text-green-100 hover:text-white"
+                  >All Schemes</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-green-100 hover:text-white"
+                  >Application Process</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-green-100 hover:text-white"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold mb-4">Categories</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-green-100 hover:text-white"
+                  >Agriculture</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-green-100 hover:text-white">Health</a>
+              </li>
+              <li>
+                <a href="#" class="text-green-100 hover:text-white"
+                  >Education</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-green-100 hover:text-white"
+                  >Financial</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-xl font-bold mb-4">Connect With Us</h4>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="bg-green-600 hover:bg-green-500 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-green-600 hover:bg-green-500 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-green-600 hover:bg-green-500 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+            <div class="mt-6">
+              <h5 class="font-bold mb-2">Subscribe to News</h5>
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  class="flex-grow py-2 px-3 rounded-l-lg text-gray-800 focus:outline-none"
+                />
+                <button
+                  class="bg-orange-600 hover:bg-orange-700 px-3 py-2 rounded-r-lg"
+                >
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-green-600 mt-8 pt-8 text-center text-green-200"
+        >
+          <p>© 2023 Pradhan Mantri Yojana. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/news.js"></script>
+</body>
+</html>
