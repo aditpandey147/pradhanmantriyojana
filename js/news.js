@@ -305,3 +305,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Function to share on WhatsApp
+function shareOnWhatsApp() {
+  const shareText = `Check out this PM Scheme: ${currentScheme.name} - ${currentScheme.description}. Learn more at: ${window.location.href}`;
+  const encodedText = encodeURIComponent(shareText);
+  window.open(`https://wa.me/?text=${encodedText}`, "_blank");
+}
