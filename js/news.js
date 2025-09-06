@@ -312,3 +312,71 @@ function shareOnWhatsApp() {
   const encodedText = encodeURIComponent(shareText);
   window.open(`https://wa.me/?text=${encodedText}`, "_blank");
 }
+
+// Mobile menu functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  mobileMenuButton.addEventListener("click", function () {
+    // Toggle mobile menu visibility
+    if (mobileMenu.classList.contains("hidden")) {
+      mobileMenu.classList.remove("hidden");
+      setTimeout(() => {
+        mobileMenu.classList.remove("scale-95", "opacity-0");
+      }, 10);
+    } else {
+      mobileMenu.classList.add("scale-95", "opacity-0");
+      setTimeout(() => {
+        mobileMenu.classList.add("hidden");
+      }, 300);
+    }
+
+    // Toggle hamburger icon
+    const icon = mobileMenuButton.querySelector("i");
+    if (icon.classList.contains("fa-bars")) {
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-times");
+    } else {
+      icon.classList.remove("fa-times");
+      icon.classList.add("fa-bars");
+    }
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function (event) {
+    if (
+      !mobileMenu.contains(event.target) &&
+      !mobileMenuButton.contains(event.target) &&
+      !mobileMenu.classList.contains("hidden")
+    ) {
+      mobileMenu.classList.add("scale-95", "opacity-0");
+      setTimeout(() => {
+        mobileMenu.classList.add("hidden");
+      }, 300);
+
+      // Reset hamburger icon
+      const icon = mobileMenuButton.querySelector("i");
+      icon.classList.remove("fa-times");
+      icon.classList.add("fa-bars");
+    }
+  });
+
+  // Prevent menu from closing when clicking inside it
+  mobileMenu.addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+
+  // Mobile submenu toggle
+  const mobileSubmenuButtons = mobileMenu.querySelectorAll("button");
+  mobileSubmenuButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const submenu = this.nextElementSibling;
+      if (submenu.classList.contains("hidden")) {
+        submenu.classList.remove("hidden");
+      } else {
+        submenu.classList.add("hidden");
+      }
+    });
+  });
+});
