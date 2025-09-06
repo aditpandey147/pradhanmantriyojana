@@ -17,7 +17,7 @@ function createSlug(text) {
 // Sample data for PM schemes
 const schemes = [
   {
-    id: generateRandomId(),
+    id: "generateRandomId()",
     name: "PM-KISAN",
     description: "Pradhan Mantri Kisan Samman Nidhi",
     fullName: "Pradhan Mantri Kisan Samman Nidhi",
@@ -32,10 +32,10 @@ const schemes = [
     ministry: "Ministry of Agriculture & Farmers Welfare",
     status: "Active",
     longDescription:
-      "The Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) scheme is one of the largest direct benefit transfer (DBT) programs in the world, designed to provide assured income support to farmers and ensure financial stability in rural India. Launched in February 2019, this scheme reflects the Government of India's commitment to improving the livelihood of small and marginal farmers who form the backbone of the Indian agricultural economy. Under PM-KISAN, eligible farmers receive a direct transfer of ₹6,000 annually, credited in three equal installments of ₹2,000 each to their bank accounts through Direct Benefit Transfer. This ensures transparency, eliminates middlemen, and guarantees timely support.\n\nThe scheme targets small and marginal landholder farmer families with cultivable land of up to two hectares. To qualify, farmers must submit Aadhaar-linked bank accounts, landholding records, and meet the prescribed eligibility criteria. Certain categories are excluded, including institutional landholders, income tax payers, and professionals such as doctors, engineers, and government employees above a certain rank. This selective inclusion ensures that the benefits reach those who genuinely depend on agriculture for survival.\n\nThe financial aid provided through PM-KISAN is not tied to crop cultivation or specific expenditures, giving farmers the freedom to use the funds for seeds, fertilizers, farm equipment, household needs, or loan repayment. For many families, this scheme acts as a safety net during times of distress caused by crop failures, natural calamities, or fluctuating market prices. By reducing dependence on informal credit and moneylenders, the scheme contributes to lowering rural indebtedness.\n\nThe PM-KISAN initiative also complements other government programs like the Pradhan Mantri Fasal Bima Yojana (PMFBY) and Pradhan Mantri Krishi Sinchayee Yojana (PMKSY), creating a holistic support framework for farmers. With the help of technology, the scheme uses a centralized online portal (pmkisan.gov.in) where farmers can register, check their installment status, and resolve grievances. Transparency and accountability are further strengthened through Aadhaar authentication and electronic fund transfer.\n\nAs of now, PM-KISAN continues to be a cornerstone policy in India's agricultural support system. It has disbursed billions of rupees to millions of farmers, empowering rural households and contributing to poverty alleviation. By offering direct financial support, the scheme reduces uncertainty in agricultural income and strengthens the government’s vision of doubling farmers’ income. Overall, PM-KISAN has emerged as a lifeline for India’s small and marginal farmers, helping them sustain livelihoods, invest in productivity, and achieve economic resilience.",
+      "The Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) scheme is one of the largest direct benefit transfer (DBT) programs in the world, designed to provide assured income support to farmers and ensure financial stability in rural India. Launched in February 2019, this scheme reflects the Government of India's commitment to improving the livelihood of small and marginal farmers who form the backbone of the Indian agricultural economy. Under PM-KISAN, eligible farmers receive a direct transfer of ₹6,000 annually, credited in three equal installments of ₹2,000 each to their bank accounts through Direct Benefit Transfer. This ensures transparency, eliminates middlemen, and guarantees timely support.\n\nThe scheme targets small and marginal landholder farmer families with cultivable land of up to two hectares. To qualify, farmers must submit Aadhaar-linked bank accounts, landholding records, and meet the prescribed eligibility criteria. Certain categories are excluded, including institutional landholders, income tax payers, and professionals such as doctors, engineers, and government employees above a certain rank. This selective inclusion ensures that the benefits reach those who genuinely depend on agriculture for survival.\n\nThe financial aid provided through PM-KISAN is not tied to crop cultivation or specific expenditures, giving farmers the freedom to use the funds for seeds, fertilizers, farm equipment, household needs, or loan repayment. For many families, this scheme acts as a safety net during times of distress caused by crop failures, natural calamities, or fluctuating market prices. By reducing dependence on informal credit and moneylenders, the scheme contributes to lowering rural indebtedness.\n\nThe PM-KISAN initiative also complements other government programs like the Pradhan Mantri Fasal Bima Yojana (PMFBY) and Pradhan Mantri Krishi Sinchayee Yojana (PMKSY), creating a holistic support framework for farmers. With the help of technology, the scheme uses a centralized online portal (pmkisan.gov.in) where farmers can register, check their installment status, and resolve grievances. Transparency and accountability are further strengthened through Aadhaar authentication and electronic fund transfer.\n\nAs of now, PM-KISAN continues to be a cornerstone policy in India's agricultural support system. It has disbursed billions of rupees to millions of farmers, empowering rural households and contributing to poverty alleviation. By offering direct financial support, the scheme reduces uncertainty in agricultural income and strengthens the government's vision of doubling farmers' income. Overall, PM-KISAN has emerged as a lifeline for India's small and marginal farmers, helping them sustain livelihoods, invest in productivity, and achieve economic resilience.",
   },
   {
-    id: generateRandomId(),
+    id: "generateRandomId()",
     name: "PM-JAY",
     description: "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana",
     fullName: "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana",
@@ -48,9 +48,11 @@ const schemes = [
     category: "Health",
     ministry: "Ministry of Health",
     status: "Active",
+    longDescription:
+      "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (PM-JAY) is the world's largest health insurance scheme, providing comprehensive hospitalization coverage to over 50 crore beneficiaries from poor and vulnerable families. Launched in September 2018, this revolutionary scheme offers cashless and paperless access to quality healthcare services at empaneled hospitals across India. PM-JAY covers secondary and tertiary care hospitalization expenses up to ₹5 lakh per family per year, with no restrictions on family size, age, or gender. The scheme includes 1,574 medical procedures covering all pre-existing conditions, day-care treatments, and diagnostic services.\n\nPM-JAY operates on a trust-based model where beneficiaries can avail treatment at any empaneled hospital without paying anything at the point of service. The scheme uses robust technology systems for verification, claim processing, and fraud detection, ensuring efficient delivery of services. It has significantly reduced out-of-pocket healthcare expenses for millions of families, preventing them from falling into poverty due to medical costs. PM-JAY represents a paradigm shift in healthcare delivery, moving from sectoral and fragmented approach to a comprehensive need-based approach that prioritizes the health needs of the most vulnerable sections of society.",
   },
   {
-    id: generateRandomId(),
+    id: "generateRandomId()",
     name: "PM-UJJWALA",
     description: "Pradhan Mantri Ujjwala Yojana",
     fullName: "Pradhan Mantri Ujjwala Yojana",
@@ -63,9 +65,11 @@ const schemes = [
     category: "Social Welfare",
     ministry: "Ministry of Petroleum",
     status: "Active",
+    longDescription:
+      "Pradhan Mantri Ujjwala Yojana (PMUY) is a transformative social welfare scheme launched to provide clean cooking fuel to women from economically disadvantaged households. Before this scheme, millions of households in India relied on traditional cooking methods using firewood, coal, and dung cakes, which caused severe indoor air pollution and health hazards. PMUY aims to safeguard women's health by providing free LPG connections, reducing drudgery, and empowering women with clean energy access.\n\nThe scheme provides financial support of ₹1,600 for each LPG connection to Below Poverty Line (BPL) households, which includes the security deposit for the cylinder, pressure regulator, booklet, and hose. Beneficiaries receive the first refill and stove free of cost, with the option to purchase subsequent refills through affordable EMI options. PMUY has particularly focused on SC/ST households, forest dwellers, tea gardens, islands, and river islands to ensure inclusive coverage.\n\nBeyond health benefits, PMUY has generated significant employment opportunities in the LPG distribution network and reduced the time women spend on cooking and collecting firewood. The scheme has also contributed to environmental conservation by reducing deforestation and carbon emissions. With over 8 crore connections provided, PMUY has emerged as one of the world's largest clean energy access programs, transforming lives and promoting sustainable development across rural India.",
   },
   {
-    id: generateRandomId(),
+    id: "generateRandomId()",
     name: "PM-AWAS",
     description: "Pradhan Mantri Awas Yojana",
     fullName: "Pradhan Mantri Awas Yojana",
@@ -77,9 +81,11 @@ const schemes = [
     category: "Housing",
     ministry: "Ministry of Housing",
     status: "Active",
+    longDescription:
+      "Pradhan Mantri Awas Yojana (PMAY) is a comprehensive mission to provide affordable housing to all urban and rural poor by 2022. The scheme addresses India's massive housing shortage, particularly among Economically Weaker Sections (EWS) and Low-Income Groups (LIG). PMAY has two components: PMAY-U for urban areas and PMAY-G for rural areas, each tailored to address specific housing challenges.\n\nUnder PMAY-U, the scheme provides central assistance to implementing agencies through four verticals: In-Situ Slum Redevelopment, Credit Linked Subsidy Scheme, Affordable Housing in Partnership, and Subsidy for Beneficiary-led Individual House Construction. The Credit Linked Subsidy Scheme offers interest subsidies of up to 6.5% on housing loans, making home ownership affordable for low-income families. PMAY-G provides financial assistance of ₹1.20 lakh to ₹1.30 lakh for construction of pucca houses with basic amenities like toilet, water supply, electricity, and cooking gas connection.\n\nThe scheme promotes sustainable and inclusive development by using eco-friendly technologies, ensuring women ownership (either in sole or joint name), and creating slum-free cities. PMAY has not only provided shelter security but also generated employment in construction and related sectors, contributing to economic growth and social development.",
   },
   {
-    id: generateRandomId(),
+    id: "generateRandomId()",
     name: "PM-SVANidhi",
     description: "PM Street Vendor's AtmaNirbhar Nidhi",
     fullName: "PM Street Vendor's AtmaNirbhar Nidhi",
@@ -91,12 +97,15 @@ const schemes = [
     category: "Financial",
     ministry: "Ministry of Housing",
     status: "Active",
+    longDescription:
+      "Pradhan Mantri Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi) is a special micro-credit scheme launched during the COVID-19 pandemic to provide affordable working capital loans to street vendors, helping them resume their livelihoods that were severely affected by lockdowns. The scheme offers collateral-free loans of ₹10,000, which can be enhanced to ₹20,000 and ₹50,000 on timely repayment, creating a cycle of credit support for business growth.\n\nPM SVANidhi stands out for its simplified application process through digital platforms, minimal documentation, and quick disbursement. The scheme promotes digital transactions by offering monthly cashback incentives for digital payments, fostering financial inclusion and formalization of the informal sector. Street vendors can access loans at subsidized interest rates, with the government providing interest subsidies to encourage timely repayment.\n\nThe scheme has empowered millions of street vendors, including those from marginalized communities, by providing them with formal credit access that was previously unavailable. It has helped vendors rebuild their businesses, purchase inventory, and adopt digital payment methods, making them more resilient to economic shocks. PM SVANidhi represents a significant step towards recognizing and integrating street vendors into the formal economy while preserving their vital role in urban ecosystems.",
   },
   {
-    id: generateRandomId(),
+    id: "generateRandomId()",
     name: "PM-MUDRA",
     description: "Pradhan Mantri MUDRA Yojana",
-    fullName: "Pradhan Mantri Micro Units Development & Refinance Agency Ltd.",
+    fullName:
+      "Pradhan Mantri Micro Units Development & Refinance Agency Ltd.",
     launched: "2015",
     benefits:
       "Loans up to ₹10 lakh to non-corporate, non-farm small/micro enterprises",
@@ -106,9 +115,11 @@ const schemes = [
     category: "Financial",
     ministry: "Ministry of Finance",
     status: "Active",
+    longDescription:
+      "Pradhan Mantri MUDRA Yojana (PMMY) is a flagship scheme to fund the unfunded by providing access to institutional finance to micro and small enterprises. Under this scheme, MUDRA loans are offered through Banks, NBFCs, MFIs, and other financial institutions to non-corporate, non-farm small/micro enterprises. The loans are categorized into three products: Shishu (up to ₹50,000), Kishore (₹50,001 to ₹5 lakh), and Tarun (₹5,00,001 to ₹10 lakh).\n\nMUDRA loans support income-generating activities in manufacturing, trading, services, and agriculture-related sectors. The scheme has been particularly beneficial for first-generation entrepreneurs, women entrepreneurs, and entrepreneurs from marginalized communities who lack collateral security. The application process is simple with minimal documentation, and loans are disbursed quickly through the extensive network of partner lending institutions.\n\nThe scheme has played a crucial role in promoting entrepreneurship, generating employment, and supporting the informal sector's transition to the formal economy. By providing affordable credit to small businesses, MUDRA has fostered innovation, economic diversification, and financial inclusion. The scheme has also contributed to women empowerment, with a significant proportion of loans disbursed to women entrepreneurs, enabling them to start and expand their businesses.",
   },
   {
-    id: generateRandomId(),
+    id: "generateRandomId()",
     name: "PM-KUSUM",
     description: "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan",
     fullName: "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan",
@@ -121,9 +132,11 @@ const schemes = [
     category: "Agriculture",
     ministry: "Ministry of New and Renewable Energy",
     status: "Active",
+    longDescription:
+      "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan (PM-KUSUM) is a visionary scheme to promote solar energy among farmers while addressing irrigation and energy security challenges. The scheme has three components: installation of grid-connected solar power plants on barren/fallow land, installation of standalone solar agriculture pumps, and solarization of grid-connected agriculture pumps.\n\nUnder Component A, farmers can set up solar power plants of capacity 500 kW to 2 MW on barren/fallow land and sell the generated power to DISCOMs, creating a stable additional income source. Component B provides 100% standalone solar pumps to farmers for irrigation, reducing dependence on diesel pumps and grid electricity. Component C enables farmers to solarize existing grid-connected agriculture pumps and use the generated solar power for irrigation while selling the surplus power to DISCOMs.\n\nPM-KUSUM addresses multiple challenges simultaneously - it reduces the subsidy burden on DISCOMs, provides reliable irrigation power, increases farmers' income, and promotes renewable energy. The scheme also contributes to environmental sustainability by reducing carbon emissions and diesel consumption. By transforming farmers into 'prosumers' (producers and consumers), PM-KUSUM is revolutionizing the agriculture-energy nexus and promoting sustainable farming practices.",
   },
   {
-    id: generateRandomId(),
+    id: "generateRandomId()",
     name: "PM-FME",
     description:
       "Pradhan Mantri Formalisation of Micro Food Processing Enterprises",
@@ -138,8 +151,11 @@ const schemes = [
     category: "Food Processing",
     ministry: "Ministry of Food Processing Industries",
     status: "Active",
+    longDescription:
+      "Pradhan Mantri Formalisation of Micro Food Processing Enterprises (PMFME) scheme is part of the Aatmanirbhar Bharat Abhiyan, aimed at providing technical, financial, and business support to micro food processing enterprises across India. The scheme focuses on supporting individual enterprises, FPOs, SHGs, and cooperatives through credit-linked capital subsidy, capacity building, and marketing assistance.\n\nPMFME adopts a One District One Product (ODOP) approach to promote specialization and scale in traditional food products unique to each district. The scheme provides 35% capital subsidy for setting up/upgrading food processing units, support for branding and marketing, training in food safety and quality standards, and assistance for obtaining FSSAI licenses. It particularly focuses on women entrepreneurs and SC/ST owners, providing them with enhanced support.\n\nThe scheme addresses key challenges faced by micro enterprises, including access to credit, technology adoption, quality standardization, and market linkage. By formalizing the unorganized food processing sector, PMFME enhances value addition, reduces wastage, increases farmers' income, and creates employment opportunities. The scheme also promotes traditional foods, preserves local culinary heritage, and supports the development of local supply chains, contributing to balanced regional development and food security.",
   },
 ];
+
 
 // DOM elements
 const schemesContainer = document.getElementById("schemes-container");
