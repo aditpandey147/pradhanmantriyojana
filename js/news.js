@@ -97,6 +97,66 @@ const newsData = [
     date: new Date().toISOString().split("T")[0],
     source: "PMO India",
   },
+  {
+    id: 7,
+    title: "India Launches National Green Hydrogen Mission with ₹19,744 Crore Investment",
+    summary: "Cabinet approves National Green Hydrogen Mission to make India global hub for green hydrogen production and export.",
+    content: "<p>The Union Cabinet, chaired by Prime Minister Narendra Modi, has approved the National Green Hydrogen Mission with an initial outlay of ₹19,744 crore. The mission aims to make India a global hub for production, usage, and export of green hydrogen and its derivatives.</p><p>The mission will significantly contribute to India's goals of achieving net zero emissions by 2070 and reducing dependence on fossil fuel imports. It is expected to attract investments worth over ₹8 lakh crore and create more than 6 lakh jobs.</p><p>Key components include strategic interventions for green hydrogen transition, pilot projects, research and development, and skill development programs.</p>",
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    category: "Energy",
+    date: "2024-01-04",
+    source: "Ministry of New and Renewable Energy"
+  },
+  {
+    id: 8,
+    title: "PM Modi Inaugurates New Parliament Building",
+    summary: "New state-of-the-art Parliament building inaugurated, featuring modern amenities and cultural heritage elements.",
+    content: "<p>Prime Minister Narendra Modi inaugurated the new Parliament building, marking a significant milestone in India's democratic journey. The new building features modern technology, expanded seating capacity, and incorporates elements from India's rich cultural heritage.</p><p>The new complex can accommodate 888 members in the Lok Sabha and 300 in the Rajya Sabha, compared to 552 and 250 respectively in the old building. It features constitutional values and cultural traditions through dedicated artwork and installations.</p><p>The building is designed with sustainability features and advanced digital systems, making it future-ready for the next 150 years.</p>",
+    image: "https://images.unsplash.com/photo-1582481725276-6a5c8c9e2c3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    category: "Infrastructure",
+    date: "2023-05-28",
+    source: "Press Information Bureau"
+  },
+  {
+    id: 9,
+    title: "Digital India Act Framework Released for Public Consultation",
+    summary: "New comprehensive legal framework proposed to govern digital ecosystem and emerging technologies.",
+    content: "<p>The Ministry of Electronics and Information Technology has released the draft Digital India Act for public consultation. The new legislation aims to replace the two-decade-old Information Technology Act and create a modern, comprehensive legal framework for India's growing digital ecosystem.</p><p>The Act addresses emerging challenges including user rights protection, ethical AI governance, competition in digital markets, and regulation of new technologies like blockchain and元宇宙. It proposes establishing dedicated regulatory bodies for digital competition and online safety.</p><p>The framework emphasizes principles of open internet, innovation, and accountability while ensuring digital sovereignty and security.</p>",
+    image: "https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    category: "Technology",
+    date: "2024-01-15",
+    source: "MeitY"
+  },
+  {
+    id: 10,
+    title: "National Education Policy Implementation Reaches 75% Completion",
+    summary: "NEP 2020 implementation shows significant progress with 75% of action items completed.",
+    content: "<p>The implementation of the National Education Policy 2020 has reached 75% completion, according to the Education Ministry's latest review. Major achievements include the establishment of the National Credit Framework, multiple entry-exit options in higher education, and integration of vocational education from school level.</p><p>The PM SHRI Schools scheme has been launched to upgrade 14,500 schools as model institutions implementing NEP. Over 3,000 institutions have been granted autonomy, and 100+ foreign universities are in process of setting up campuses in India.</p><p>The remaining 25% implementation focuses on teacher training, curriculum reform, and establishing the Higher Education Commission of India.</p>",
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    category: "Education",
+    date: "2024-01-12",
+    source: "Ministry of Education"
+  },
+  {
+    id: 11,
+    title: "Ayushman Bharat Scheme Crosses 25 Crore Beneficiary Milestone",
+    summary: "World's largest health protection scheme achieves new milestone in healthcare coverage.",
+    content: "<p>Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB-PMJAY) has crossed 25 crore beneficiary mark, providing health coverage to the most vulnerable sections of society. The scheme has authorized over 5 crore hospital admissions worth ₹61,500 crore since its launch in 2018.</p><p>Recent expansions include coverage for transgender persons, mental health treatments, and addition of new medical procedures. The scheme now covers 1,949 procedures across 27 specialties at over 26,000 empaneled hospitals.</p><p>Digital initiatives like the Ayushman Bharat Digital Mission have created health IDs for over 50 crore citizens, enabling seamless access to healthcare services.</p>",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    category: "Healthcare",
+    date: "2024-01-08",
+    source: "National Health Authority"
+  },
+  {
+    id: 12,
+    title: "PM Modi's Monthly Radio Address 'Mann Ki Baat' to Focus on Environmental Conservation",
+    summary: "The next episode of PM Modi's radio program 'Mann Ki Baat' will focus on environmental conservation and sustainable living practices.",
+    content: "<p>Prime Minister Narendra Modi announced that the next episode of his monthly radio program 'Mann Ki Baat' will focus on environmental conservation and sustainable living practices.</p><p>In a tweet, PM Modi urged citizens to share their ideas and initiatives related to environmental protection that he can highlight in the program. The episode is expected to emphasize the importance of individual and community actions in addressing climate change and environmental degradation.</p><p>Our planet is facing unprecedented environmental challenges. Through small actions in our daily lives, we can collectively make a big difference, the Prime Minister said.</p><p>The episode will feature stories of individuals and communities who have undertaken innovative environmental conservation projects. It will also highlight government initiatives like the Swachh Bharat Mission and efforts to promote renewable energy.</p><p>Mann Ki Baat, which completes 100 episodes next month, has become a popular platform for the Prime Minister to connect with citizens and discuss issues of national importance.</p>",
+    image: "https://images.unsplash.com/photo-1569163139394-de4e4f43e3e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    category: "Environment",
+    date: "2024-01-21",
+    source: "PMO India"
+  }
 ];
 
 // DOM elements
