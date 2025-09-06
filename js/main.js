@@ -1,393 +1,370 @@
-// Generate random ID for schemes
-function generateRandomId() {
-  return "PM" + Math.floor(1000 + Math.random() * 9000);
-}
-
-// Function to create URL-friendly slug
-function createSlug(text) {
-  return text
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w\-]+/g, "")
-    .replace(/\-\-+/g, "-")
-    .replace(/^-+/, "")
-    .replace(/-+$/, "");
-}
-
-// Sample data for PM schemes
-const schemes = [
+// Sample news data
+const newsData = [
   {
-    id: generateRandomId(),
-    name: "PM-KISAN",
-    description: "Pradhan Mantri Kisan Samman Nidhi",
-    fullName: "Pradhan Mantri Kisan Samman Nidhi",
-    launched: "2019",
-    benefits:
-      "₹6,000 per year in three equal installments directly transferred to beneficiary bank accounts",
-    eligibility:
-      "Small and marginal landholder farmer families owning up to 2 hectares of cultivable land. Institutional landholders and higher-income category farmers are excluded.",
-    officialSite: "https://pmkisan.gov.in",
-    logo: "fas fa-tractor",
-    category: "Agriculture",
-    ministry: "Ministry of Agriculture & Farmers Welfare",
-    status: "Active",
-    longDescription:
-      "The Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) scheme is one of the largest direct benefit transfer (DBT) programs in the world, designed to provide assured income support to farmers and ensure financial stability in rural India. Launched in February 2019, this scheme reflects the Government of India's commitment to improving the livelihood of small and marginal farmers who form the backbone of the Indian agricultural economy. Under PM-KISAN, eligible farmers receive a direct transfer of ₹6,000 annually, credited in three equal installments of ₹2,000 each to their bank accounts through Direct Benefit Transfer. This ensures transparency, eliminates middlemen, and guarantees timely support.\n\nThe scheme targets small and marginal landholder farmer families with cultivable land of up to two hectares. To qualify, farmers must submit Aadhaar-linked bank accounts, landholding records, and meet the prescribed eligibility criteria. Certain categories are excluded, including institutional landholders, income tax payers, and professionals such as doctors, engineers, and government employees above a certain rank. This selective inclusion ensures that the benefits reach those who genuinely depend on agriculture for survival.\n\nThe financial aid provided through PM-KISAN is not tied to crop cultivation or specific expenditures, giving farmers the freedom to use the funds for seeds, fertilizers, farm equipment, household needs, or loan repayment. For many families, this scheme acts as a safety net during times of distress caused by crop failures, natural calamities, or fluctuating market prices. By reducing dependence on informal credit and moneylenders, the scheme contributes to lowering rural indebtedness.\n\nThe PM-KISAN initiative also complements other government programs like the Pradhan Mantri Fasal Bima Yojana (PMFBY) and Pradhan Mantri Krishi Sinchayee Yojana (PMKSY), creating a holistic support framework for farmers. With the help of technology, the scheme uses a centralized online portal (pmkisan.gov.in) where farmers can register, check their installment status, and resolve grievances. Transparency and accountability are further strengthened through Aadhaar authentication and electronic fund transfer.\n\nAs of now, PM-KISAN continues to be a cornerstone policy in India's agricultural support system. It has disbursed billions of rupees to millions of farmers, empowering rural households and contributing to poverty alleviation. By offering direct financial support, the scheme reduces uncertainty in agricultural income and strengthens the government's vision of doubling farmers' income. Overall, PM-KISAN has emerged as a lifeline for India's small and marginal farmers, helping them sustain livelihoods, invest in productivity, and achieve economic resilience.",
+    id: 1,
+    title: "PM Modi Inaugurates New Infrastructure Projects in Varanasi",
+    summary:
+      "Prime Minister Narendra Modi inaugurated multiple development projects in his constituency Varanasi, including a new medical college and highway projects.",
+    content: `<p>Prime Minister Narendra Modi visited Varanasi today to inaugurate several infrastructure projects worth over ₹1,500 crore. The projects include a new state-of-the-art medical college, a six-lane highway, and a new sewage treatment plant.</p>
+                         <p>During his address, PM Modi emphasized the government's commitment to holistic development across all regions of India. He stated, "These projects will not only boost Varanasi's infrastructure but also create numerous employment opportunities for the local youth."</p>
+                         <p>The Prime Minister also interacted with beneficiaries of various government schemes and took a firsthand review of the development works in the region. The medical college is expected to serve over 5,000 patients daily and will have modern facilities for medical education and research.</p>
+                         <p>This visit marks PM Modi's fifth trip to Varanasi this year, highlighting the importance he places on the development of his parliamentary constituency.</p>`,
+    image:
+      "https://images.unsplash.com/photo-1611267254323-4db7b39c732c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    category: "Infrastructure",
+    date: new Date().toISOString().split("T")[0],
+    source: "Press Trust of India",
   },
   {
-    id: generateRandomId(),
-    name: "PM-JAY",
-    description: "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana",
-    fullName: "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana",
-    launched: "2018",
-    benefits: "Health coverage of ₹5 lakh per family per year",
-    eligibility:
-      "Deprived rural families and identified occupational categories",
-    officialSite: "https://www.pmjay.gov.in",
-    logo: "fas fa-hospital",
-    category: "Health",
-    ministry: "Ministry of Health",
-    status: "Active",
-    longDescription:
-      "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (PM-JAY) is the world's largest health insurance scheme, providing comprehensive hospitalization coverage to over 50 crore beneficiaries from poor and vulnerable families. Launched in September 2018, this revolutionary scheme offers cashless and paperless access to quality healthcare services at empaneled hospitals across India. PM-JAY covers secondary and tertiary care hospitalization expenses up to ₹5 lakh per family per year, with no restrictions on family size, age, or gender. The scheme includes 1,574 medical procedures covering all pre-existing conditions, day-care treatments, and diagnostic services.\n\nPM-JAY operates on a trust-based model where beneficiaries can avail treatment at any empaneled hospital without paying anything at the point of service. The scheme uses robust technology systems for verification, claim processing, and fraud detection, ensuring efficient delivery of services. It has significantly reduced out-of-pocket healthcare expenses for millions of families, preventing them from falling into poverty due to medical costs. PM-JAY represents a paradigm shift in healthcare delivery, moving from sectoral and fragmented approach to a comprehensive need-based approach that prioritizes the health needs of the most vulnerable sections of society.",
+    id: 2,
+    title:
+      "India's GDP Growth Exceeds Expectations: PM Modi Hails Economic Resilience",
+    summary:
+      "Prime Minister Modi praised India's economic performance as latest GDP figures show stronger-than-expected growth despite global challenges.",
+    content: `<p>Prime Minister Narendra Modi today hailed India's economic resilience as the latest GDP figures showed growth of 7.8% in the last quarter, exceeding economists' expectations.</p>
+                         <p>Speaking at an economic conference, PM Modi credited reforms and policy stability for India's strong performance amid global economic uncertainty. He emphasized that India remains a bright spot in the global economy and is on track to become a $5 trillion economy.</p>
+                         <p>"Our focus on digital infrastructure, manufacturing, and exports has yielded excellent results. The world is looking at India as a engine of global growth," the Prime Minister stated.</p>
+                         <p>He also highlighted that foreign direct investment has reached record levels, and India's forex reserves are at an all-time high, providing stability to the economy.</p>
+                         <p>The Prime Minister concluded by emphasizing the government's commitment to inclusive growth, ensuring that the benefits of development reach all sections of society.</p>`,
+    image:
+      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    category: "Economy",
+    date: new Date().toISOString().split("T")[0],
+    source: "Economic Times",
   },
   {
-    id: generateRandomId(),
-    name: "PM-UJJWALA",
-    description: "Pradhan Mantri Ujjwala Yojana",
-    fullName: "Pradhan Mantri Ujjwala Yojana",
-    launched: "2016",
-    benefits:
-      "Free LPG connections to women from below-poverty-line households",
-    eligibility: "Women from below-poverty-line households",
-    officialSite: "https://www.pmuy.gov.in",
-    logo: "fas fa-fire",
-    category: "Social Welfare",
-    ministry: "Ministry of Petroleum",
-    status: "Active",
-    longDescription:
-      "Pradhan Mantri Ujjwala Yojana (PMUY) is a transformative social welfare scheme launched to provide clean cooking fuel to women from economically disadvantaged households. Before this scheme, millions of households in India relied on traditional cooking methods using firewood, coal, and dung cakes, which caused severe indoor air pollution and health hazards. PMUY aims to safeguard women's health by providing free LPG connections, reducing drudgery, and empowering women with clean energy access.\n\nThe scheme provides financial support of ₹1,600 for each LPG connection to Below Poverty Line (BPL) households, which includes the security deposit for the cylinder, pressure regulator, booklet, and hose. Beneficiaries receive the first refill and stove free of cost, with the option to purchase subsequent refills through affordable EMI options. PMUY has particularly focused on SC/ST households, forest dwellers, tea gardens, islands, and river islands to ensure inclusive coverage.\n\nBeyond health benefits, PMUY has generated significant employment opportunities in the LPG distribution network and reduced the time women spend on cooking and collecting firewood. The scheme has also contributed to environmental conservation by reducing deforestation and carbon emissions. With over 8 crore connections provided, PMUY has emerged as one of the world's largest clean energy access programs, transforming lives and promoting sustainable development across rural India.",
+    id: 3,
+    title: "PM Modi Chairs High-Level Meeting on National Security",
+    summary:
+      "Prime Minister Narendra Modi chaired a meeting of the National Security Council to review current security challenges and preparedness.",
+    content: `<p>Prime Minister Narendra Modi today chaired a meeting of the National Security Council to assess the current security landscape and review preparedness.</p>
+                         <p>The meeting was attended by Defense Minister, Home Minister, National Security Advisor, and chiefs of armed forces. Discussions focused on border security, cyber threats, and internal security challenges.</p>
+                         <p>PM Modi emphasized the need for continued vigilance and advanced preparedness to address emerging security threats. He directed officials to ensure seamless coordination between different agencies and to leverage technology for enhanced security.</p>
+                         <p>"In today's interconnected world, we need to be prepared for non-traditional security challenges as well, including cyber attacks and economic warfare," the Prime Minister noted.</p>
+                         <p>The meeting also reviewed the progress of various defense modernization projects and initiatives to strengthen homeland security. PM Modi commended the security forces for their dedication and sacrifice in protecting the nation.</p>`,
+    image:
+      "https://images.unsplash.com/photo-1589561253898-768105ca53a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    category: "Security",
+    date: new Date().toISOString().split("T")[0],
+    source: "ANI News",
   },
   {
-    id: generateRandomId(),
-    name: "PM-AWAS",
-    description: "Pradhan Mantri Awas Yojana",
-    fullName: "Pradhan Mantri Awas Yojana",
-    launched: "2015",
-    benefits: "Financial assistance for construction of houses",
-    eligibility: "Economically weaker sections and low-income groups",
-    officialSite: "https://pmaymis.gov.in",
-    logo: "fas fa-home",
-    category: "Housing",
-    ministry: "Ministry of Housing",
-    status: "Active",
-    longDescription:
-      "Pradhan Mantri Awas Yojana (PMAY) is a comprehensive mission to provide affordable housing to all urban and rural poor by 2022. The scheme addresses India's massive housing shortage, particularly among Economically Weaker Sections (EWS) and Low-Income Groups (LIG). PMAY has two components: PMAY-U for urban areas and PMAY-G for rural areas, each tailored to address specific housing challenges.\n\nUnder PMAY-U, the scheme provides central assistance to implementing agencies through four verticals: In-Situ Slum Redevelopment, Credit Linked Subsidy Scheme, Affordable Housing in Partnership, and Subsidy for Beneficiary-led Individual House Construction. The Credit Linked Subsidy Scheme offers interest subsidies of up to 6.5% on housing loans, making home ownership affordable for low-income families. PMAY-G provides financial assistance of ₹1.20 lakh to ₹1.30 lakh for construction of pucca houses with basic amenities like toilet, water supply, electricity, and cooking gas connection.\n\nThe scheme promotes sustainable and inclusive development by using eco-friendly technologies, ensuring women ownership (either in sole or joint name), and creating slum-free cities. PMAY has not only provided shelter security but also generated employment in construction and related sectors, contributing to economic growth and social development.",
+    id: 4,
+    title: "PM Modi to Visit Japan Next Week for Annual Summit",
+    summary:
+      "Prime Minister Narendra Modi will visit Japan next week for the annual bilateral summit, focusing on strategic partnership and economic cooperation.",
+    content: `<p>Prime Minister Narendra Modi will travel to Japan next week for the annual India-Japan bilateral summit. The visit aims to strengthen the Special Strategic and Global Partnership between the two countries.</p>
+                         <p>Key agenda items include defense cooperation, economic partnerships, and collaboration in technology and infrastructure development. This will be PM Modi's fifth visit to Japan since taking office, reflecting the importance both countries place on their relationship.</p>
+                         <p>"Japan is one of our most important partners in the Indo-Pacific region. Our relationship encompasses trade, investment, defense, technology, and people-to-people ties," the Prime Minister said in a pre-departure statement.</p>
+                         <p>The visit is expected to result in several agreements, including in the areas of clean energy, digital partnership, and infrastructure development. Japanese companies are increasingly looking at India as an investment destination and manufacturing hub.</p>
+                         <p>PM Modi is also scheduled to meet Japanese business leaders and address the Indian community in Japan during his visit.</p>`,
+    image:
+      "https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    category: "International",
+    date: new Date().toISOString().split("T")[0],
+    source: "Ministry of External Affairs",
   },
   {
-    id: generateRandomId(),
-    name: "PM-SVANidhi",
-    description: "PM Street Vendor's AtmaNirbhar Nidhi",
-    fullName: "PM Street Vendor's AtmaNirbhar Nidhi",
-    launched: "2020",
-    benefits: "Collateral-free working capital loans up to ₹10,000",
-    eligibility: "Street vendors engaged in vending activities",
-    officialSite: "https://pmsvanidhi.mohua.gov.in",
-    logo: "fas fa-store",
-    category: "Financial",
-    ministry: "Ministry of Housing",
-    status: "Active",
-    longDescription:
-      "Pradhan Mantri Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi) is a special micro-credit scheme launched during the COVID-19 pandemic to provide affordable working capital loans to street vendors, helping them resume their livelihoods that were severely affected by lockdowns. The scheme offers collateral-free loans of ₹10,000, which can be enhanced to ₹20,000 and ₹50,000 on timely repayment, creating a cycle of credit support for business growth.\n\nPM SVANidhi stands out for its simplified application process through digital platforms, minimal documentation, and quick disbursement. The scheme promotes digital transactions by offering monthly cashback incentives for digital payments, fostering financial inclusion and formalization of the informal sector. Street vendors can access loans at subsidized interest rates, with the government providing interest subsidies to encourage timely repayment.\n\nThe scheme has empowered millions of street vendors, including those from marginalized communities, by providing them with formal credit access that was previously unavailable. It has helped vendors rebuild their businesses, purchase inventory, and adopt digital payment methods, making them more resilient to economic shocks. PM SVANidhi represents a significant step towards recognizing and integrating street vendors into the formal economy while preserving their vital role in urban ecosystems.",
+    id: 5,
+    title: "PM Modi Launches Digital Education Initiative for Rural Students",
+    summary:
+      "Prime Minister Modi launched a new digital education platform aimed at providing quality education to students in remote areas.",
+    content: `<p>Prime Minister Narendra Modi today launched the 'Digital Shiksha' initiative, a comprehensive platform designed to bring quality education to students in remote and rural areas.</p>
+                         <p>The platform will provide access to digital classrooms, educational content in regional languages, and interactive learning tools. PM Modi emphasized that digital infrastructure is key to ensuring equitable access to education and opportunities for all children, regardless of their geographical location.</p>
+                         <p>"Education is the foundation for building a developed India. With Digital Shiksha, we are ensuring that no child is left behind due to lack of access to quality education," the Prime Minister stated.</p>
+                         <p>The initiative will partner with leading educational institutions and ed-tech companies to provide curated content aligned with the national curriculum. Special focus will be given to STEM education and skill development.</p>
+                         <p>The platform will be available through multiple channels, including mobile apps, web portal, and dedicated television channels, to ensure maximum reach even in areas with limited internet connectivity.</p>`,
+    image:
+      "https://images.unsplash.com/photo-1584697964358-3e14ca57658b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    category: "Education",
+    date: new Date().toISOString().split("T")[0],
+    source: "Ministry of Education",
   },
   {
-    id: generateRandomId(),
-    name: "PM-MUDRA",
-    description: "Pradhan Mantri MUDRA Yojana",
-    fullName:
-      "Pradhan Mantri Micro Units Development & Refinance Agency Ltd.",
-    launched: "2015",
-    benefits:
-      "Loans up to ₹10 lakh to non-corporate, non-farm small/micro enterprises",
-    eligibility: "Small business owners, entrepreneurs",
-    officialSite: "https://www.mudra.org.in",
-    logo: "fas fa-business-time",
-    category: "Financial",
-    ministry: "Ministry of Finance",
-    status: "Active",
-    longDescription:
-      "Pradhan Mantri MUDRA Yojana (PMMY) is a flagship scheme to fund the unfunded by providing access to institutional finance to micro and small enterprises. Under this scheme, MUDRA loans are offered through Banks, NBFCs, MFIs, and other financial institutions to non-corporate, non-farm small/micro enterprises. The loans are categorized into three products: Shishu (up to ₹50,000), Kishore (₹50,001 to ₹5 lakh), and Tarun (₹5,00,001 to ₹10 lakh).\n\nMUDRA loans support income-generating activities in manufacturing, trading, services, and agriculture-related sectors. The scheme has been particularly beneficial for first-generation entrepreneurs, women entrepreneurs, and entrepreneurs from marginalized communities who lack collateral security. The application process is simple with minimal documentation, and loans are disbursed quickly through the extensive network of partner lending institutions.\n\nThe scheme has played a crucial role in promoting entrepreneurship, generating employment, and supporting the informal sector's transition to the formal economy. By providing affordable credit to small businesses, MUDRA has fostered innovation, economic diversification, and financial inclusion. The scheme has also contributed to women empowerment, with a significant proportion of loans disbursed to women entrepreneurs, enabling them to start and expand their businesses.",
+    id: 6,
+    title:
+      "PM Modi's Monthly Radio Address 'Mann Ki Baat' to Focus on Environmental Conservation",
+    summary:
+      "The next episode of PM Modi's radio program 'Mann Ki Baat' will focus on environmental conservation and sustainable living practices.",
+    content: `<p>Prime Minister Narendra Modi announced that the next episode of his monthly radio program 'Mann Ki Baat' will focus on environmental conservation and sustainable living practices.</p>
+                         <p>In a tweet, PM Modi urged citizens to share their ideas and initiatives related to environmental protection that he can highlight in the program. The episode is expected to emphasize the importance of individual and community actions in addressing climate change and environmental degradation.</p>
+                         <p>"Our planet is facing unprecedented environmental challenges. Through small actions in our daily lives, we can collectively make a big difference," the Prime Minister said.</p>
+                         <p>The episode will feature stories of individuals and communities who have undertaken innovative environmental conservation projects. It will also highlight government initiatives like the Swachh Bharat Mission and efforts to promote renewable energy.</p>
+                         <p>Mann Ki Baat, which completes 100 episodes next month, has become a popular platform for the Prime Minister to connect with citizens and discuss issues of national importance.</p>`,
+    image:
+      "https://images.unsplash.com/photo-1569163139394-de4e4f43e3e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    category: "Environment",
+    date: new Date().toISOString().split("T")[0],
+    source: "PMO India",
   },
   {
-    id: generateRandomId(),
-    name: "PM-KUSUM",
-    description: "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan",
-    fullName: "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan",
-    launched: "2019",
-    benefits:
-      "Installation of solar pumps and grid-connected solar power plants",
-    eligibility: "Farmers with cultivable land",
-    officialSite: "https://pmkusum.mnre.gov.in",
-    logo: "fas fa-solar-panel",
-    category: "Agriculture",
-    ministry: "Ministry of New and Renewable Energy",
-    status: "Active",
-    longDescription:
-      "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan (PM-KUSUM) is a visionary scheme to promote solar energy among farmers while addressing irrigation and energy security challenges. The scheme has three components: installation of grid-connected solar power plants on barren/fallow land, installation of standalone solar agriculture pumps, and solarization of grid-connected agriculture pumps.\n\nUnder Component A, farmers can set up solar power plants of capacity 500 kW to 2 MW on barren/fallow land and sell the generated power to DISCOMs, creating a stable additional income source. Component B provides 100% standalone solar pumps to farmers for irrigation, reducing dependence on diesel pumps and grid electricity. Component C enables farmers to solarize existing grid-connected agriculture pumps and use the generated solar power for irrigation while selling the surplus power to DISCOMs.\n\nPM-KUSUM addresses multiple challenges simultaneously - it reduces the subsidy burden on DISCOMs, provides reliable irrigation power, increases farmers' income, and promotes renewable energy. The scheme also contributes to environmental sustainability by reducing carbon emissions and diesel consumption. By transforming farmers into 'prosumers' (producers and consumers), PM-KUSUM is revolutionizing the agriculture-energy nexus and promoting sustainable farming practices.",
+    id: 7,
+    title: "India Launches National Green Hydrogen Mission with ₹19,744 Crore Investment",
+    summary: "Cabinet approves National Green Hydrogen Mission to make India global hub for green hydrogen production and export.",
+    content: "<p>The Union Cabinet, chaired by Prime Minister Narendra Modi, has approved the National Green Hydrogen Mission with an initial outlay of ₹19,744 crore. The mission aims to make India a global hub for production, usage, and export of green hydrogen and its derivatives.</p><p>The mission will significantly contribute to India's goals of achieving net zero emissions by 2070 and reducing dependence on fossil fuel imports. It is expected to attract investments worth over ₹8 lakh crore and create more than 6 lakh jobs.</p><p>Key components include strategic interventions for green hydrogen transition, pilot projects, research and development, and skill development programs.</p>",
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    category: "Energy",
+    date: new Date().toISOString().split("T")[0],
+    source: "Ministry of New and Renewable Energy"
   },
   {
-    id: generateRandomId(),
-    name: "PM-FME",
-    description:
-      "Pradhan Mantri Formalisation of Micro Food Processing Enterprises",
-    fullName:
-      "Pradhan Mantri Formalisation of Micro Food Processing Enterprises",
-    launched: "2020",
-    benefits:
-      "Financial, technical and business support for micro food processing enterprises",
-    eligibility: "Micro food processing enterprises",
-    officialSite: "https://pmfme.mofpi.gov.in",
-    logo: "fas fa-utensils",
-    category: "Food Processing",
-    ministry: "Ministry of Food Processing Industries",
-    status: "Active",
-    longDescription:
-      "Pradhan Mantri Formalisation of Micro Food Processing Enterprises (PMFME) scheme is part of the Aatmanirbhar Bharat Abhiyan, aimed at providing technical, financial, and business support to micro food processing enterprises across India. The scheme focuses on supporting individual enterprises, FPOs, SHGs, and cooperatives through credit-linked capital subsidy, capacity building, and marketing assistance.\n\nPMFME adopts a One District One Product (ODOP) approach to promote specialization and scale in traditional food products unique to each district. The scheme provides 35% capital subsidy for setting up/upgrading food processing units, support for branding and marketing, training in food safety and quality standards, and assistance for obtaining FSSAI licenses. It particularly focuses on women entrepreneurs and SC/ST owners, providing them with enhanced support.\n\nThe scheme addresses key challenges faced by micro enterprises, including access to credit, technology adoption, quality standardization, and market linkage. By formalizing the unorganized food processing sector, PMFME enhances value addition, reduces wastage, increases farmers' income, and creates employment opportunities. The scheme also promotes traditional foods, preserves local culinary heritage, and supports the development of local supply chains, contributing to balanced regional development and food security.",
+    id: 8,
+    title: "PM Modi Inaugurates New Parliament Building",
+    summary: "New state-of-the-art Parliament building inaugurated, featuring modern amenities and cultural heritage elements.",
+    content: "<p>Prime Minister Narendra Modi inaugurated the new Parliament building, marking a significant milestone in India's democratic journey. The new building features modern technology, expanded seating capacity, and incorporates elements from India's rich cultural heritage.</p><p>The new complex can accommodate 888 members in the Lok Sabha and 300 in the Rajya Sabha, compared to 552 and 250 respectively in the old building. It features constitutional values and cultural traditions through dedicated artwork and installations.</p><p>The building is designed with sustainability features and advanced digital systems, making it future-ready for the next 150 years.</p>",
+    image: "https://images.unsplash.com/photo-1582481725276-6a5c8c9e2c3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    category: "Infrastructure",
+    date: new Date().toISOString().split("T")[0],
+    source: "Press Information Bureau"
   },
+  {
+    id: 9,
+    title: "Digital India Act Framework Released for Public Consultation",
+    summary: "New comprehensive legal framework proposed to govern digital ecosystem and emerging technologies.",
+    content: "<p>The Ministry of Electronics and Information Technology has released the draft Digital India Act for public consultation. The new legislation aims to replace the two-decade-old Information Technology Act and create a modern, comprehensive legal framework for India's growing digital ecosystem.</p><p>The Act addresses emerging challenges including user rights protection, ethical AI governance, competition in digital markets, and regulation of new technologies like blockchain and元宇宙. It proposes establishing dedicated regulatory bodies for digital competition and online safety.</p><p>The framework emphasizes principles of open internet, innovation, and accountability while ensuring digital sovereignty and security.</p>",
+    image: "https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    category: "Technology",
+    date: new Date().toISOString().split("T")[0],
+    source: "MeitY"
+  },
+  {
+    id: 10,
+    title: "National Education Policy Implementation Reaches 75% Completion",
+    summary: "NEP 2020 implementation shows significant progress with 75% of action items completed.",
+    content: "<p>The implementation of the National Education Policy 2020 has reached 75% completion, according to the Education Ministry's latest review. Major achievements include the establishment of the National Credit Framework, multiple entry-exit options in higher education, and integration of vocational education from school level.</p><p>The PM SHRI Schools scheme has been launched to upgrade 14,500 schools as model institutions implementing NEP. Over 3,000 institutions have been granted autonomy, and 100+ foreign universities are in process of setting up campuses in India.</p><p>The remaining 25% implementation focuses on teacher training, curriculum reform, and establishing the Higher Education Commission of India.</p>",
+    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    category: "Education",
+    date: new Date().toISOString().split("T")[0],
+    source: "Ministry of Education"
+  },
+  {
+    id: 11,
+    title: "Ayushman Bharat Scheme Crosses 25 Crore Beneficiary Milestone",
+    summary: "World's largest health protection scheme achieves new milestone in healthcare coverage.",
+    content: "<p>Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB-PMJAY) has crossed 25 crore beneficiary mark, providing health coverage to the most vulnerable sections of society. The scheme has authorized over 5 crore hospital admissions worth ₹61,500 crore since its launch in 2018.</p><p>Recent expansions include coverage for transgender persons, mental health treatments, and addition of new medical procedures. The scheme now covers 1,949 procedures across 27 specialties at over 26,000 empaneled hospitals.</p><p>Digital initiatives like the Ayushman Bharat Digital Mission have created health IDs for over 50 crore citizens, enabling seamless access to healthcare services.</p>",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    category: "Healthcare",
+    date: new Date().toISOString().split("T")[0],
+    source: "National Health Authority"
+  },
+  {
+    id: 12,
+    title: "PM Modi's Monthly Radio Address 'Mann Ki Baat' to Focus on Environmental Conservation",
+    summary: "The next episode of PM Modi's radio program 'Mann Ki Baat' will focus on environmental conservation and sustainable living practices.",
+    content: "<p>Prime Minister Narendra Modi announced that the next episode of his monthly radio program 'Mann Ki Baat' will focus on environmental conservation and sustainable living practices.</p><p>In a tweet, PM Modi urged citizens to share their ideas and initiatives related to environmental protection that he can highlight in the program. The episode is expected to emphasize the importance of individual and community actions in addressing climate change and environmental degradation.</p><p>Our planet is facing unprecedented environmental challenges. Through small actions in our daily lives, we can collectively make a big difference, the Prime Minister said.</p><p>The episode will feature stories of individuals and communities who have undertaken innovative environmental conservation projects. It will also highlight government initiatives like the Swachh Bharat Mission and efforts to promote renewable energy.</p><p>Mann Ki Baat, which completes 100 episodes next month, has become a popular platform for the Prime Minister to connect with citizens and discuss issues of national importance.</p>",
+    image: "https://images.unsplash.com/photo-1569163139394-de4e4f43e3e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    category: "Environment",
+   date: new Date().toISOString().split("T")[0],
+    source: "PMO India"
+  }
 ];
 
-
 // DOM elements
-const schemesContainer = document.getElementById("schemes-container");
-const detailsContainer = document.getElementById("details-container");
-const schemeDetails = document.getElementById("scheme-details");
-const backButton = document.getElementById("back-button");
-const cardViewBtn = document.getElementById("card-view-btn");
-const listViewBtn = document.getElementById("list-view-btn");
-const heroSearch = document.getElementById("hero-search");
-const heroSearchBtn = document.getElementById("hero-search-btn");
-const mainSearch = document.getElementById("main-search");
-const categoryFilter = document.getElementById("category-filter");
-const statusFilter = document.getElementById("status-filter");
-const resetFiltersBtn = document.getElementById("reset-filters");
-const resultsCount = document.getElementById("results-count");
+const newsContainer = document.getElementById("news-container");
 const noResults = document.getElementById("no-results");
-const whatsappShare = document.getElementById("whatsapp-share");
-const whatsappLink = document.getElementById("whatsapp-link");
-let currentView = "card";
-let filteredSchemes = [...schemes];
-let currentScheme = null;
+const loadingIndicator = document.getElementById("loading-indicator");
+const dateFilter = document.getElementById("date-filter");
+const quickFilters = document.querySelectorAll(".category-filter");
+const popupOverlay = document.getElementById("news-popup");
+const popupClose = document.getElementById("popup-close");
+const popupImage = document.getElementById("popup-image");
+const popupCategory = document.getElementById("popup-category");
+const popupDate = document.getElementById("popup-date");
+const popupSource = document.getElementById("popup-source");
+const popupTitle = document.getElementById("popup-title");
+const popupContent = document.getElementById("popup-content");
 
-// Function to render scheme cards
-function renderSchemeCards(schemesToRender) {
-  schemesContainer.innerHTML = "";
-  schemesContainer.classList.remove("grid-cols-1");
-  schemesContainer.classList.add(
-    "grid-cols-1",
-    "md:grid-cols-2",
-    "lg:grid-cols-3"
-  );
+// Set today's date as default in the date filter
+dateFilter.value = new Date().toISOString().split("T")[0];
 
-  if (schemesToRender.length === 0) {
+// Function to format date
+function formatDate(dateString) {
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return new Date(dateString).toLocaleDateString("en-US", options);
+}
+
+// Function to render news items
+function renderNewsItems(newsItems) {
+  newsContainer.innerHTML = "";
+
+  if (newsItems.length === 0) {
     noResults.classList.remove("hidden");
     return;
   }
 
   noResults.classList.add("hidden");
 
-  schemesToRender.forEach((scheme) => {
-    const schemeCard = document.createElement("div");
-    schemeCard.className = "bg-white rounded-xl shadow-lg p-6 scheme-card";
-    schemeCard.innerHTML = `
-                          <div class="flex items-start mb-4">
-                              <i class="${scheme.logo} text-3xl text-orange-600 mr-4"></i>
-                              <div>
-                                  <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
-                                  <h3 class="font-bold text-xl mt-2">${scheme.name}</h3>
-                                  <p class="text-gray-600">${scheme.description}</p>
-                              </div>
-                          </div>
-                          <div class="flex justify-between items-center">
-                              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.category}</span>
-                              <button class="text-orange-600 hover:text-orange-800 font-medium">
-                                  View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                              </button>
-                          </div>
-                      `;
-    schemeCard.addEventListener("click", () => showSchemeDetails(scheme));
-    schemesContainer.appendChild(schemeCard);
+  newsItems.forEach((news) => {
+    const newsItem = document.createElement("div");
+    newsItem.className =
+      "bg-white rounded-xl shadow-lg overflow-hidden news-card news-item";
+    newsItem.innerHTML = `
+                    <div class="h-48 overflow-hidden">
+                        <img src="${news.image}" alt="${
+      news.title
+    }" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${
+                              news.category
+                            }</span>
+                            <span class="text-gray-500 text-sm ml-3">${formatDate(
+                              news.date
+                            )}</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">${
+                          news.title
+                        }</h3>
+                        <p class="text-gray-600 mb-4">${news.summary}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Source: ${
+                              news.source
+                            }</span>
+                            <button class="read-more-btn text-orange-600 hover:text-orange-800 font-medium" data-id="${
+                              news.id
+                            }">
+                                Read More <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+    newsContainer.appendChild(newsItem);
   });
 
-  // Update results count
-  resultsCount.textContent = `${schemesToRender.length} scheme${
-    schemesToRender.length !== 1 ? "s" : ""
-  }`;
+  // Add event listeners to "Read More" buttons
+  document.querySelectorAll(".read-more-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const newsId = parseInt(this.getAttribute("data-id"));
+      showNewsDetails(newsId);
+    });
+  });
 }
 
-// Function to render scheme list view
-function renderSchemeList(schemesToRender) {
-  schemesContainer.innerHTML = "";
-  schemesContainer.classList.remove(
-    "grid-cols-1",
-    "md:grid-cols-2",
-    "lg:grid-cols-3"
-  );
-  schemesContainer.classList.add("grid-cols-1");
+// Function to show news details in popup
+function showNewsDetails(newsId) {
+  const newsItem = newsData.find((item) => item.id === newsId);
 
-  if (schemesToRender.length === 0) {
-    noResults.classList.remove("hidden");
-    return;
+  if (newsItem) {
+    popupImage.src = newsItem.image;
+    popupImage.alt = newsItem.title;
+    popupCategory.textContent = newsItem.category;
+    popupDate.textContent = formatDate(newsItem.date);
+    popupSource.textContent = `Source: ${newsItem.source}`;
+    popupTitle.textContent = newsItem.title;
+    popupContent.innerHTML = newsItem.content;
+
+    // Set up share buttons
+    const shareUrl = encodeURIComponent(window.location.href);
+    const shareText = encodeURIComponent(newsItem.title);
+
+    document.querySelector(
+      ".share-button.facebook"
+    ).href = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+    document.querySelector(
+      ".share-button.twitter"
+    ).href = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`;
+    document.querySelector(
+      ".share-button.whatsapp"
+    ).href = `https://wa.me/?text=${shareText}%20${shareUrl}`;
+    document.querySelector(
+      ".share-button.linkedin"
+    ).href = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
+
+    // Show popup
+    popupOverlay.classList.add("active");
+    document.body.style.overflow = "hidden"; // Prevent scrolling
   }
+}
 
-  noResults.classList.add("hidden");
+// Function to close popup
+function closePopup() {
+  popupOverlay.classList.remove("active");
+  document.body.style.overflow = "auto"; // Enable scrolling
+}
 
-  schemesToRender.forEach((scheme) => {
-    const schemeItem = document.createElement("div");
-    schemeItem.className = "bg-white rounded-xl shadow-lg p-6 scheme-card mb-4";
-    schemeItem.innerHTML = `
-                          <div class="flex justify-between items-start">
-                              <div class="flex items-start">
-                                  <i class="${scheme.logo} text-3xl text-orange-600 mr-4"></i>
-                                  <div>
-                                      <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
-                                      <h3 class="font-bold text-xl mt-2">${scheme.name}</h3>
-                                      <p class="text-gray-600">${scheme.description}</p>
-                                      <div class="mt-3">
-                                          <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.category}</span>
-                                          <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded ml-2">${scheme.status}</span>
-                                      </div>
-                                  </div>
-                              </div>
-                              <button class="text-orange-600 hover:text-orange-800 font-medium">
-                                  View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                              </button>
-                          </div>
-                      `;
-    schemeItem.addEventListener("click", () => showSchemeDetails(scheme));
-    schemesContainer.appendChild(schemeItem);
+// Function to filter news by date
+function filterNewsByDate(date) {
+  loadingIndicator.classList.remove("hidden");
+
+  // Simulate loading delay
+  setTimeout(() => {
+    const filteredNews = newsData.filter((news) => news.date === date);
+    renderNewsItems(filteredNews);
+    loadingIndicator.classList.add("hidden");
+  }, 500);
+}
+
+// Function to filter news by days ago
+function filterNewsByDays(days) {
+  loadingIndicator.classList.remove("hidden");
+
+  const targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() - days);
+  const dateString = targetDate.toISOString().split("T")[0];
+
+  // Update date filter value
+  dateFilter.value = dateString;
+
+  // Simulate loading delay
+  setTimeout(() => {
+    const filteredNews = newsData.filter((news) => news.date === dateString);
+    renderNewsItems(filteredNews);
+    loadingIndicator.classList.add("hidden");
+
+    // Update active state of quick filter buttons
+    quickFilters.forEach((button) => {
+      if (parseInt(button.getAttribute("data-days")) === days) {
+        button.classList.add("active", "bg-orange-100", "text-orange-800");
+      } else {
+        button.classList.remove("active", "bg-orange-100", "text-orange-800");
+        button.classList.add("bg-gray-100", "text-gray-800");
+      }
+    });
+  }, 500);
+}
+
+// Initialize the page
+document.addEventListener("DOMContentLoaded", () => {
+  // Load today's news initially
+  filterNewsByDate(new Date().toISOString().split("T")[0]);
+
+  // Add event listener for date filter
+  dateFilter.addEventListener("change", (e) => {
+    filterNewsByDate(e.target.value);
+
+    // Remove active state from quick filters when using custom date
+    quickFilters.forEach((button) => {
+      button.classList.remove("active", "bg-orange-100", "text-orange-800");
+      button.classList.add("bg-gray-100", "text-gray-800");
+    });
   });
 
-  // Update results count
-  resultsCount.textContent = `${schemesToRender.length} scheme${
-    schemesToRender.length !== 1 ? "s" : ""
-  }`;
-}
+  // Add event listeners for quick filters
+  quickFilters.forEach((button) => {
+    button.addEventListener("click", () => {
+      const days = parseInt(button.getAttribute("data-days"));
+      filterNewsByDays(days);
+    });
+  });
 
-// Function to show scheme details
-function showSchemeDetails(scheme) {
-  currentScheme = scheme;
-  schemesContainer.classList.add("hidden");
-  detailsContainer.classList.remove("hidden");
-  whatsappShare.classList.remove("hidden");
+  // Add event listener for popup close button
+  popupClose.addEventListener("click", closePopup);
 
-  // Update URL with scheme name as hash
-  const schemeSlug = createSlug(scheme.name);
-  window.history.pushState(null, null, `#${schemeSlug}`);
-
-  // Update WhatsApp share link
-  const shareText = `Check out this PM Scheme: ${scheme.name} - ${scheme.description}. Learn more at: `;
-  const encodedText = encodeURIComponent(shareText);
-  whatsappLink.href = `https://wa.me/?text=${encodedText}`;
-
-  schemeDetails.innerHTML = `
-                      <div class="fade-in">
-                          <div class="flex items-center mb-6">
-                              <i class="${scheme.logo} text-4xl text-orange-600 mr-4"></i>
-                              <div>
-                                  <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
-                                  <h3 class="text-3xl font-bold">${scheme.name}</h3>
-                                  <p class="text-gray-600 text-lg">${scheme.fullName}</p>
-                              </div>
-                          </div>
-
-                          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                              <div class="bg-orange-50 p-4 rounded-lg">
-                                  <h4 class="font-bold text-lg mb-2"><i class="fas fa-gift mr-2 text-orange-600"></i>Benefits</h4>
-                                  <p>${scheme.benefits}</p>
-                              </div>
-                              <div class="bg-green-50 p-4 rounded-lg">
-                                  <h4 class="font-bold text-lg mb-2"><i class="fas fa-user-check mr-2 text-green-600"></i>Eligibility</h4>
-                                  <p>${scheme.eligibility}</p>
-                              </div>
-                              <div class="bg-orange-50 p-4 rounded-lg">
-                                  <h4 class="font-bold text-lg mb-2"><i class="fas fa-calendar-alt mr-2 text-orange-600"></i>Launched</h4>
-                                  <p>${scheme.launched}</p>
-                              </div>
-                              <div class="bg-green-50 p-4 rounded-lg">
-                                  <h4 class="font-bold text-lg mb-2"><i class="fas fa-tag mr-2 text-green-600"></i>Category</h4>
-                                  <p>${scheme.category}</p>
-                              </div>
-                          </div>
-
-                          <div class="mb-6">
-                              <h4 class="font-bold text-lg mb-2"><i class="fas fa-info-circle mr-2 text-gray-600"></i>Scheme Details</h4>
-                              <p class="text-gray-700">${scheme.longDescription}ndians. Administered by the ${scheme.ministry}.</p>
-                          </div>
-
-                          <div class="flex items-center flex-wrap gap-4">
-                              <a href="${scheme.officialSite}" target="_blank" class="btn-orange px-6 py-3 rounded-lg flex items-center">
-                                  <i class="fas fa-external-link-alt mr-2"></i> Official Website
-                              </a>
-                              <button id="share-btn" class="border border-orange-600 text-orange-600 hover:bg-orange-50 px-6 py-3 rounded-lg">
-                                  <i class="far fa-share-square mr-2"></i> Share
-                              </button>
-                              <button id="whatsapp-btn" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg flex items-center">
-                                  <i class="fab fa-whatsapp mr-2"></i> Share via WhatsApp
-                              </button>
-                          </div>
-                      </div>
-                  `;
-
-  // Add event listeners for share buttons
-  document.getElementById("share-btn").addEventListener("click", shareScheme);
-  document
-    .getElementById("whatsapp-btn")
-    .addEventListener("click", shareOnWhatsApp);
-
-  // Scroll to top
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-// Function to handle back button
-function handleBackButton() {
-  detailsContainer.classList.add("hidden");
-  schemesContainer.classList.remove("hidden");
-  whatsappShare.classList.add("hidden");
-
-  // Remove scheme hash from URL
-  window.history.pushState(null, null, window.location.pathname);
-}
-
-// Function to check URL hash and show corresponding scheme
-function checkUrlHash() {
-  const hash = window.location.hash.substring(1); // Remove the # character
-  if (hash) {
-    // Find scheme by slug
-    const scheme = schemes.find((s) => createSlug(s.name) === hash);
-    if (scheme) {
-      showSchemeDetails(scheme);
+  // Close popup when clicking outside content
+  popupOverlay.addEventListener("click", (e) => {
+    if (e.target === popupOverlay) {
+      closePopup();
     }
-  }
-}
+  });
 
-// Function to share scheme
-function shareScheme() {
-  if (navigator.share) {
-    navigator
-      .share({
-        title: currentScheme.name,
-        text: currentScheme.description,
-        url: window.location.href,
-      })
-      .catch((error) => {
-        console.log("Error sharing:", error);
-      });
-  } else {
-    alert(
-      "Web Share API not supported in your browser. You can share via WhatsApp instead."
-    );
-  }
-}
+  // Close popup with Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && popupOveिrlay.classList.contains("active")) {
+      closePopup();
+    }
+  });
+});
 
 // Function to share on WhatsApp
 function shareOnWhatsApp() {
@@ -395,96 +372,6 @@ function shareOnWhatsApp() {
   const encodedText = encodeURIComponent(shareText);
   window.open(`https://wa.me/?text=${encodedText}`, "_blank");
 }
-
-// Function to filter schemes based on search and filters
-function filterSchemes() {
-  const searchText =
-    mainSearch.value.toLowerCase() || heroSearch.value.toLowerCase();
-  const category = categoryFilter.value;
-  const status = statusFilter.value;
-
-  filteredSchemes = schemes.filter((scheme) => {
-    const matchesSearch =
-      scheme.name.toLowerCase().includes(searchText) ||
-      scheme.description.toLowerCase().includes(searchText) ||
-      scheme.fullName.toLowerCase().includes(searchText) ||
-      scheme.category.toLowerCase().includes(searchText);
-
-    const matchesCategory = category === "all" || scheme.category === category;
-    const matchesStatus = status === "all" || scheme.status === status;
-
-    return matchesSearch && matchesCategory && matchesStatus;
-  });
-
-  if (currentView === "card") {
-    renderSchemeCards(filteredSchemes);
-  } else {
-    renderSchemeList(filteredSchemes);
-  }
-}
-
-// Initialize the page
-document.addEventListener("DOMContentLoaded", () => {
-  renderSchemeCards(schemes);
-
-  // Check if URL has a hash and show corresponding scheme
-  checkUrlHash();
-
-  // Listen for hash changes
-  window.addEventListener("hashchange", checkUrlHash);
-
-  // Back button event listener
-  backButton.addEventListener("click", handleBackButton);
-
-  // View toggle event listeners
-  cardViewBtn.addEventListener("click", () => {
-    currentView = "card";
-    renderSchemeCards(filteredSchemes);
-    cardViewBtn.classList.add("bg-orange-100", "text-orange-700");
-    listViewBtn.classList.remove("bg-orange-100", "text-orange-700");
-  });
-
-  listViewBtn.addEventListener("click", () => {
-    currentView = "list";
-    renderSchemeList(filteredSchemes);
-    listViewBtn.classList.add("bg-orange-100", "text-orange-700");
-    cardViewBtn.classList.remove("bg-orange-100", "text-orange-700");
-  });
-
-  // Search and filter event listeners
-  heroSearch.addEventListener("keyup", (e) => {
-    if (e.key === "Enter") {
-      filterSchemes();
-    }
-  });
-
-  heroSearchBtn.addEventListener("click", filterSchemes);
-
-  mainSearch.addEventListener("keyup", (e) => {
-    if (e.key === "Enter") {
-      filterSchemes();
-    }
-  });
-
-  categoryFilter.addEventListener("change", filterSchemes);
-  statusFilter.addEventListener("change", filterSchemes);
-
-  resetFiltersBtn.addEventListener("click", () => {
-    mainSearch.value = "";
-    heroSearch.value = "";
-    categoryFilter.value = "all";
-    statusFilter.value = "all";
-    filterSchemes();
-  });
-
-  // Quick filter buttons in hero section
-  document.querySelectorAll(".hero-pattern button").forEach((button) => {
-    button.addEventListener("click", (e) => {
-      mainSearch.value = e.target.textContent;
-      filterSchemes();
-    });
-  });
-});
 
 // Mobile menu functionality
 document.addEventListener("DOMContentLoaded", function () {
@@ -553,64 +440,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-// Function to toggle FAQ items
-function toggleFaq(id) {
-  const answer = document.getElementById(`answer-${id}`);
-  const icon = document.getElementById(`icon-${id}`);
-
-  answer.classList.toggle("open");
-  icon.classList.toggle("open");
-}
-
-// Initialize the page
-document.addEventListener("DOMContentLoaded", () => {
-  // Add event listener for FAQ search
-  const faqSearch = document.getElementById("faq-search");
-  const faqSearchBtn = document.getElementById("faq-search-btn");
-
-  faqSearchBtn.addEventListener("click", searchFaqs);
-  faqSearch.addEventListener("keyup", (e) => {
-    if (e.key === "Enter") {
-      searchFaqs();
-    }
-  });
-
-  function searchFaqs() {
-    const searchTerm = faqSearch.value.toLowerCase();
-    if (searchTerm) {
-      alert(`Searching for: ${searchTerm}`);
-      // In a real implementation, this would filter the FAQs
-    }
-  }
-
-  // Category buttons
-  const categoryButtons = document.querySelectorAll(".bg-white button");
-  categoryButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      categoryButtons.forEach((btn) => {
-        btn.classList.remove("bg-orange-100", "text-orange-700");
-        btn.classList.add("hover:bg-gray-100", "text-gray-700");
-      });
-      button.classList.add("bg-orange-100", "text-orange-700");
-      button.classList.remove("hover:bg-gray-100", "text-gray-700");
-
-      // Scroll to the corresponding category
-      const category = button.textContent.trim();
-      alert(`Showing category: ${category}`);
-      // In a real implementation, this would filter the FAQs by category
-    });
-  });
-});
-
-// Function to check URL hash and show corresponding scheme
-function checkUrlHash() {
-  const hash = window.location.hash.substring(1); // Remove the # character
-  if (hash) {
-    // Find scheme by slug
-    const scheme = schemes.find((s) => createSlug(s.name) === hash);
-    if (scheme) {
-      showSchemeDetails(scheme);
-    }
-  }
-}
