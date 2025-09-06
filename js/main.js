@@ -1,5 +1,17 @@
+// Generate random ID for schemes
 function generateRandomId() {
   return "PM" + Math.floor(1000 + Math.random() * 9000);
+}
+
+// Function to create URL-friendly slug
+function createSlug(text) {
+  return text
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-")
+    .replace(/^-+/, "")
+    .replace(/-+$/, "");
 }
 
 // Sample data for PM schemes
@@ -10,13 +22,17 @@ const schemes = [
     description: "Pradhan Mantri Kisan Samman Nidhi",
     fullName: "Pradhan Mantri Kisan Samman Nidhi",
     launched: "2019",
-    benefits: "₹6,000 per year in three equal installments",
-    eligibility: "Small and marginal landholder farmer families",
+    benefits:
+      "₹6,000 per year in three equal installments directly transferred to beneficiary bank accounts",
+    eligibility:
+      "Small and marginal landholder farmer families owning up to 2 hectares of cultivable land. Institutional landholders and higher-income category farmers are excluded.",
     officialSite: "https://pmkisan.gov.in",
     logo: "fas fa-tractor",
     category: "Agriculture",
-    ministry: "Ministry of Agriculture",
+    ministry: "Ministry of Agriculture & Farmers Welfare",
     status: "Active",
+    longDescription:
+      "The Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) scheme is one of the largest direct benefit transfer (DBT) programs in the world, designed to provide assured income support to farmers and ensure financial stability in rural India. Launched in February 2019, this scheme reflects the Government of India's commitment to improving the livelihood of small and marginal farmers who form the backbone of the Indian agricultural economy. Under PM-KISAN, eligible farmers receive a direct transfer of ₹6,000 annually, credited in three equal installments of ₹2,000 each to their bank accounts through Direct Benefit Transfer. This ensures transparency, eliminates middlemen, and guarantees timely support.\n\nThe scheme targets small and marginal landholder farmer families with cultivable land of up to two hectares. To qualify, farmers must submit Aadhaar-linked bank accounts, landholding records, and meet the prescribed eligibility criteria. Certain categories are excluded, including institutional landholders, income tax payers, and professionals such as doctors, engineers, and government employees above a certain rank. This selective inclusion ensures that the benefits reach those who genuinely depend on agriculture for survival.\n\nThe financial aid provided through PM-KISAN is not tied to crop cultivation or specific expenditures, giving farmers the freedom to use the funds for seeds, fertilizers, farm equipment, household needs, or loan repayment. For many families, this scheme acts as a safety net during times of distress caused by crop failures, natural calamities, or fluctuating market prices. By reducing dependence on informal credit and moneylenders, the scheme contributes to lowering rural indebtedness.\n\nThe PM-KISAN initiative also complements other government programs like the Pradhan Mantri Fasal Bima Yojana (PMFBY) and Pradhan Mantri Krishi Sinchayee Yojana (PMKSY), creating a holistic support framework for farmers. With the help of technology, the scheme uses a centralized online portal (pmkisan.gov.in) where farmers can register, check their installment status, and resolve grievances. Transparency and accountability are further strengthened through Aadhaar authentication and electronic fund transfer.\n\nAs of now, PM-KISAN continues to be a cornerstone policy in India's agricultural support system. It has disbursed billions of rupees to millions of farmers, empowering rural households and contributing to poverty alleviation. By offering direct financial support, the scheme reduces uncertainty in agricultural income and strengthens the government’s vision of doubling farmers’ income. Overall, PM-KISAN has emerged as a lifeline for India’s small and marginal farmers, helping them sustain livelihoods, invest in productivity, and achieve economic resilience.",
   },
   {
     id: generateRandomId(),
@@ -167,21 +183,21 @@ function renderSchemeCards(schemesToRender) {
     const schemeCard = document.createElement("div");
     schemeCard.className = "bg-white rounded-xl shadow-lg p-6 scheme-card";
     schemeCard.innerHTML = `
-                    <div class="flex items-start mb-4">
-                        <i class="${scheme.logo} text-3xl text-orange-600 mr-4"></i>
-                        <div>
-                            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
-                            <h3 class="font-bold text-xl mt-2">${scheme.name}</h3>
-                            <p class="text-gray-600">${scheme.description}</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.category}</span>
-                        <button class="text-orange-600 hover:text-orange-800 font-medium">
-                            View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                        </button>
-                    </div>
-                `;
+                          <div class="flex items-start mb-4">
+                              <i class="${scheme.logo} text-3xl text-orange-600 mr-4"></i>
+                              <div>
+                                  <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
+                                  <h3 class="font-bold text-xl mt-2">${scheme.name}</h3>
+                                  <p class="text-gray-600">${scheme.description}</p>
+                              </div>
+                          </div>
+                          <div class="flex justify-between items-center">
+                              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.category}</span>
+                              <button class="text-orange-600 hover:text-orange-800 font-medium">
+                                  View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                              </button>
+                          </div>
+                      `;
     schemeCard.addEventListener("click", () => showSchemeDetails(scheme));
     schemesContainer.appendChild(schemeCard);
   });
@@ -213,24 +229,24 @@ function renderSchemeList(schemesToRender) {
     const schemeItem = document.createElement("div");
     schemeItem.className = "bg-white rounded-xl shadow-lg p-6 scheme-card mb-4";
     schemeItem.innerHTML = `
-                    <div class="flex justify-between items-start">
-                        <div class="flex items-start">
-                            <i class="${scheme.logo} text-3xl text-orange-600 mr-4"></i>
-                            <div>
-                                <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
-                                <h3 class="font-bold text-xl mt-2">${scheme.name}</h3>
-                                <p class="text-gray-600">${scheme.description}</p>
-                                <div class="mt-3">
-                                    <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.category}</span>
-                                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded ml-2">${scheme.status}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="text-orange-600 hover:text-orange-800 font-medium">
-                            View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                        </button>
-                    </div>
-                `;
+                          <div class="flex justify-between items-start">
+                              <div class="flex items-start">
+                                  <i class="${scheme.logo} text-3xl text-orange-600 mr-4"></i>
+                                  <div>
+                                      <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
+                                      <h3 class="font-bold text-xl mt-2">${scheme.name}</h3>
+                                      <p class="text-gray-600">${scheme.description}</p>
+                                      <div class="mt-3">
+                                          <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.category}</span>
+                                          <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded ml-2">${scheme.status}</span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <button class="text-orange-600 hover:text-orange-800 font-medium">
+                                  View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                              </button>
+                          </div>
+                      `;
     schemeItem.addEventListener("click", () => showSchemeDetails(scheme));
     schemesContainer.appendChild(schemeItem);
   });
@@ -248,71 +264,63 @@ function showSchemeDetails(scheme) {
   detailsContainer.classList.remove("hidden");
   whatsappShare.classList.remove("hidden");
 
+  // Update URL with scheme name as hash
+  const schemeSlug = createSlug(scheme.name);
+  window.history.pushState(null, null, `#${schemeSlug}`);
+
   // Update WhatsApp share link
   const shareText = `Check out this PM Scheme: ${scheme.name} - ${scheme.description}. Learn more at: `;
   const encodedText = encodeURIComponent(shareText);
   whatsappLink.href = `https://wa.me/?text=${encodedText}`;
 
   schemeDetails.innerHTML = `
-                <div class="fade-in">
-                    <div class="flex items-center mb-6">
-                        <i class="${
-                          scheme.logo
-                        } text-4xl text-orange-600 mr-4"></i>
-                        <div>
-                            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${
-                              scheme.id
-                            }</span>
-                            <h3 class="text-3xl font-bold">${scheme.name}</h3>
-                            <p class="text-gray-600 text-lg">${
-                              scheme.fullName
-                            }</p>
-                        </div>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div class="bg-orange-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-lg mb-2"><i class="fas fa-gift mr-2 text-orange-600"></i>Benefits</h4>
-                            <p>${scheme.benefits}</p>
-                        </div>
-                        <div class="bg-green-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-lg mb-2"><i class="fas fa-user-check mr-2 text-green-600"></i>Eligibility</h4>
-                            <p>${scheme.eligibility}</p>
-                        </div>
-                        <div class="bg-orange-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-lg mb-2"><i class="fas fa-calendar-alt mr-2 text-orange-600"></i>Launched</h4>
-                            <p>${scheme.launched}</p>
-                        </div>
-                        <div class="bg-green-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-lg mb-2"><i class="fas fa-tag mr-2 text-green-600"></i>Category</h4>
-                            <p>${scheme.category}</p>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <h4 class="font-bold text-lg mb-2"><i class="fas fa-info-circle mr-2 text-gray-600"></i>Scheme Details</h4>
-                        <p class="text-gray-700">Launched in ${
-                          scheme.launched
-                        }, this scheme aims to provide support to citizens across India. The scheme has shown significant impact in its domain and continues to benefit millions of Indians. Administered by the ${
-    scheme.ministry
-  }, it is currently ${scheme.status.toLowerCase()}.</p>
-                    </div>
-                    
-                    <div class="flex items-center flex-wrap gap-4">
-                        <a href="${
-                          scheme.officialSite
-                        }" target="_blank" class="btn-orange px-6 py-3 rounded-lg flex items-center">
-                            <i class="fas fa-external-link-alt mr-2"></i> Official Website
-                        </a>
-                        <button id="share-btn" class="border border-orange-600 text-orange-600 hover:bg-orange-50 px-6 py-3 rounded-lg">
-                            <i class="far fa-share-square mr-2"></i> Share
-                        </button>
-                        <button id="whatsapp-btn" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg flex items-center">
-                            <i class="fab fa-whatsapp mr-2"></i> Share via WhatsApp
-                        </button>
-                    </div>
-                </div>
-            `;
+                      <div class="fade-in">
+                          <div class="flex items-center mb-6">
+                              <i class="${scheme.logo} text-4xl text-orange-600 mr-4"></i>
+                              <div>
+                                  <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
+                                  <h3 class="text-3xl font-bold">${scheme.name}</h3>
+                                  <p class="text-gray-600 text-lg">${scheme.fullName}</p>
+                              </div>
+                          </div>
+
+                          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                              <div class="bg-orange-50 p-4 rounded-lg">
+                                  <h4 class="font-bold text-lg mb-2"><i class="fas fa-gift mr-2 text-orange-600"></i>Benefits</h4>
+                                  <p>${scheme.benefits}</p>
+                              </div>
+                              <div class="bg-green-50 p-4 rounded-lg">
+                                  <h4 class="font-bold text-lg mb-2"><i class="fas fa-user-check mr-2 text-green-600"></i>Eligibility</h4>
+                                  <p>${scheme.eligibility}</p>
+                              </div>
+                              <div class="bg-orange-50 p-4 rounded-lg">
+                                  <h4 class="font-bold text-lg mb-2"><i class="fas fa-calendar-alt mr-2 text-orange-600"></i>Launched</h4>
+                                  <p>${scheme.launched}</p>
+                              </div>
+                              <div class="bg-green-50 p-4 rounded-lg">
+                                  <h4 class="font-bold text-lg mb-2"><i class="fas fa-tag mr-2 text-green-600"></i>Category</h4>
+                                  <p>${scheme.category}</p>
+                              </div>
+                          </div>
+
+                          <div class="mb-6">
+                              <h4 class="font-bold text-lg mb-2"><i class="fas fa-info-circle mr-2 text-gray-600"></i>Scheme Details</h4>
+                              <p class="text-gray-700">${scheme.longDescription}ndians. Administered by the ${scheme.ministry}.</p>
+                          </div>
+
+                          <div class="flex items-center flex-wrap gap-4">
+                              <a href="${scheme.officialSite}" target="_blank" class="btn-orange px-6 py-3 rounded-lg flex items-center">
+                                  <i class="fas fa-external-link-alt mr-2"></i> Official Website
+                              </a>
+                              <button id="share-btn" class="border border-orange-600 text-orange-600 hover:bg-orange-50 px-6 py-3 rounded-lg">
+                                  <i class="far fa-share-square mr-2"></i> Share
+                              </button>
+                              <button id="whatsapp-btn" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg flex items-center">
+                                  <i class="fab fa-whatsapp mr-2"></i> Share via WhatsApp
+                              </button>
+                          </div>
+                      </div>
+                  `;
 
   // Add event listeners for share buttons
   document.getElementById("share-btn").addEventListener("click", shareScheme);
@@ -322,6 +330,28 @@ function showSchemeDetails(scheme) {
 
   // Scroll to top
   window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+// Function to handle back button
+function handleBackButton() {
+  detailsContainer.classList.add("hidden");
+  schemesContainer.classList.remove("hidden");
+  whatsappShare.classList.add("hidden");
+
+  // Remove scheme hash from URL
+  window.history.pushState(null, null, window.location.pathname);
+}
+
+// Function to check URL hash and show corresponding scheme
+function checkUrlHash() {
+  const hash = window.location.hash.substring(1); // Remove the # character
+  if (hash) {
+    // Find scheme by slug
+    const scheme = schemes.find((s) => createSlug(s.name) === hash);
+    if (scheme) {
+      showSchemeDetails(scheme);
+    }
+  }
 }
 
 // Function to share scheme
@@ -381,12 +411,14 @@ function filterSchemes() {
 document.addEventListener("DOMContentLoaded", () => {
   renderSchemeCards(schemes);
 
+  // Check if URL has a hash and show corresponding scheme
+  checkUrlHash();
+
+  // Listen for hash changes
+  window.addEventListener("hashchange", checkUrlHash);
+
   // Back button event listener
-  backButton.addEventListener("click", () => {
-    detailsContainer.classList.add("hidden");
-    schemesContainer.classList.remove("hidden");
-    whatsappShare.classList.add("hidden");
-  });
+  backButton.addEventListener("click", handleBackButton);
 
   // View toggle event listeners
   cardViewBtn.addEventListener("click", () => {
@@ -554,3 +586,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Function to check URL hash and show corresponding scheme
+function checkUrlHash() {
+  const hash = window.location.hash.substring(1); // Remove the # character
+  if (hash) {
+    // Find scheme by slug
+    const scheme = schemes.find((s) => createSlug(s.name) === hash);
+    if (scheme) {
+      showSchemeDetails(scheme);
+    }
+  }
+}
