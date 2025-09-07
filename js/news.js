@@ -486,3 +486,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+ function submitButton(){
+      document.getElementById("msg").style.display = "block";
+      document.getElementById("btn").style.display = "none";
+     }
