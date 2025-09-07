@@ -1247,8 +1247,9 @@ function checkUrlHash() {
   }
 }
 
- function submitButton(){
-      document.getElementById("msg").innerText = "Submited";
-      document.getElementById("submit-button").style.display = "none";
+function submitButton(){
+      document.getElementById("msg").style.display = "block";
+      document.getElementById("btn").style.display = "none";
      }
+
 
