@@ -722,102 +722,70 @@ const schemes = [
     longDescription:
       "Beti Bachao Beti Padhao (BBBP), launched in 2015, is a government initiative aimed at addressing the declining child sex ratio, promoting girls’ education, and empowering the girl child in India. The program focuses on three key pillars: prevention of gender-biased sex-selective elimination, ensuring survival and protection of the girl child, and promoting education and participation in socio-economic development. BBBP combines advocacy, awareness campaigns, policy interventions, and community engagement to change societal attitudes and improve the status of girls in India. The scheme collaborates with health, education, and law enforcement departments to implement measures for early detection of gender bias, timely medical care, and enforcement of laws against female feticide. BBBP also promotes enrollment, retention, and quality education for girls, providing scholarships, mentoring, and skill development opportunities to empower them. Community-based programs encourage parental support, reduce discrimination, and ensure access to healthcare and nutrition. The initiative engages media, civil society, and local authorities to spread awareness and mobilize societal support for gender equality. Since its inception, BBBP has contributed to improving the child sex ratio in several districts, increased awareness about the value of the girl child, and promoted inclusive participation in education and social development. By focusing on protection, education, and empowerment, Beti Bachao Beti Padhao strengthens gender equality, reduces discrimination, and fosters a more equitable society. It aligns with India’s vision of empowering women, promoting human development, and building a progressive, inclusive nation."
   },
-  {
+   {
     id: generateRandomId(),
-    name: "PM-VIKAS",
-    description: "PM Vishwakarma Kaushal Samman",
-    fullName: "Pradhan Mantri Vishwakarma Kaushal Samman",
-    launched: "2023",
-    benefits: "Skill training and financial support for artisans",
-    eligibility: "Traditional artisans and craftspeople",
-    officialSite: "https://pmvishwakarma.gov.in",
-    logo: "fas fa-tools",
-    category: "Skill Development",
-    ministry: "Ministry of MSME",
+    name: "National Nutrition Mission",
+    description: "Nutrition & Health Scheme",
+    fullName: "Poshan Abhiyaan",
+    launched: "2018",
+    benefits: "Reducing malnutrition, improving maternal and child health, micronutrient supplementation",
+    eligibility: "Pregnant women, lactating mothers, and children up to 6 years",
+    officialSite: "https://poshanabhiyaan.gov.in",
+    logo: "fas fa-apple-alt",
+    category: "Health & Nutrition",
+    ministry: "Ministry of Women and Child Development",
     status: "Active",
     longDescription:
-      "PM Vishwakarma Kaushal Samman (PM-VIKAS) is aimed at supporting traditional artisans and craftspeople by offering skill training, toolkit incentives, and collateral-free loans. It helps in preserving traditional crafts while improving livelihood opportunities for artisans."
+      "The National Nutrition Mission, or Poshan Abhiyaan, launched in 2018, is a flagship government initiative aimed at improving nutritional outcomes for children, pregnant women, and lactating mothers in India. The mission focuses on reducing stunting, undernutrition, anemia, and low birth weight through interventions such as supplementary nutrition, immunization, health check-ups, and behavior change communication. Poshan Abhiyaan leverages technology, real-time monitoring, and digital platforms to track service delivery, identify gaps, and ensure accountability. The program engages Anganwadi workers, community leaders, and local governance institutions to implement nutrition-related activities effectively at the grassroots level. Awareness campaigns, capacity building, and community mobilization are integral components to promote healthy eating habits, hygiene, and maternal care. By addressing malnutrition early in life, the mission contributes to improved cognitive development, physical health, and long-term educational and economic outcomes. Poshan Abhiyaan also integrates initiatives for micronutrient supplementation, growth monitoring, and health education, fostering holistic child development. The mission aligns with India’s Sustainable Development Goals (SDGs), targeting improved health, well-being, and social equity, while strengthening institutional frameworks for nutrition governance. Through Poshan Abhiyaan, the government aims to create a healthier, more productive, and resilient population, reducing the burden of malnutrition and fostering sustainable human development across communities."
   },
   {
     id: generateRandomId(),
-    name: "PM Vaya Vandana Yojana",
-    description: "Pension scheme for senior citizens",
-    fullName: "Pradhan Mantri Vaya Vandana Yojana",
-    launched: "2017",
-    benefits: "Pension at guaranteed rate of return",
-    eligibility: "Senior citizens (60 years and above)",
-    officialSite: "https://licindia.in",
-    logo: "fas fa-user-clock",
-    category: "Social Security",
-    ministry: "Ministry of Finance",
-    status: "Active",
-    longDescription:
-      "PM Vaya Vandana Yojana is a pension scheme for senior citizens introduced by the Government of India through LIC. It provides a guaranteed return of 7.4% per annum for 10 years, ensuring financial security and stability for elderly citizens."
-  },
-  {
-    id: generateRandomId(),
-    name: "PMGKAY",
-    description: "Pradhan Mantri Garib Kalyan Anna Yojana",
-    fullName: "Pradhan Mantri Garib Kalyan Anna Yojana",
-    launched: "2020",
-    benefits: "Free food grains for poor households",
-    eligibility: "Ration card holders and poor households",
-    officialSite: "https://nfsa.gov.in",
-    logo: "fas fa-bread-slice",
-    category: "Food Security",
-    ministry: "Ministry of Consumer Affairs, Food & Public Distribution",
-    status: "Active",
-    longDescription:
-      "PMGKAY is a food security scheme launched during the COVID-19 pandemic, providing 5 kg of free food grains per person per month to NFSA beneficiaries. It has been extended multiple times to support poor households during economic hardships."
-  },
-  {
-    id: generateRandomId(),
-    name: "Ayushman Bharat Digital Mission",
-    description: "Digital health ID initiative",
-    fullName: "Ayushman Bharat Digital Mission",
-    launched: "2021",
-    benefits: "Unique health ID and digital health records",
-    eligibility: "All Indian citizens",
-    officialSite: "https://abdm.gov.in",
-    logo: "fas fa-notes-medical",
-    category: "Health",
-    ministry: "Ministry of Health & Family Welfare",
-    status: "Active",
-    longDescription:
-      "Ayushman Bharat Digital Mission (ABDM) aims to create a unified digital health infrastructure by providing every citizen with a unique Health ID. It enables easy access to medical records, telemedicine, and digital health services across India."
-  },
-  {
-    id: generateRandomId(),
-    name: "BharatNet Project",
-    description: "Broadband connectivity to rural areas",
-    fullName: "BharatNet Project",
-    launched: "2011",
-    benefits: "High-speed broadband for gram panchayats",
-    eligibility: "Rural population",
-    officialSite: "https://bharatnet.bbnl.nic.in",
-    logo: "fas fa-network-wired",
-    category: "Digital India",
-    ministry: "Ministry of Communications",
-    status: "Active",
-    longDescription:
-      "BharatNet is the world’s largest rural broadband project aiming to connect all 2.5 lakh gram panchayats of India with high-speed internet through optical fiber. It plays a key role in Digital India by improving e-governance, education, and health services in rural regions."
-  },
-  {
-    id: generateRandomId(),
-    name: "Smart Cities Mission",
-    description: "Urban renewal and retrofitting program",
-    fullName: "Smart Cities Mission",
+    name: "Deen Dayal Upadhyaya Gram Jyoti Yojana",
+    description: "Rural Electrification Scheme",
+    fullName: "DDUGJY",
     launched: "2015",
-    benefits: "Urban infrastructure, IT connectivity, housing, transport",
-    eligibility: "Selected Indian cities",
-    officialSite: "https://smartcities.gov.in",
-    logo: "fas fa-city",
-    category: "Urban Development",
-    ministry: "Ministry of Housing & Urban Affairs",
+    benefits: "Rural electrification, feeder separation, and reliable electricity supply to villages",
+    eligibility: "All rural households and villages without electricity",
+    officialSite: "https://www.ddugjy.gov.in",
+    logo: "fas fa-bolt",
+    category: "Energy & Infrastructure",
+    ministry: "Ministry of Power",
     status: "Active",
     longDescription:
-      "Smart Cities Mission is an urban renewal project launched in 2015 to develop 100 cities across India with modern infrastructure, smart governance, sustainable housing, and efficient transport. It focuses on technology-driven solutions for urban challenges."
-  }
+      "Deen Dayal Upadhyaya Gram Jyoti Yojana (DDUGJY), launched in 2015, is a government initiative aimed at providing continuous and reliable electricity to rural India while enhancing infrastructure for agricultural and household power needs. The scheme focuses on feeder separation for agricultural and domestic consumption, strengthening sub-transmission and distribution networks, and electrifying unconnected villages. DDUGJY promotes energy access, economic development, and quality of life improvements in rural areas. By leveraging modern technology, smart metering, and real-time monitoring, the scheme ensures efficient electricity distribution and reduces power losses. Rural households benefit from reliable lighting, energy for appliances, and improved educational and healthcare facilities. Farmers gain access to uninterrupted electricity for irrigation and farm-related activities, enhancing productivity and income. DDUGJY also encourages private sector participation, capacity building, and employment opportunities in rural electrification projects. Since its launch, thousands of villages have been electrified, contributing to socio-economic upliftment and bridging urban-rural energy gaps. The scheme supports sustainable development, environmental considerations, and energy security. By delivering modern electricity infrastructure, DDUGJY empowers rural communities, stimulates economic growth, and fosters inclusive development across India’s countryside."
+  },
+  {
+  id: generateRandomId(),
+  name: "Smart Cities Mission",
+  description: "Urban Development & Smart Infrastructure Scheme",
+  fullName: "Smart Cities Mission",
+  launched: "2015",
+  benefits: "Creation of citizen-friendly, sustainable, and technologically advanced urban centers",
+  eligibility: "Selected cities based on State/UT proposals and ranking under the mission framework",
+  officialSite: "https://smartcities.gov.in",
+  logo: "fas fa-city",
+  category: "Urban Development & Infrastructure",
+  ministry: "Ministry of Housing and Urban Affairs",
+  status: "Active",
+  longDescription:
+    "The Smart Cities Mission, launched in 2015 by the Government of India, is a transformative urban development initiative aimed at creating 100 smart cities across the country that are citizen-centric, sustainable, and technologically advanced. The mission seeks to improve urban living by integrating core infrastructure elements such as adequate water supply, efficient sanitation, reliable energy, intelligent transport systems, and robust IT connectivity. Smart Cities are designed to be economically productive, environmentally sustainable, and socially inclusive, focusing on improving the quality of life for residents. The mission encourages cities to adopt innovative solutions for urban mobility, waste management, energy efficiency, and public safety using digital technologies and data-driven governance. Citizen participation is central to the initiative, empowering residents to be actively involved in planning, monitoring, and decision-making processes. Smart Cities leverage public-private partnerships (PPP) to implement sustainable infrastructure projects and enhance investment opportunities. The program also emphasizes green spaces, clean air initiatives, and climate-resilient planning to promote environmental well-being. By fostering innovation, the mission supports local entrepreneurship, job creation, and skill development. Since its inception, numerous cities have undertaken projects such as smart traffic management, e-governance platforms, smart water meters, urban mobility solutions, and digitally connected public services, demonstrating measurable improvements in efficiency, transparency, and citizen satisfaction. The Smart Cities Mission aligns with India’s vision of sustainable urbanization, economic growth, and enhanced livability, transforming the urban landscape while addressing the challenges posed by rapid population growth, urban congestion, and environmental stress. By integrating technology, governance, and citizen engagement, the Smart Cities Mission seeks to build urban spaces that are resilient, inclusive, and capable of supporting the aspirations of present and future generations."
+},
+ {
+  id: generateRandomId(),
+  name: "BharatNet Project",
+  description: "Rural Broadband Connectivity Initiative",
+  fullName: "BharatNet Project",
+  launched: "2011",
+  benefits: "High-speed broadband connectivity to all gram panchayats, bridging the digital divide",
+  eligibility: "All rural areas and gram panchayats across India",
+  officialSite: "https://bharatnet.bbnl.nic.in",
+  logo: "fas fa-network-wired",
+  category: "Digital Infrastructure",
+  ministry: "Ministry of Communications",
+  status: "Active",
+  longDescription:
+    "The BharatNet Project, launched in 2011, is India’s flagship initiative to provide high-speed broadband connectivity to all 2.5 lakh gram panchayats in rural areas, creating a foundation for Digital India. The mission aims to bridge the digital divide between urban and rural regions, enabling equitable access to digital services, education, health, governance, and economic opportunities. The project is implemented through a combination of optical fiber networks, wireless technologies, and last-mile connectivity solutions, ensuring reliable internet access to remote and underserved villages. BharatNet facilitates e-governance by enabling online delivery of government services, digital financial inclusion through access to banking and digital payment platforms, and enhanced educational and skill development opportunities for rural populations. The project also empowers farmers, entrepreneurs, and small businesses to leverage online markets, e-commerce platforms, and digital supply chains, fostering rural entrepreneurship and socio-economic development. Health services are improved via telemedicine initiatives and digital health platforms, reducing the gap in quality healthcare access between urban and rural areas. Furthermore, BharatNet supports smart village and smart agriculture initiatives, contributing to sustainable rural development. With a focus on affordability, accessibility, and scalability, the project is designed to support a wide range of applications, including public Wi-Fi hotspots, digital literacy programs, and community information centers. By providing a robust digital backbone, BharatNet enhances communication, collaboration, and innovation across rural India, positioning the country to harness the benefits of the digital economy. The mission is not only transforming connectivity but also enabling socio-economic empowerment, bridging information gaps, and fostering inclusive growth for rural communities, ensuring that no citizen is left behind in the digital era."
+},
 ];
 
 // DOM elements
