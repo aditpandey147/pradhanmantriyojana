@@ -427,3 +427,6 @@
 .linkedin {
   background-color: #0077b5;
 }
+ #msg{
+    display: none;
+  }
