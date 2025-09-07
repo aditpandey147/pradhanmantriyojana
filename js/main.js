@@ -945,7 +945,8 @@ function showSchemeDetails(scheme) {
 
   // Update URL with scheme name as hash
   const schemeSlug = createSlug(scheme.description);
-  window.history.pushState(null, null, `/${schemeSlug}`);
+  const schemeNameSlug = createSlug(scheme.name);
+  window.history.pushState(null, null, `/${schemeNameSlug}/${schemeSlug}`);
 
   // Update WhatsApp share link
   const shareText = `Check out this PM Scheme: ${scheme.name} - ${scheme.description}. Learn more at: `;
