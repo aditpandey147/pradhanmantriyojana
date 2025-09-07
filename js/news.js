@@ -156,7 +156,18 @@ const newsData = [
     category: "Environment",
    date: new Date().toISOString().split("T")[0],
     source: "PMO India"
-  }
+  },
+  {
+    id: 47,
+    title: "GST Council Meeting Concludes; Tax Rates Revised on Multiple Items",
+    summary: "The 52nd GST Council meeting announced rate rationalization for several goods and services, aiming to simplify the tax structure and boost compliance.",
+    content: "<p>The 52nd meeting of the GST Council, chaired by Union Finance Minister Nirmala Sitharaman, concluded today with major decisions on rate rationalization and compliance measures.</p><p>The Council recommended reducing the GST rate on liquid jaggery from 18% to 5% and on pencil sharpeners from 18% to 12%. It also decided to exempt GST on satellite launch services provided by private organizations to boost the space sector.</p><p>To curb tax evasion, the Council approved biometric-based Aadhaar authentication for new registrants on a pilot basis. Measures to streamline GST return filing and improve the input tax credit mechanism were also discussed.</p><p>Finance Minister Sitharaman stated, 'These changes are aimed at simplifying the tax structure, reducing litigation, and fostering ease of doing business.'</p><p>The Council also formed a Group of Ministers (GoM) to examine the issue of tax rate rationalization for online gaming and casinos, with a report expected in the next meeting.</p>",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    category: "GST",
+    date: new Date().toISOString().split("T")[0],
+    source: "Ministry of Finance"
+}
+  
 ];
 
 // DOM elements
