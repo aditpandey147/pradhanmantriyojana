@@ -281,8 +281,8 @@ function showSchemeDetails(scheme) {
   whatsappShare.classList.remove("hidden");
 
   // Update URL with scheme name as hash
-  const schemeSlug = createSlug(scheme.name);
-  window.history.pushState(null, null, `#${schemeSlug}`);
+  const schemeSlug = createSlug(scheme.description);
+  window.history.pushState(null, null, `/${schemeSlug}`);
 
   // Update WhatsApp share link
   const shareText = `Check out this PM Scheme: ${scheme.name} - ${scheme.description}. Learn more at: `;
