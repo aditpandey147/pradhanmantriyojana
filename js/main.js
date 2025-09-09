@@ -916,10 +916,10 @@ function showSchemeDetails(scheme) {
   const schemeNameSlug = createSlug(scheme.name);
   window.history.pushState(null, null, `/${schemeNameSlug}/${schemeSlug}`);
 
-  // Update WhatsApp share link
-  const shareText = `Check out this PM Scheme: ${scheme.name} - ${scheme.description}. Learn more at: `;
-  const encodedText = encodeURIComponent(shareText);
-  whatsappLink.href = `https://wa.me/?text=${encodedText}`;
+  // // Update WhatsApp share link
+  // const shareText = `Check out this PM Scheme: ${scheme.name} - ${scheme.description}. Learn more at: `;
+  // const encodedText = encodeURIComponent(shareText);
+  // whatsappLink.href = `https://wa.me/?text=${encodedText}`;
 
   schemeDetails.innerHTML = `
                       <div class="fade-in">
