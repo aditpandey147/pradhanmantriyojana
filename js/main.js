@@ -1142,32 +1142,32 @@ document.addEventListener("DOMContentLoaded", () => {
     cardViewBtn.classList.remove("bg-orange-100", "text-orange-700");
   });
 
-  // Search and filter event listeners
-  heroSearch.addEventListener("keyup", (e) => {
-    if (e.key === "Enter") {
-      filterSchemes();
-    }
+  // Function to filter schemes based on search and filters
+function filterSchemes() {
+  const searchText =
+    mainSearch.value.toLowerCase() || heroSearch.value.toLowerCase();
+  const category = categoryFilter.value;
+  const status = statusFilter.value;
+
+  filteredSchemes = schemes.filter((scheme) => {
+    const matchesSearch =
+      scheme.name.toLowerCase().includes(searchText) ||
+      scheme.description.toLowerCase().includes(searchText) ||
+      scheme.fullName.toLowerCase().includes(searchText) ||
+      scheme.category.toLowerCase().includes(searchText);
+
+    const matchesCategory = category === "all" || scheme.category === category;
+    const matchesStatus = status === "all" || scheme.status === status;
+
+    return matchesSearch && matchesCategory && matchesStatus;
   });
 
-  heroSearchBtn.addEventListener("click", filterSchemes);
-
-  mainSearch.addEventListener("keyup", (e) => {
-    if (e.key === "Enter") {
-      filterSchemes();
-    }
-  });
-
-  categoryFilter.addEventListener("change", filterSchemes);
-  statusFilter.addEventListener("change", filterSchemes);
-
-  resetFiltersBtn.addEventListener("click", () => {
-    mainSearch.value = "";
-    heroSearch.value = "";
-    categoryFilter.value = "all";
-    statusFilter.value = "all";
-    filterSchemes();
-  });
-
+  if (currentView === "card") {
+    renderSchemeCards(filteredSchemes);
+  } else {
+    renderSchemeList(filteredSchemes);
+  }
+}
   // Quick filter buttons in hero section
   document.querySelectorAll(".hero-pattern button").forEach((button) => {
     button.addEventListener("click", (e) => {
