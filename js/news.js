@@ -491,3 +491,59 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("msg").style.display = "block";
       document.getElementById("btn").style.display = "none";
      }
+
+
+// disable right-click menu
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    // block common developer-shortcuts and view-source
+    document.addEventListener('keydown', function(e) {
+      // Normalize key (modern browsers)
+      const key = e.key || e.keyCode;
+
+      // Block F12
+      if (key === 'F12' || key === 123) {
+        e.preventDefault();
+        return false;
+      }
+
+      // Block Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C
+      if (e.ctrlKey && e.shiftKey && (key === 'I' || key === 'J' || key === 'C' || key === 73 || key === 74 || key === 67)) {
+        e.preventDefault();
+        return false;
+      }
+
+      // Block Ctrl+U (view source), Ctrl+S (save), Ctrl+Shift+S, Ctrl+P (print)
+      if ((e.ctrlKey || e.metaKey) && (key === 'U' || key === 'S' || key === 'P' || key === 'u' || key === 's' || key === 'p' || key === 85 || key === 83 || key === 80)) {
+        e.preventDefault();
+        return false;
+      }
+
+      // Block Ctrl+Shift+K (firefox webconsole), Ctrl+Shift+K keyCode fallback
+      if (e.ctrlKey && e.shiftKey && (key === 'K' || key === 75 || key === 'k')) {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // Optional: mild devtools-open detection (heuristic, unreliable)
+    (function detectDevTools() {
+      const threshold = 160;
+      let open = false;
+      function check() {
+        const widthDiff = window.outerWidth - window.innerWidth;
+        const heightDiff = window.outerHeight - window.innerHeight;
+        if (widthDiff > threshold || heightDiff > threshold) {
+          if (!open) {
+            open = true;
+            console.log('DevTools likely opened');
+            // Do NOT forcibly redirect users — that is hostile. You can log or show UI instead.
+          }
+        } else {
+          open = false;
+        }
+      }
+      setInterval(check, 1000);
+    })();
