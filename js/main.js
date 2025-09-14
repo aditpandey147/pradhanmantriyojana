@@ -1203,6 +1203,7 @@ document.addEventListener("DOMContentLoaded", () => {
     filterSchemes();
   });
 
+
   // Quick filter buttons in hero section
   document.querySelectorAll(".hero-pattern button").forEach((button) => {
     button.addEventListener("click", (e) => {
