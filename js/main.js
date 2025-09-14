@@ -1043,11 +1043,7 @@ function showSchemeDetails(scheme) {
                         <h4 class="font-bold text-lg mb-2"><i class="fas fa-info-circle mr-2 text-gray-600"></i>Scheme Details</h4>
                         <p class="text-gray-700">${scheme.longDescription}</p>
                     </div>
-                     <div class="mb-6">
-                        <h4 class="font-bold text-lg mb-2"><i class="fas fa-info-circle mr-2 text-gray-600"></i>Scheme Details</h4>
-                        <p class="text-gray-700">${scheme.howtoapply.registration}</p>
-                    </div>
-
+                     
                     <div class="flex items-center flex-wrap gap-4">
                         <a href="${scheme.officialSite}" target="_blank" class="btn-orange px-6 py-3 rounded-lg flex items-center">
                             <i class="fas fa-external-link-alt mr-2"></i> Official Website
@@ -1342,6 +1338,7 @@ function submitButton() {
       }
       setInterval(check, 1000);
     })();
+
 
 
 
