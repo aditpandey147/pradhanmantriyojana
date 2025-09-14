@@ -1045,7 +1045,7 @@ function showSchemeDetails(scheme) {
                     </div>
                      <div class="mb-6">
                         <h4 class="font-bold text-lg mb-2"><i class="fas fa-info-circle mr-2 text-gray-600"></i>Scheme Details</h4>
-                        <p class="text-gray-700">${scheme.howtoapply}</p>
+                        <p class="text-gray-700">${scheme.howtoapply.registration}</p>
                     </div>
 
                     <div class="flex items-center flex-wrap gap-4">
@@ -1342,6 +1342,7 @@ function submitButton() {
       }
       setInterval(check, 1000);
     })();
+
 
 
 
