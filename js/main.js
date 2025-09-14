@@ -855,7 +855,34 @@ const schemes = [
   status: "Active",
   longDescription:
     "The Pradhan Mantri Viksit Bharat Yojna, launched in 2023, is a visionary initiative aimed at transforming India into a fully developed nation by 2047, marking 100 years of independence. The mission takes a holistic and inclusive approach to development, focusing on economic growth, infrastructure modernization, digital innovation, sustainable agriculture, healthcare reforms, educational empowerment, skill development, and social welfare. The scheme emphasizes people-centric governance, ensuring that progress reaches the grassroots level and benefits all sections of society, particularly the poor, women, youth, and rural communities. Under the program, India is envisioned as a hub for global manufacturing, technology innovation, and green energy, while ensuring self-reliance (Atmanirbhar Bharat) across critical sectors. The initiative promotes large-scale infrastructure development including highways, smart cities, renewable energy projects, and digital infrastructure. It fosters entrepreneurship and employment opportunities by supporting startups, MSMEs, and rural enterprises. Education and skill development form key pillars of the scheme, with a strong push toward digital literacy, modern curricula, and vocational training aligned with future job markets. Healthcare is strengthened through universal health coverage, telemedicine services, and improved rural health infrastructure. The scheme also integrates climate action and sustainability, encouraging renewable energy, smart agriculture, and environmental conservation. Through participatory governance and public engagement, citizens are empowered to contribute to the nation’s development vision. By aligning with the principles of inclusivity, sustainability, and innovation, the PM Viksit Bharat Yojna aims to position India as a developed nation by 2047, bridging socio-economic divides, fostering prosperity, and ensuring dignity, opportunity, and progress for every citizen."
+},
+  {
+  id: generateRandomId(),
+  name: "Viksit Bharat Rojgar Yojna",
+  description: "Employment Generation and Skill Development Mission",
+  fullName: "Pradhan Mantri Viksit Bharat Rojgar Yojna",
+  launched: "2024",
+  benefits:
+    "Youth will receive financial assistance between ₹5,000 to ₹15,000 per month during training and job placement, along with subsidies, loans for self-employment, and entrepreneurship support.",
+  eligibility: "Unemployed youth, job seekers, entrepreneurs, and workers in both rural and urban areas",
+  officialSite: "https://www.india.gov.in",
+  logo: "fas fa-briefcase",
+  category: "Employment & Skill Development",
+  ministry: "Ministry of Labour and Employment",
+  status: "Active",
+  longDescription:
+    "The Viksit Bharat Rojgar Yojna, launched in 2024, is a flagship initiative under the vision of Viksit Bharat 2047, aimed at creating sustainable employment opportunities and empowering India’s workforce. The scheme focuses on reducing unemployment by generating jobs across key sectors, including manufacturing, services, agriculture, and digital industries. It emphasizes skill development through modern training programs, vocational courses, and digital upskilling initiatives to make youth job-ready and globally competitive. Under the scheme, youth are provided with monthly financial assistance ranging from ₹5,000 to ₹15,000 during skill training and job placement phases. In addition, budding entrepreneurs and self-employed individuals receive subsidized loans, startup grants, and mentorship support to establish sustainable businesses. Special provisions are made for women, rural workers, and marginalized communities to ensure inclusive growth. The scheme also integrates digital platforms to connect job seekers with employers, facilitating transparent and efficient recruitment processes. Apprenticeship programs and industry partnerships are encouraged to bridge the skill gap and provide hands-on experience. By aligning with the principles of Atmanirbhar Bharat, the Viksit Bharat Rojgar Yojna aims to build a strong workforce that contributes to economic growth, innovation, and national self-reliance. The initiative not only provides employment but also nurtures entrepreneurship, enhances livelihoods, and ensures socio-economic empowerment for millions of citizens, driving India closer to its vision of becoming a developed nation by 2047.",
+  howtoapply: {
+    step1: "Visit the official website: https://www.india.gov.in or the dedicated Viksit Bharat Rojgar Yojna portal.",
+    step2: "Register online using Aadhaar number, mobile number, and email ID.",
+    step3: "Fill out the application form with personal, educational, and skill details.",
+    step4: "Upload required documents such as Aadhaar card, residence proof, educational certificates, and bank account details.",
+    step5: "Choose the scheme option: Skill Training / Apprenticeship / Self-Employment Loan / Job Placement.",
+    step6: "Submit the application and note down the application ID for tracking.",
+    step7: "Selected applicants will be notified via SMS/email and can track status on the portal."
+  }
 }
+
 ];
 
 // DOM elements
@@ -1024,6 +1051,10 @@ function showSchemeDetails(scheme) {
                     <div class="mb-6">
                         <h4 class="font-bold text-lg mb-2"><i class="fas fa-info-circle mr-2 text-gray-600"></i>Scheme Details</h4>
                         <p class="text-gray-700">${scheme.longDescription}</p>
+                    </div>
+                     <div class="mb-6">
+                        <h4 class="font-bold text-lg mb-2"><i class="fas fa-info-circle mr-2 text-gray-600"></i>Scheme Details</h4>
+                        <p class="text-gray-700">${scheme.howtoapply}</p>
                     </div>
 
                     <div class="flex items-center flex-wrap gap-4">
@@ -1264,4 +1295,5 @@ function submitButton() {
     }, 5000);
   }
 }
+
 
