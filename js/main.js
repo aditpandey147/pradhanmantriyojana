@@ -839,6 +839,23 @@ const schemes = [
     longDescription:
       "The BharatNet Project, launched in 2011, is India’s flagship initiative to provide high-speed broadband connectivity to all 2.5 lakh gram panchayats in rural areas, creating a foundation for Digital India. The mission aims to bridge the digital divide between urban and rural regions, enabling equitable access to digital services, education, health, governance, and economic opportunities. The project is implemented through a combination of optical fiber networks, wireless technologies, and last-mile connectivity solutions, ensuring reliable internet access to remote and underserved villages. BharatNet facilitates e-governance by enabling online delivery of government services, digital financial inclusion through access to banking and digital payment platforms, and enhanced educational and skill development opportunities for rural populations. The project also empowers farmers, entrepreneurs, and small businesses to leverage online markets, e-commerce platforms, and digital supply chains, fostering rural entrepreneurship and socio-economic development. Health services are improved via telemedicine initiatives and digital health platforms, reducing the gap in quality healthcare access between urban and rural areas. Furthermore, BharatNet supports smart village and smart agriculture initiatives, contributing to sustainable rural development. With a focus on affordability, accessibility, and scalability, the project is designed to support a wide range of applications, including public Wi-Fi hotspots, digital literacy programs, and community information centers. By providing a robust digital backbone, BharatNet enhances communication, collaboration, and innovation across rural India, positioning the country to harness the benefits of the digital economy. The mission is not only transforming connectivity but also enabling socio-economic empowerment, bridging information gaps, and fostering inclusive growth for rural communities, ensuring that no citizen is left behind in the digital era.",
   },
+  {
+  id: generateRandomId(),
+  name: "PM Viksit Bharat Yojna",
+  description: "Holistic Development Mission for a Developed India by 2047",
+  fullName: "Pradhan Mantri Viksit Bharat Yojna",
+  launched: "2023",
+  benefits:
+    "Comprehensive growth across infrastructure, digital empowerment, healthcare, education, agriculture, and employment to achieve the vision of a developed India by 2047",
+  eligibility: "All citizens of India; special focus on rural, youth, women, and marginalized communities",
+  officialSite: "https://www.india.gov.in",
+  logo: "fas fa-flag",
+  category: "National Development",
+  ministry: "NITI Aayog / Multiple Ministries",
+  status: "Active",
+  longDescription:
+    "The Pradhan Mantri Viksit Bharat Yojna, launched in 2023, is a visionary initiative aimed at transforming India into a fully developed nation by 2047, marking 100 years of independence. The mission takes a holistic and inclusive approach to development, focusing on economic growth, infrastructure modernization, digital innovation, sustainable agriculture, healthcare reforms, educational empowerment, skill development, and social welfare. The scheme emphasizes people-centric governance, ensuring that progress reaches the grassroots level and benefits all sections of society, particularly the poor, women, youth, and rural communities. Under the program, India is envisioned as a hub for global manufacturing, technology innovation, and green energy, while ensuring self-reliance (Atmanirbhar Bharat) across critical sectors. The initiative promotes large-scale infrastructure development including highways, smart cities, renewable energy projects, and digital infrastructure. It fosters entrepreneurship and employment opportunities by supporting startups, MSMEs, and rural enterprises. Education and skill development form key pillars of the scheme, with a strong push toward digital literacy, modern curricula, and vocational training aligned with future job markets. Healthcare is strengthened through universal health coverage, telemedicine services, and improved rural health infrastructure. The scheme also integrates climate action and sustainability, encouraging renewable energy, smart agriculture, and environmental conservation. Through participatory governance and public engagement, citizens are empowered to contribute to the nation’s development vision. By aligning with the principles of inclusivity, sustainability, and innovation, the PM Viksit Bharat Yojna aims to position India as a developed nation by 2047, bridging socio-economic divides, fostering prosperity, and ensuring dignity, opportunity, and progress for every citizen."
+}
 ];
 
 // DOM elements
@@ -1247,3 +1264,4 @@ function submitButton() {
     }, 5000);
   }
 }
+
