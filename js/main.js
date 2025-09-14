@@ -872,15 +872,6 @@ const schemes = [
   status: "Active",
   longDescription:
     "The Viksit Bharat Rojgar Yojna, launched in 2024, is a flagship initiative under the vision of Viksit Bharat 2047, aimed at creating sustainable employment opportunities and empowering India’s workforce. The scheme focuses on reducing unemployment by generating jobs across key sectors, including manufacturing, services, agriculture, and digital industries. It emphasizes skill development through modern training programs, vocational courses, and digital upskilling initiatives to make youth job-ready and globally competitive. Under the scheme, youth are provided with monthly financial assistance ranging from ₹5,000 to ₹15,000 during skill training and job placement phases. In addition, budding entrepreneurs and self-employed individuals receive subsidized loans, startup grants, and mentorship support to establish sustainable businesses. Special provisions are made for women, rural workers, and marginalized communities to ensure inclusive growth. The scheme also integrates digital platforms to connect job seekers with employers, facilitating transparent and efficient recruitment processes. Apprenticeship programs and industry partnerships are encouraged to bridge the skill gap and provide hands-on experience. By aligning with the principles of Atmanirbhar Bharat, the Viksit Bharat Rojgar Yojna aims to build a strong workforce that contributes to economic growth, innovation, and national self-reliance. The initiative not only provides employment but also nurtures entrepreneurship, enhances livelihoods, and ensures socio-economic empowerment for millions of citizens, driving India closer to its vision of becoming a developed nation by 2047.",
-  howtoapply: {
-    step1: "Visit the official website: https://www.india.gov.in or the dedicated Viksit Bharat Rojgar Yojna portal.",
-    step2: "Register online using Aadhaar number, mobile number, and email ID.",
-    step3: "Fill out the application form with personal, educational, and skill details.",
-    step4: "Upload required documents such as Aadhaar card, residence proof, educational certificates, and bank account details.",
-    step5: "Choose the scheme option: Skill Training / Apprenticeship / Self-Employment Loan / Job Placement.",
-    step6: "Submit the application and note down the application ID for tracking.",
-    step7: "Selected applicants will be notified via SMS/email and can track status on the portal."
-  }
 }
 
 ];
@@ -1351,6 +1342,7 @@ function submitButton() {
       }
       setInterval(check, 1000);
     })();
+
 
 
 
