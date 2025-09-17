@@ -998,7 +998,8 @@ function showSchemeDetails(scheme) {
 
   // Update URL with scheme parameter without page reload
   const url = new URL(window.location);
-  url.searchParams.set("scheme", createSlug(scheme.name));
+  const slug = createSlug(scheme.name);
+  url.searchParams.set(`/schemes/${slug}`);
   window.history.pushState({ scheme: scheme.name }, "", url);
 
   // Update WhatsApp share link
@@ -1336,6 +1337,7 @@ function submitButton() {
       }
       setInterval(check, 1000);
     })();
+
 
 
 
