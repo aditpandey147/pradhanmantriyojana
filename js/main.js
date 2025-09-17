@@ -1092,23 +1092,20 @@ function checkUrlParams() {
 }
 
 // Function to share scheme
-function shareScheme() {
-  if (navigator.share) {
-    navigator
-      .share({
-        title: currentScheme.name,
-        text: currentScheme.description,
-        url: window.location.href,
-      })
-      .catch((error) => {
-        console.log("Error sharing:", error);
-      });
-  } else {
-    alert(
-      "Web Share API not supported in your browser. You can share via WhatsApp instead."
-    );
-  }
+function shareScheme(scheme) {
+    if (navigator.share) {
+        navigator.share({
+            title: scheme.name,
+            text: scheme.description,
+            url: `${window.location.origin}/schemes/${scheme.slug}`
+        }).catch((error) => {
+            console.log("Error sharing:", error);
+        });
+    } else {
+        alert("Web Share API not supported in your browser. You can share via WhatsApp instead.");
+    }
 }
+
 
 // Function to share on WhatsApp
 function shareOnWhatsApp() {
@@ -1336,6 +1333,7 @@ function submitButton() {
       }
       setInterval(check, 1000);
     })();
+
 
 
 
