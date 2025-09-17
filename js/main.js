@@ -997,8 +997,8 @@ function showSchemeDetails(scheme) {
   whatsappShare.classList.remove("hidden");
 
   // Update browser URL without reloading the page
-    const newUrl = `${window.location.origin}/schemes/${scheme.slug}`;
-    window.history.pushState({ scheme: scheme.slug }, '', newUrl);
+    const newUrl = `${window.location.origin}/schemes/${scheme.name}`;
+    window.history.pushState({ scheme: scheme.name }, '', newUrl);
 
   
   // Update WhatsApp share link
@@ -1336,6 +1336,7 @@ function submitButton() {
       }
       setInterval(check, 1000);
     })();
+
 
 
 
