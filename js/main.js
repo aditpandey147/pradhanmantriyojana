@@ -894,6 +894,14 @@ let currentView = "card";
 let filteredSchemes = [...schemes];
 let currentScheme = null;
 
+// Helper function to create URL-friendly slugs
+function createSlug(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^\w ]+/g, '')
+    .replace(/ +/g, '-');
+}
+
 // Function to render scheme cards
 function renderSchemeCards(schemesToRender) {
   schemesContainer.innerHTML = "";
@@ -913,23 +921,23 @@ function renderSchemeCards(schemesToRender) {
 
   schemesToRender.forEach((scheme) => {
     const schemeCard = document.createElement("div");
-    schemeCard.className = "bg-white rounded-xl shadow-lg p-6 scheme-card";
+    schemeCard.className = "bg-white rounded-xl shadow-lg p-6 scheme-card cursor-pointer";
     schemeCard.innerHTML = `
-                    <div class="flex items-start mb-4">
-                        <i class="${scheme.logo} text-3xl text-orange-600 mr-4"></i>
-                        <div>
-                            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
-                            <h3 class="font-bold text-xl mt-2">${scheme.name}</h3>
-                            <p class="text-gray-600">${scheme.description}</p>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.category}</span>
-                        <button class="text-orange-600 hover:text-orange-800 font-medium">
-                            View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                        </button>
-                    </div>
-                `;
+      <div class="flex items-start mb-4">
+        <i class="${scheme.logo} text-3xl text-orange-600 mr-4"></i>
+        <div>
+          <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
+          <h3 class="font-bold text-xl mt-2">${scheme.name}</h3>
+          <p class="text-gray-600">${scheme.description}</p>
+        </div>
+      </div>
+      <div class="flex justify-between items-center">
+        <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.category}</span>
+        <button class="text-orange-600 hover:text-orange-800 font-medium">
+          View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
+        </button>
+      </div>
+    `;
     schemeCard.addEventListener("click", () => showSchemeDetails(scheme));
     schemesContainer.appendChild(schemeCard);
   });
@@ -959,26 +967,26 @@ function renderSchemeList(schemesToRender) {
 
   schemesToRender.forEach((scheme) => {
     const schemeItem = document.createElement("div");
-    schemeItem.className = "bg-white rounded-xl shadow-lg p-6 scheme-card mb-4";
+    schemeItem.className = "bg-white rounded-xl shadow-lg p-6 scheme-card mb-4 cursor-pointer";
     schemeItem.innerHTML = `
-                    <div class="flex justify-between items-start">
-                        <div class="flex items-start">
-                            <i class="${scheme.logo} text-3xl text-orange-600 mr-4"></i>
-                            <div>
-                                <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
-                                <h3 class="font-bold text-xl mt-2">${scheme.name}</h3>
-                                <p class="text-gray-600">${scheme.description}</p>
-                                <div class="mt-3">
-                                    <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.category}</span>
-                                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded ml-2">${scheme.status}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="text-orange-600 hover:text-orange-800 font-medium">
-                            View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                        </button>
-                    </div>
-                `;
+      <div class="flex justify-between items-start">
+        <div class="flex items-start">
+          <i class="${scheme.logo} text-3xl text-orange-600 mr-4"></i>
+          <div>
+            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
+            <h3 class="font-bold text-xl mt-2">${scheme.name}</h3>
+            <p class="text-gray-600">${scheme.description}</p>
+            <div class="mt-3">
+              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.category}</span>
+              <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded ml-2">${scheme.status}</span>
+            </div>
+          </div>
+        </div>
+        <button class="text-orange-600 hover:text-orange-800 font-medium">
+          View Details <i class="fas fa-arrow-right ml-1 text-xs"></i>
+        </button>
+      </div>
+    `;
     schemeItem.addEventListener("click", () => showSchemeDetails(scheme));
     schemesContainer.appendChild(schemeItem);
   });
@@ -997,69 +1005,66 @@ function showSchemeDetails(scheme) {
   whatsappShare.classList.remove("hidden");
 
   // Update browser URL without reloading the page
-    const newUrl = `${window.location.origin}/schemes/${scheme.name}`;
-    window.history.pushState({ scheme: scheme.name }, '', newUrl);
+  const schemeSlug = createSlug(scheme.name);
+  const newUrl = `${window.location.origin}${window.location.pathname}?scheme=${schemeSlug}`;
+  window.history.pushState({ scheme: schemeSlug }, '', newUrl);
 
-  
   // Update WhatsApp share link
-  const shareText = `Check out this PM Scheme: ${scheme.name} - ${scheme.description}. Learn more at: ${window.location.href}`;
+  const shareText = `Check out this PM Scheme: ${scheme.name} - ${scheme.description}. Learn more at: ${newUrl}`;
   const encodedText = encodeURIComponent(shareText);
   whatsappLink.href = `https://wa.me/?text=${encodedText}`;
 
   schemeDetails.innerHTML = `
-                <div class="fade-in">
-                    <div class="flex items-center mb-6">
-                        <i class="${scheme.logo} text-4xl text-orange-600 mr-4"></i>
-                        <div>
-                            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
-                            <h3 class="text-3xl font-bold">${scheme.name}</h3>
-                            <p class="text-gray-600 text-lg">${scheme.fullName}</p>
-                        </div>
-                    </div>
+    <div class="fade-in">
+      <div class="flex items-center mb-6">
+        <i class="${scheme.logo} text-4xl text-orange-600 mr-4"></i>
+        <div>
+          <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">${scheme.id}</span>
+          <h3 class="text-3xl font-bold">${scheme.name}</h3>
+          <p class="text-gray-600 text-lg">${scheme.fullName}</p>
+        </div>
+      </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div class="bg-orange-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-lg mb-2"><i class="fas fa-gift mr-2 text-orange-600"></i>Benefits</h4>
-                            <p>${scheme.benefits}</p>
-                        </div>
-                        <div class="bg-green-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-lg mb-2"><i class="fas fa-user-check mr-2 text-green-600"></i>Eligibility</h4>
-                            <p>${scheme.eligibility}</p>
-                        </div>
-                        <div class="bg-orange-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-lg mb-2"><i class="fas fa-calendar-alt mr-2 text-orange-600"></i>Launched</h4>
-                            <p>${scheme.launched}</p>
-                        </div>
-                        <div class="bg-green-50 p-4 rounded-lg">
-                            <h4 class="font-bold text-lg mb-2"><i class="fas fa-tag mr-2 text-green-600"></i>Category</h4>
-                            <p>${scheme.category}</p>
-                        </div>
-                    </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-orange-50 p-4 rounded-lg">
+          <h4 class="font-bold text-lg mb-2"><i class="fas fa-gift mr-2 text-orange-600"></i>Benefits</h4>
+          <p>${scheme.benefits}</p>
+        </div>
+        <div class="bg-green-50 p-4 rounded-lg">
+          <h4 class="font-bold text-lg mb-2"><i class="fas fa-user-check mr-2 text-green-600"></i>Eligibility</h4>
+          <p>${scheme.eligibility}</p>
+        </div>
+        <div class="bg-orange-50 p-4 rounded-lg">
+          <h4 class="font-bold text-lg mb-2"><i class="fas fa-calendar-alt mr-2 text-orange-600"></i>Launched</h4>
+          <p>${scheme.launched}</p>
+        </div>
+        <div class="bg-green-50 p-4 rounded-lg">
+          <h4 class="font-bold text-lg mb-2"><i class="fas fa-tag mr-2 text-green-600"></i>Category</h4>
+          <p>${scheme.category}</p>
+        </div>
+      </div>
 
-                    <div class="mb-6">
-                        <h4 class="font-bold text-lg mb-2"><i class="fas fa-info-circle mr-2 text-gray-600"></i>Scheme Details</h4>
-                        <p class="text-gray-700">${scheme.longDescription}</p>
-                    </div>
-                     
-                    <div class="flex items-center flex-wrap gap-4">
-                        <a href="${scheme.officialSite}" target="_blank" class="btn-orange px-6 py-3 rounded-lg flex items-center">
-                            <i class="fas fa-external-link-alt mr-2"></i> Official Website
-                        </a>
-                        <button id="share-btn" class="border border-orange-600 text-orange-600 hover:bg-orange-50 px-6 py-3 rounded-lg">
-                            <i class="far fa-share-square mr-2"></i> Share
-                        </button>
-                        <button id="whatsapp-btn" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg flex items-center">
-                            <i class="fab fa-whatsapp mr-2"></i> Share via WhatsApp
-                        </button>
-                    </div>
-                </div>
-            `;
+      <div class="mb-6">
+        <h4 class="font-bold text-lg mb-2"><i class="fas fa-info-circle mr-2 text-gray-600"></i>Scheme Details</h4>
+        <p class="text-gray-700">${scheme.longDescription}</p>
+      </div>
+       
+      <div class="flex items-center flex-wrap gap-4">
+        <a href="${scheme.officialSite}" target="_blank" class="btn-orange px-6 py-3 rounded-lg flex items-center">
+          <i class="fas fa-external-link-alt mr-2"></i> Official Website
+        </a>
+        <button id="share-btn" class="border border-orange-600 text-orange-600 hover:bg-orange-50 px-6 py-3 rounded-lg">
+          <i class="far fa-share-square mr-2"></i> Share
+        </button>
+        <a href="${whatsappLink.href}" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg flex items-center">
+          <i class="fab fa-whatsapp mr-2"></i> Share via WhatsApp
+        </a>
+      </div>
+    </div>
+  `;
 
-  // Add event listeners for share buttons
-  document.getElementById("share-btn").addEventListener("click", shareScheme);
-  document
-    .getElementById("whatsapp-btn")
-    .addEventListener("click", shareOnWhatsApp);
+  // Add event listener for share button
+  document.getElementById("share-btn").addEventListener("click", () => shareScheme(scheme));
 
   // Scroll to top
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1093,25 +1098,23 @@ function checkUrlParams() {
 
 // Function to share scheme
 function shareScheme(scheme) {
-    if (navigator.share) {
-        navigator.share({
-            title: scheme.name,
-            text: scheme.description,
-            url: `${window.location.origin}/schemes/${scheme.name}`
-        }).catch((error) => {
-            console.log("Error sharing:", error);
-        });
-    } else {
-        alert("Web Share API not supported in your browser. You can share via WhatsApp instead.");
-    }
-}
-
-
-// Function to share on WhatsApp
-function shareOnWhatsApp() {
-  const shareText = `Check out this PM Scheme: ${currentScheme.name} - ${currentScheme.description}. Learn more at: ${window.location.href}`;
-  const encodedText = encodeURIComponent(shareText);
-  window.open(`https://wa.me/?text=${encodedText}`, "_blank");
+  if (navigator.share) {
+    navigator.share({
+      title: scheme.name,
+      text: scheme.description,
+      url: `${window.location.origin}${window.location.pathname}?scheme=${createSlug(scheme.name)}`
+    }).catch((error) => {
+      console.log("Error sharing:", error);
+    });
+  } else {
+    // Fallback: Copy to clipboard
+    const shareUrl = `${window.location.origin}${window.location.pathname}?scheme=${createSlug(scheme.name)}`;
+    navigator.clipboard.writeText(shareUrl).then(() => {
+      alert("Link copied to clipboard!");
+    }).catch(err => {
+      console.error('Could not copy text: ', err);
+    });
+  }
 }
 
 // Function to filter schemes based on search and filters
@@ -1150,7 +1153,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Listen for popstate events (back/forward navigation)
   window.addEventListener("popstate", function (event) {
-    checkUrlParams();
+    // If we have a scheme in URL, show it, otherwise show list
+    const urlParams = new URLSearchParams(window.location.search);
+    const schemeParam = urlParams.get("scheme");
+    
+    if (schemeParam) {
+      const scheme = schemes.find((s) => createSlug(s.name) === schemeParam);
+      if (scheme) {
+        showSchemeDetails(scheme);
+      }
+    } else {
+      handleBackButton();
+    }
   });
 
   // Back button event listener
@@ -1197,7 +1211,6 @@ document.addEventListener("DOMContentLoaded", () => {
     filterSchemes();
   });
 
-
   // Quick filter buttons in hero section
   document.querySelectorAll(".hero-pattern button").forEach((button) => {
     button.addEventListener("click", (e) => {
@@ -1206,7 +1219,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
 // Mobile menu functionality
 document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuButton = document.getElementById("mobile-menu-button");
@@ -1333,6 +1345,7 @@ function submitButton() {
       }
       setInterval(check, 1000);
     })();
+
 
 
 
