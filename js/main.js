@@ -1097,7 +1097,7 @@ function shareScheme(scheme) {
         navigator.share({
             title: scheme.name,
             text: scheme.description,
-            url: `${window.location.origin}/schemes/${scheme.slug}`
+            url: `${window.location.origin}/schemes/${scheme.name}`
         }).catch((error) => {
             console.log("Error sharing:", error);
         });
@@ -1333,6 +1333,7 @@ function submitButton() {
       }
       setInterval(check, 1000);
     })();
+
 
 
 
