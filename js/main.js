@@ -996,11 +996,11 @@ function showSchemeDetails(scheme) {
   detailsContainer.classList.remove("hidden");
   whatsappShare.classList.remove("hidden");
 
-  // Update URL with scheme parameter without page reload
-const url = new URL(window.location);
-url.searchParams.set("scheme", createSlug(scheme.name));
-window.history.pushState({ scheme: scheme.name }, "", url);
+  // Update browser URL without reloading the page
+    const newUrl = `${window.location.origin}/schemes/${scheme.slug}`;
+    window.history.pushState({ scheme: scheme.slug }, '', newUrl);
 
+  
   // Update WhatsApp share link
   const shareText = `Check out this PM Scheme: ${scheme.name} - ${scheme.description}. Learn more at: ${window.location.href}`;
   const encodedText = encodeURIComponent(shareText);
@@ -1336,6 +1336,7 @@ function submitButton() {
       }
       setInterval(check, 1000);
     })();
+
 
 
 
