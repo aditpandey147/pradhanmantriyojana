@@ -1004,13 +1004,13 @@ function showSchemeDetails(scheme) {
   detailsContainer.classList.remove("hidden");
   whatsappShare.classList.remove("hidden");
 
-  // Update browser URL with clean path
+  // Update browser URL without reloading the page
   const schemeSlug = createSlug(scheme.name);
-  const newPath = `/scheme/${schemeSlug}`;
-  window.history.pushState({ scheme: schemeSlug }, '', newPath);
+  const newUrl = `${window.location.origin}${window.location.pathname}?scheme=${schemeSlug}`;
+  window.history.pushState({ scheme: schemeSlug }, '', newUrl);
 
   // Update WhatsApp share link
-  const shareText = `Check out this PM Scheme: ${scheme.name} - ${scheme.description}. Learn more at: ${window.location.origin}${newPath}`;
+  const shareText = `Check out this PM Scheme: ${scheme.name} - ${scheme.description}. Learn more at: ${newUrl}`;
   const encodedText = encodeURIComponent(shareText);
   whatsappLink.href = `https://wa.me/?text=${encodedText}`;
 
@@ -1076,27 +1076,24 @@ function handleBackButton() {
   schemesContainer.classList.remove("hidden");
   whatsappShare.classList.add("hidden");
 
-  // Reset to home URL
-  window.history.pushState({}, "", "/");
+  // Remove scheme parameter from URL without page reload
+  const url = new URL(window.location);
+  url.searchParams.delete("scheme");
+  window.history.pushState({}, "", url);
 }
 
-// Function to check URL and show corresponding scheme
-function checkUrlAndShowScheme() {
-  const pathSegments = window.location.pathname.split('/').filter(segment => segment);
-  
-  // Check if URL matches pattern /scheme/scheme-name
-  if (pathSegments.length === 2 && pathSegments[0] === 'scheme') {
-    const schemeSlug = pathSegments[1];
-    
+// Function to check URL parameters and show corresponding scheme
+function checkUrlParams() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const schemeParam = urlParams.get("scheme");
+
+  if (schemeParam) {
     // Find scheme by slug
-    const scheme = schemes.find((s) => createSlug(s.name) === schemeSlug);
+    const scheme = schemes.find((s) => createSlug(s.name) === schemeParam);
     if (scheme) {
       showSchemeDetails(scheme);
-      return true;
     }
   }
-  
-  return false;
 }
 
 // Function to share scheme
@@ -1105,13 +1102,13 @@ function shareScheme(scheme) {
     navigator.share({
       title: scheme.name,
       text: scheme.description,
-      url: `${window.location.origin}/scheme/${createSlug(scheme.name)}`
+      url: `${window.location.origin}${window.location.pathname}?scheme=${createSlug(scheme.name)}`
     }).catch((error) => {
       console.log("Error sharing:", error);
     });
   } else {
     // Fallback: Copy to clipboard
-    const shareUrl = `${window.location.origin}/scheme/${createSlug(scheme.name)}`;
+    const shareUrl = `${window.location.origin}${window.location.pathname}?scheme=${createSlug(scheme.name)}`;
     navigator.clipboard.writeText(shareUrl).then(() => {
       alert("Link copied to clipboard!");
     }).catch(err => {
@@ -1149,27 +1146,24 @@ function filterSchemes() {
 
 // Initialize the page
 document.addEventListener("DOMContentLoaded", () => {
-  // Check if we need to show a specific scheme based on URL
-  const shouldShowScheme = checkUrlAndShowScheme();
-  
-  // If not showing a scheme, render the scheme list
-  if (!shouldShowScheme) {
-    renderSchemeCards(schemes);
-  }
+  renderSchemeCards(schemes);
+
+  // Check if URL has a scheme parameter and show corresponding scheme
+  checkUrlParams();
 
   // Listen for popstate events (back/forward navigation)
   window.addEventListener("popstate", function (event) {
-    // Check if we need to show a scheme based on the new URL
-    const shouldShowScheme = checkUrlAndShowScheme();
+    // If we have a scheme in URL, show it, otherwise show list
+    const urlParams = new URLSearchParams(window.location.search);
+    const schemeParam = urlParams.get("scheme");
     
-    // If not showing a scheme, show the list view
-    if (!shouldShowScheme) {
-      handleBackButton();
-      if (currentView === "card") {
-        renderSchemeCards(filteredSchemes);
-      } else {
-        renderSchemeList(filteredSchemes);
+    if (schemeParam) {
+      const scheme = schemes.find((s) => createSlug(s.name) === schemeParam);
+      if (scheme) {
+        showSchemeDetails(scheme);
       }
+    } else {
+      handleBackButton();
     }
   });
 
@@ -1352,6 +1346,7 @@ function submitButton() {
       }
       setInterval(check, 1000);
     })();
+
 
 
 
