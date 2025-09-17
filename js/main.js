@@ -6,12 +6,9 @@ function generateRandomId() {
 // Function to create URL-friendly slug
 function createSlug(text) {
   return text
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w\-]+/g, "")
-    .replace(/\-\-+/g, "-")
-    .replace(/^-+/, "")
-    .replace(/-+$/, "");
+.toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-") // replace spaces & special chars with -
+    .replace(/^-+|-+$/g, "");
 }
 
 // Sample data for PM schemes
@@ -1339,6 +1336,7 @@ function submitButton() {
       }
       setInterval(check, 1000);
     })();
+
 
 
 
