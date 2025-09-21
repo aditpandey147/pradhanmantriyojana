@@ -28,4 +28,34 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+     <url>
+        <loc>https://schemeupdates.com/?scheme=pmkisan</loc>
+        <lastmod>2023-11-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://schemeupdates.com/?scheme=pmjay</loc>
+        <lastmod>2023-11-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://schemeupdates.com/?scheme=pmujjwala</loc>
+        <lastmod>2023-11-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+     <url>
+        <loc>https://schemeupdates.com/?scheme=pmawas</loc>
+        <lastmod>2023-11-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://schemeupdates.com/?scheme=pmmudra</loc>
+        <lastmod>2023-11-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
 </urlset>
