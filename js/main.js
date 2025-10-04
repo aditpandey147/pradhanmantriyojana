@@ -6,7 +6,7 @@ function generateRandomId() {
 // Function to create URL-friendly slug
 function createSlug(text) {
   return text
-.toLowerCase()
+    .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-") // replace spaces & special chars with -
     .replace(/^-+|-+$/g, "");
 }
@@ -15,292 +15,332 @@ function createSlug(text) {
 const schemes = [
   {
     id: generateRandomId(),
-    name: "PM-KISAN",
-    description: "Pradhan Mantri Kisan Samman Nidhi",
-    fullName: "Pradhan Mantri Kisan Samman Nidhi",
+    name: "PM-KISAN Scheme",
+    description:
+      "Pradhan Mantri Kisan Samman Nidhi Yojana – Government income support scheme for farmers in India.",
+    fullName: "Pradhan Mantri Kisan Samman Nidhi Yojana (PM-KISAN)",
     launched: "2019",
     benefits:
-      "₹6,000 per year in three equal installments directly transferred to beneficiary bank accounts",
+      "₹6,000 per year given in three equal installments directly into farmer bank accounts via Direct Benefit Transfer (DBT).",
     eligibility:
-      "Small and marginal landholder farmer families owning up to 2 hectares of cultivable land",
+      "Small and marginal farmer families with up to 2 hectares of cultivable land. Excludes institutional landholders, income tax payers, and professionals like doctors/engineers/government employees.",
     officialSite: "https://pmkisan.gov.in",
     logo: "fas fa-tractor",
-    category: "Agriculture",
-    ministry: "Ministry of Agriculture & Farmers Welfare",
+    category: "Agriculture & Farmer Welfare",
+    ministry: "Ministry of Agriculture & Farmers Welfare, Government of India",
     status: "Active",
     longDescription:
-      "The Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) scheme was launched in February 2019 with the aim of providing assured income support to farmers across India. This scheme addresses the financial needs of small and marginal landholder families, who often face uncertain income due to crop failures, price fluctuations, and natural disasters. Under PM-KISAN, eligible farmers receive ₹6,000 annually in three equal installments, directly transferred to their Aadhaar-linked bank accounts through the Direct Benefit Transfer (DBT) mechanism. This ensures transparency, removes middlemen, and guarantees timely delivery of benefits. The scheme specifically targets farmer families owning up to two hectares of cultivable land, thereby focusing on the most vulnerable segment of the agricultural community. Certain groups such as institutional landholders, income tax payers, and high-income professionals are excluded to ensure benefits reach those who truly depend on farming for survival. One of the strengths of PM-KISAN is that it provides flexibility, as the funds are not tied to specific expenses. Farmers can use the money for seeds, fertilizers, tools, household needs, or debt repayment, helping them achieve financial stability. Beyond individual support, PM-KISAN complements other government initiatives like PM Fasal Bima Yojana (crop insurance) and PM Krishi Sinchayee Yojana (irrigation support), creating a holistic ecosystem of agricultural support. Over time, the scheme has expanded its coverage and strengthened its verification mechanisms using digital technology and land record databases. As of today, PM-KISAN has disbursed billions of rupees, directly benefiting millions of farmer families across rural India. By reducing dependence on moneylenders, improving consumption capacity, and supporting farm investment, the scheme contributes to poverty reduction and rural economic growth. It also reflects the government’s vision of doubling farmers’ income and ensuring long-term agricultural sustainability. PM-KISAN remains one of the world’s largest income support programs for farmers, representing a major policy intervention in India’s rural economy.",
+      "Pradhan Mantri Kisan Samman Nidhi Yojana (PM-KISAN) is a flagship income support scheme launched in February 2019 to provide assured income support to farmers in India. Eligible farmers receive ₹6,000 annually in three installments directly into Aadhaar-linked bank accounts via the Direct Benefit Transfer (DBT) system. The scheme targets small and marginal farmers owning up to 2 hectares of cultivable land. By eliminating middlemen, PM-KISAN ensures transparency and timely payments. It complements other farmer welfare programs such as PM Fasal Bima Yojana (crop insurance) and PM Krishi Sinchayee Yojana (irrigation support). As of now, PM-KISAN has benefited millions of farmers and remains one of the world’s largest income support programs, strengthening rural households, reducing poverty, and helping achieve the government’s vision of doubling farmers’ income.",
   },
   {
     id: generateRandomId(),
-    name: "PM-JAY",
-    description: "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana",
-    fullName: "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana",
+    name: "PM-JAY (Ayushman Bharat)",
+    description:
+      "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana – World’s largest government health insurance scheme.",
+    fullName: "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
     launched: "2018",
-    benefits: "Health coverage of ₹5 lakh per family per year",
+    benefits:
+      "Cashless health insurance coverage of ₹5 lakh per family per year for secondary and tertiary hospitalization.",
     eligibility:
-      "Deprived rural families and identified occupational categories",
+      "Poor and vulnerable families identified through the Socio-Economic Caste Census (SECC) and specific occupational categories.",
     officialSite: "https://www.pmjay.gov.in",
     logo: "fas fa-hospital",
-    category: "Health",
-    ministry: "Ministry of Health & Family Welfare",
+    category: "Health & Social Security",
+    ministry: "Ministry of Health & Family Welfare, Government of India",
     status: "Active",
     longDescription:
-      "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (PM-JAY), launched in September 2018, is the world’s largest publicly funded health insurance scheme. Its primary objective is to reduce the financial burden of healthcare on poor and vulnerable families by providing free secondary and tertiary hospitalization coverage. PM-JAY provides an annual coverage of ₹5 lakh per family with no restriction on family size, age, or gender. Beneficiaries are identified based on the Socio-Economic Caste Census (SECC) database and specific occupational criteria, ensuring that the scheme targets the most disadvantaged households. The scheme covers over 1,500 medical packages including surgeries, diagnostics, and pre- and post-hospitalization costs, all provided on a cashless and paperless basis at empaneled public and private hospitals across the country. A major strength of PM-JAY is its portability, allowing beneficiaries to access healthcare services anywhere in India, irrespective of their home state. The scheme has significantly reduced out-of-pocket expenditure, which has historically been one of the main reasons for rural indebtedness and poverty. By preventing catastrophic healthcare expenses, PM-JAY helps families avoid falling deeper into financial distress. Technological innovations such as electronic health cards, biometric verification, and real-time monitoring systems ensure efficiency, transparency, and fraud prevention in service delivery. PM-JAY also incentivizes hospitals to expand infrastructure, improve service quality, and adopt digital health solutions. As of now, the scheme has benefited millions of households, with lakhs of hospital admissions being covered under it every year. It represents a paradigm shift in healthcare delivery in India by prioritizing universal health coverage and addressing the healthcare needs of the most vulnerable. In addition, PM-JAY complements other health missions like Ayushman Bharat Health and Wellness Centres, thereby creating a holistic healthcare ecosystem. This landmark program not only saves lives but also safeguards livelihoods by ensuring affordable access to quality healthcare services.",
+      "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (PM-JAY), launched in September 2018, is the world’s largest publicly funded health insurance scheme. It provides cashless coverage of ₹5 lakh per family per year for hospitalization at empaneled public and private hospitals. The scheme covers more than 1,500 medical packages including surgeries, diagnostics, and post-hospitalization care. Beneficiaries are identified based on the SECC database and targeted occupational groups. PM-JAY ensures portability across India, allowing beneficiaries to access healthcare anywhere in the country. With its emphasis on cashless and paperless service delivery, biometric verification, and fraud prevention, PM-JAY has transformed healthcare accessibility for millions of poor families, reducing out-of-pocket expenses and preventing medical debt. The scheme complements Ayushman Bharat Health and Wellness Centres, strengthening India’s universal health coverage framework.",
   },
   {
     id: generateRandomId(),
-    name: "PM-UJJWALA",
-    description: "Pradhan Mantri Ujjwala Yojana",
-    fullName: "Pradhan Mantri Ujjwala Yojana",
+    name: "PM-Ujjwala Yojana",
+    description:
+      "Pradhan Mantri Ujjwala Yojana – Free LPG connections for women from BPL households to promote clean cooking fuel.",
+    fullName: "Pradhan Mantri Ujjwala Yojana (PMUY)",
     launched: "2016",
     benefits:
-      "Free LPG connections to women from below-poverty-line households",
-    eligibility: "Women belonging to BPL households",
+      "Free LPG connections with financial assistance for deposit, stove, and first refill.",
+    eligibility:
+      "Women belonging to Below Poverty Line (BPL) households, including SC/ST families, forest dwellers, and vulnerable groups.",
     officialSite: "https://www.pmuy.gov.in",
     logo: "fas fa-fire",
-    category: "Social Welfare",
-    ministry: "Ministry of Petroleum & Natural Gas",
+    category: "Energy & Social Welfare",
+    ministry: "Ministry of Petroleum & Natural Gas, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Ujjwala Yojana (PMUY) was launched in May 2016 with the goal of promoting clean cooking fuel among poor households in India. Before this scheme, a significant proportion of rural families relied on traditional fuels like firewood, coal, or cow dung cakes, which not only harmed the environment but also caused severe indoor air pollution leading to respiratory diseases, especially among women and children. PMUY aims to address this health and social challenge by providing free LPG connections to women belonging to below-poverty-line households. Each beneficiary receives a financial support of ₹1,600 which covers the security deposit for the LPG cylinder, regulator, and installation charges. Additionally, the first refill and stove are often provided free or through easy installment schemes, making it easier for poor families to adopt LPG usage. The scheme has a special focus on marginalized groups such as SC/ST households, forest dwellers, and other vulnerable communities. By empowering women with access to clean cooking fuel, PMUY has reduced their drudgery of collecting firewood and improved their overall quality of life. It has also promoted environmental conservation by reducing deforestation and carbon emissions. Over 8 crore LPG connections have been distributed under PMUY, making it one of the largest clean energy programs in the world. The scheme has also created jobs in the LPG supply chain, boosting rural employment. While challenges remain, such as ensuring affordability of refill cylinders for the poorest families, the government continues to provide targeted subsidies and encourage regular LPG usage. PMUY stands as a milestone in India’s journey towards universal energy access, gender empowerment, and sustainable development.",
+      "Pradhan Mantri Ujjwala Yojana (PMUY), launched in May 2016, provides free LPG connections to women from Below Poverty Line (BPL) families to promote clean cooking fuel. Each household receives financial support of ₹1,600 covering the security deposit, regulator, and installation charges. The scheme aims to reduce dependence on unsafe fuels like wood and kerosene, improving women’s health and reducing indoor pollution. PMUY has distributed more than 8 crore LPG connections, empowering women, improving health outcomes, and contributing to environmental conservation. By replacing traditional fuels with LPG, the scheme reduces deforestation and carbon emissions while saving time and labor for rural women. Targeted subsidies continue to support the poorest families in sustaining LPG usage.",
   },
   {
     id: generateRandomId(),
-    name: "PM-AWAS",
-    description: "Pradhan Mantri Awas Yojana",
-    fullName: "Pradhan Mantri Awas Yojana",
+    name: "PM-Awas Yojana",
+    description:
+      "Pradhan Mantri Awas Yojana – Affordable housing scheme ensuring Housing for All by 2022.",
+    fullName: "Pradhan Mantri Awas Yojana (PMAY)",
     launched: "2015",
-    benefits: "Affordable housing for all by 2022",
-    eligibility: "Economically weaker sections and low-income groups",
+    benefits:
+      "Financial assistance and subsidies for pucca houses with basic amenities in rural and urban areas.",
+    eligibility:
+      "Economically Weaker Sections (EWS), Low-Income Groups (LIG), and slum dwellers.",
     officialSite: "https://pmaymis.gov.in",
     logo: "fas fa-home",
-    category: "Housing",
-    ministry: "Ministry of Housing & Urban Affairs",
+    category: "Housing & Urban Development",
+    ministry: "Ministry of Housing & Urban Affairs, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Awas Yojana (PMAY) was launched in June 2015 with the ambitious vision of ensuring ‘Housing for All’ by 2022. The scheme was designed to tackle India’s acute housing shortage, particularly for the urban and rural poor, and to improve living standards by providing pucca houses with basic amenities. PMAY has two main components – PMAY-Urban (PMAY-U) targeting slum dwellers and low-income families in cities, and PMAY-Gramin (PMAY-G) focusing on rural households. Under PMAY-U, the scheme provides assistance through four verticals: in-situ slum redevelopment, credit-linked subsidy for home loans, affordable housing in partnership, and beneficiary-led house construction. PMAY-G, on the other hand, provides direct financial support of ₹1.20 to ₹1.30 lakh for constructing houses with essential facilities like toilets, electricity, LPG connections, and clean drinking water. One of the distinguishing features of PMAY is the emphasis on women empowerment, as houses are often registered in the name of women or jointly with their spouses. The scheme also promotes the use of eco-friendly, disaster-resistant construction technologies to ensure sustainable housing. PMAY has transformed millions of lives by giving families a sense of security, dignity, and improved health conditions. It has also generated massive employment in the construction and allied industries, boosting the economy. Though challenges such as timely execution, land availability, and urban planning persist, PMAY remains one of the most impactful housing programs globally. By aiming to provide a roof over every family’s head, the scheme symbolizes inclusive development and the government’s commitment to social welfare.",
+      "Pradhan Mantri Awas Yojana (PMAY), launched in 2015, is the government’s flagship housing scheme to achieve ‘Housing for All’ by 2022. The scheme has two components: PMAY-Urban (PMAY-U) for slum dwellers and low-income groups in cities, and PMAY-Gramin (PMAY-G) for rural households. It provides financial assistance and subsidies for building pucca houses with facilities like toilets, LPG, electricity, and water. Women’s ownership is prioritized, empowering them with property rights. PMAY also promotes eco-friendly construction technologies. Millions of houses have been built under PMAY, reducing homelessness, improving living conditions, and generating employment in the construction sector. It remains one of the most impactful housing programs in the world.",
   },
   {
     id: generateRandomId(),
-    name: "PM-MUDRA",
-    description: "Pradhan Mantri MUDRA Yojana",
-    fullName: "Pradhan Mantri Micro Units Development & Refinance Agency Ltd.",
+    name: "PM-MUDRA Yojana",
+    description:
+      "Pradhan Mantri MUDRA Yojana – Loan scheme supporting small and micro businesses in India.",
+    fullName:
+      "Pradhan Mantri Micro Units Development and Refinance Agency Yojana (PM-MUDRA)",
     launched: "2015",
-    benefits: "Loans up to ₹10 lakh for small and micro enterprises",
-    eligibility: "Small business owners, entrepreneurs, and startups",
+    benefits:
+      "Collateral-free loans up to ₹10 lakh under Shishu, Kishore, and Tarun categories for small businesses and startups.",
+    eligibility:
+      "Small entrepreneurs, startups, and non-corporate small businesses including traders, manufacturers, and service providers.",
     officialSite: "https://www.mudra.org.in",
     logo: "fas fa-business-time",
-    category: "Financial Inclusion",
-    ministry: "Ministry of Finance",
+    category: "Financial Inclusion & Entrepreneurship",
+    ministry: "Ministry of Finance, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri MUDRA Yojana (PMMY), launched in April 2015, is a flagship financial inclusion program aimed at supporting small and micro enterprises that form the backbone of India’s economy. The scheme was created to address the challenges faced by small entrepreneurs in accessing affordable credit due to lack of collateral, credit history, or formal documentation. Under PMMY, loans up to ₹10 lakh are provided to non-corporate, non-farm small businesses through banks, microfinance institutions, and NBFCs. These loans are categorized into three products: Shishu (up to ₹50,000) for early-stage businesses, Kishore (₹50,001 to ₹5 lakh) for growing enterprises, and Tarun (₹5,00,001 to ₹10 lakh) for well-established small businesses seeking expansion. By tailoring support according to business needs, PMMY provides flexibility and ensures scalability. The scheme has been especially beneficial for first-generation entrepreneurs, women, SC/ST communities, and rural youth who want to start or expand businesses in manufacturing, trading, or services. One of the unique features of PMMY is that loans are collateral-free, reducing barriers for small entrepreneurs. The scheme has facilitated millions of loans worth billions of rupees, enabling job creation, innovation, and economic diversification. In addition, PMMY has contributed to formalizing the informal sector by bringing small enterprises under the ambit of institutional finance. Despite challenges like repayment risks and the need for financial literacy, PMMY continues to empower India’s entrepreneurial spirit and supports the vision of ‘Make in India’ and self-reliant growth. By funding the unfunded, the scheme has become a catalyst for inclusive and sustainable economic development.",
+      "Pradhan Mantri MUDRA Yojana (PMMY), launched in April 2015, is a financial inclusion scheme that provides collateral-free loans up to ₹10 lakh to small and micro enterprises. Loans are divided into Shishu (up to ₹50,000) for startups, Kishore (₹50,001–₹5 lakh) for growing businesses, and Tarun (₹5–10 lakh) for established businesses. The scheme empowers first-generation entrepreneurs, women, SC/ST communities, and rural youth by supporting businesses in manufacturing, trading, and services. By funding small businesses, PMMY creates jobs, promotes self-reliance, and contributes to Make in India. Millions of loans have been sanctioned under PMMY, formalizing small businesses, reducing credit gaps, and driving inclusive economic growth.",
   },
   {
     id: generateRandomId(),
     name: "PM-SVANidhi",
-    description: "Pradhan Mantri Street Vendor’s AtmaNirbhar Nidhi",
-    fullName: "Pradhan Mantri Street Vendor’s AtmaNirbhar Nidhi",
+    description:
+      "Pradhan Mantri Street Vendor’s AtmaNirbhar Nidhi – Collateral-free loans and financial support for street vendors in India.",
+    fullName: "Pradhan Mantri Street Vendor’s AtmaNirbhar Nidhi (PM-SVANidhi)",
     launched: "2020",
-    benefits: "Collateral-free loans up to ₹10,000 for street vendors",
-    eligibility: "Registered street vendors under the Street Vendors Act, 2014",
+    benefits:
+      "Collateral-free loans up to ₹10,000 with cashback incentives for digital transactions to help street vendors restart businesses.",
+    eligibility:
+      "Registered street vendors under the Street Vendors (Protection of Livelihood and Regulation of Street Vending) Act, 2014.",
     officialSite: "https://pmnsvy.in",
     logo: "fas fa-store",
-    category: "Financial Inclusion",
-    ministry: "Ministry of Housing & Urban Affairs",
+    category: "Financial Inclusion & Urban Livelihoods",
+    ministry: "Ministry of Housing & Urban Affairs, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Street Vendor’s AtmaNirbhar Nidhi (PM-SVANidhi) was launched in June 2020 to provide economic support to street vendors affected by the COVID-19 pandemic. Recognizing the vulnerability of urban informal workers, the scheme offers collateral-free loans up to ₹10,000 to street vendors, enabling them to restart their businesses and restore livelihoods disrupted by lockdowns. Vendors can avail of the loan for working capital, purchasing stock, or upgrading their business. PM-SVANidhi is designed to encourage digital transactions; vendors making digital payments become eligible for cashback incentives, promoting financial inclusion and transparency. The scheme also provides a mechanism for loan renewal, giving vendors access to higher credit limits upon timely repayment. Street vendors registered under the Street Vendors (Protection of Livelihood and Regulation of Street Vending) Act, 2014 are eligible, ensuring a formal recognition process and protection of their rights. Beyond credit support, PM-SVANidhi includes skill development and financial literacy programs to help vendors manage their businesses efficiently. The scheme also fosters integration of street vendors into urban development plans, promoting sustainable livelihoods and contributing to the local economy. Since its launch, millions of vendors across India have benefited, demonstrating the government’s commitment to informal workers’ welfare. PM-SVANidhi not only addresses immediate financial needs but also strengthens resilience among street vendors by encouraging modernization, digital adoption, and formal financial linkages. By facilitating entrepreneurship at the grassroots level, the scheme contributes to economic recovery, urban employment, and inclusive growth in post-pandemic India.",
+      "PM-SVANidhi, launched in June 2020, provides economic support to street vendors affected by the COVID-19 pandemic. The scheme offers collateral-free loans up to ₹10,000, enabling vendors to restart businesses, purchase stock, or upgrade operations. Digital payments are incentivized through cashback, promoting financial inclusion and transparency. The program also provides mechanisms for loan renewal with higher credit limits for timely repayment. Skill development and financial literacy initiatives help vendors manage businesses efficiently. Millions of street vendors across India have benefited, reflecting the government’s commitment to informal workers, entrepreneurship, and urban economic recovery.",
   },
   {
     id: generateRandomId(),
     name: "PM-KUSUM",
-    description: "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan",
-    fullName: "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan",
+    description:
+      "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan – Solar power and energy support scheme for farmers in India.",
+    fullName:
+      "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan (PM-KUSUM)",
     launched: "2019",
-    benefits: "Solar pumps and grid-connected solar power for farmers",
-    eligibility: "All farmers in India",
+    benefits:
+      "Financial assistance for standalone solar pumps, solarizing grid-connected pumps, and decentralized solar power plants for farmers.",
+    eligibility: "All farmers in India.",
     officialSite: "https://pmkusum.nic.in",
     logo: "fas fa-solar-panel",
-    category: "Renewable Energy",
-    ministry: "Ministry of New and Renewable Energy",
+    category: "Renewable Energy & Agriculture",
+    ministry: "Ministry of New and Renewable Energy, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Kisan Urja Suraksha evam Utthaan Mahabhiyan (PM-KUSUM) was launched in 2019 with the objective of promoting solar energy adoption among farmers, reducing their dependence on grid electricity, and providing additional income through renewable energy generation. The scheme aims to install thousands of standalone solar pumps and grid-connected solar plants on farmers’ land, ensuring sustainable energy usage while empowering farmers economically. PM-KUSUM has three key components: installation of standalone solar pumps, solarization of existing grid-connected agricultural pumps, and the development of decentralized renewable power plants. Farmers who participate can receive financial assistance from the central and state governments, with subsidies covering a significant portion of the project cost. The scheme not only ensures reliable and affordable irrigation but also helps farmers reduce electricity bills and operational costs. Additionally, excess electricity generated by solar plants can be sold to the grid, providing farmers with an alternative revenue source and promoting rural entrepreneurship. PM-KUSUM supports environmental sustainability by reducing carbon emissions, promoting green energy, and contributing to India’s renewable energy targets. It also encourages technology adoption, training programs, and skill development for rural communities. By integrating agriculture with renewable energy, the scheme strengthens energy security, enhances farmers’ income, and supports climate-resilient farming. Since its inception, PM-KUSUM has facilitated thousands of installations across the country, contributing to energy transition, rural empowerment, and sustainable agricultural growth.",
+      "PM-KUSUM, launched in 2019, aims to promote solar energy adoption among farmers, reduce dependence on grid electricity, and generate additional income through renewable energy. The scheme supports standalone solar pumps, solarization of existing pumps, and decentralized solar plants. Financial assistance and subsidies cover a significant portion of costs, enabling farmers to lower electricity bills and sell excess power to the grid. PM-KUSUM encourages technology adoption, skill development, and environmental sustainability while strengthening rural entrepreneurship and climate-resilient agriculture.",
   },
   {
     id: generateRandomId(),
     name: "PM-FME",
     description:
-      "Pradhan Mantri Formalisation of Micro Food Processing Enterprises",
+      "Pradhan Mantri Formalisation of Micro Food Processing Enterprises – Support for micro food businesses in India.",
     fullName:
-      "Pradhan Mantri Formalisation of Micro Food Processing Enterprises",
+      "Pradhan Mantri Formalisation of Micro Food Processing Enterprises (PM-FME)",
     launched: "2020",
     benefits:
-      "Credit-linked subsidy and support for food processing micro-enterprises",
-    eligibility: "Micro food processing units and small food entrepreneurs",
+      "Credit-linked subsidies, financial support, technical assistance, and marketing support for small food processing units.",
+    eligibility:
+      "Micro food processing units, small food entrepreneurs, SHGs, FPOs, and cooperatives.",
     officialSite: "https://pmfme.mofpi.gov.in",
     logo: "fas fa-industry",
-    category: "Entrepreneurship",
-    ministry: "Ministry of Food Processing Industries",
+    category: "Entrepreneurship & Food Processing",
+    ministry: "Ministry of Food Processing Industries, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Formalisation of Micro Food Processing Enterprises (PM-FME) was launched in 2020 to strengthen and formalize the food processing sector in India, especially micro units and small entrepreneurs operating in the informal economy. The scheme provides financial support, credit-linked subsidies, and technical assistance to micro food processing enterprises, helping them enhance competitiveness, scale operations, and comply with food safety and quality standards. PM-FME targets self-help groups, farmer producer organizations, cooperatives, and individual entrepreneurs engaged in food processing activities such as milling, pickling, dairy, and packaging. Through the scheme, beneficiaries receive up to 35% subsidy on eligible project costs, access to low-cost credit, and marketing support, including participation in exhibitions, branding, and e-commerce promotion. Capacity-building initiatives under PM-FME include skill development, training on modern technology adoption, food safety compliance, and business development. By formalizing these micro-enterprises, the scheme increases productivity, improves quality standards, and enhances market linkages for small food producers. The initiative not only fosters entrepreneurship and income generation in rural and semi-urban areas but also contributes to national objectives like doubling farmers’ income and reducing post-harvest losses. PM-FME promotes employment generation, women participation, and value addition in the agri-food sector, strengthening India’s overall food processing ecosystem. By bridging the gap between informal and formal business practices, the scheme ensures sustainability, better access to finance, and economic resilience for micro food entrepreneurs.",
+      "PM-FME, launched in 2020, aims to formalize and strengthen micro food processing enterprises across India. The scheme provides credit-linked subsidies up to 35%, technical assistance, and marketing support, including exhibitions and e-commerce promotion. It targets SHGs, FPOs, cooperatives, and individual entrepreneurs in milling, dairy, pickling, and packaging sectors. PM-FME enhances productivity, quality standards, and market linkages, fosters rural entrepreneurship, employment generation, women participation, and contributes to doubling farmers’ income and reducing post-harvest losses.",
   },
   {
     id: generateRandomId(),
     name: "PMFBY",
-    description: "Pradhan Mantri Fasal Bima Yojana",
-    fullName: "Pradhan Mantri Fasal Bima Yojana",
+    description:
+      "Pradhan Mantri Fasal Bima Yojana – Comprehensive crop insurance scheme for Indian farmers.",
+    fullName: "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
     launched: "2016",
-    benefits: "Insurance coverage for crops against natural calamities",
-    eligibility: "All farmers cultivating notified crops in India",
+    benefits:
+      "Insurance coverage for crops against natural calamities, pests, and diseases with timely compensation via Direct Benefit Transfer.",
+    eligibility: "All farmers cultivating notified crops in India.",
     officialSite: "https://pmfby.gov.in",
     logo: "fas fa-umbrella",
-    category: "Agriculture",
-    ministry: "Ministry of Agriculture & Farmers Welfare",
+    category: "Agriculture & Risk Management",
+    ministry: "Ministry of Agriculture & Farmers Welfare, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Fasal Bima Yojana (PMFBY), launched in 2016, is a comprehensive crop insurance scheme designed to provide financial protection to farmers against crop loss due to natural calamities, pests, and diseases. The scheme aims to stabilize farmers’ income, encourage them to adopt modern technology and crop diversification, and reduce dependence on informal lending sources. PMFBY covers annual crops, horticultural crops, and commercial crops, offering risk coverage at the individual farm level or area-based level. Premium rates are highly subsidized, with the central and state governments sharing a substantial portion to make it affordable for small and marginal farmers. In case of crop loss, the scheme ensures timely compensation through Direct Benefit Transfer to farmers’ bank accounts, enabling them to restart cultivation without falling into debt. PMFBY also promotes accurate yield estimation, data-driven risk assessment, and the use of technology like remote sensing and drones to monitor crop health. By securing farmers’ income, the scheme reduces economic vulnerability, encourages adoption of quality seeds, and enhances agricultural productivity. Since its inception, PMFBY has enrolled millions of farmers and insured crores of hectares of farmland. The scheme plays a pivotal role in building a resilient agricultural ecosystem, supporting food security, and providing social security to farming communities. By combining risk mitigation, technology adoption, and financial inclusion, PMFBY represents a significant policy intervention in India’s agricultural landscape.",
+      "PMFBY, launched in 2016, provides crop insurance protection against losses from natural calamities, pests, and diseases. It stabilizes farmers’ income, encourages crop diversification, and reduces dependence on informal credit. Premiums are subsidized by central and state governments. Compensation is directly transferred to farmers’ accounts through DBT. The scheme uses technology like remote sensing and drones for crop monitoring and risk assessment. PMFBY has insured millions of farmers, securing livelihoods, improving adoption of quality seeds, and strengthening India’s agricultural resilience.",
   },
   {
     id: generateRandomId(),
     name: "PMJDY",
-    description: "Pradhan Mantri Jan Dhan Yojana",
-    fullName: "Pradhan Mantri Jan Dhan Yojana",
+    description:
+      "Pradhan Mantri Jan Dhan Yojana – Universal banking access and financial inclusion scheme in India.",
+    fullName: "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
     launched: "2014",
     benefits:
-      "Universal access to bank accounts, credit, insurance, and pensions",
-    eligibility: "All Indian citizens, especially the unbanked",
+      "Zero-balance bank accounts, RuPay debit card, overdraft facility, insurance cover, and pension access for all citizens.",
+    eligibility: "All Indian citizens, especially unbanked populations.",
     officialSite: "https://pmjdy.gov.in",
     logo: "fas fa-wallet",
-    category: "Financial Inclusion",
-    ministry: "Ministry of Finance",
+    category: "Financial Inclusion & Digital Banking",
+    ministry: "Ministry of Finance, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Jan Dhan Yojana (PMJDY), launched in August 2014, is a flagship financial inclusion program aimed at ensuring universal access to banking facilities for all Indian citizens, particularly those who have never held a bank account. The scheme allows individuals to open zero-balance savings accounts with access to a RuPay debit card, overdraft facility, insurance cover, and pension schemes. PMJDY is designed to integrate marginalized and underserved populations into the formal financial system, enabling them to save securely, access credit, and participate in government welfare programs directly through Direct Benefit Transfer (DBT). By providing a banking gateway to the unbanked, the scheme reduces dependency on informal lenders, improves financial literacy, and promotes responsible financial behavior. Over the years, PMJDY has facilitated millions of account openings, with many beneficiaries availing of overdraft facilities and insurance schemes like life, accident, and deposit insurance. The initiative also includes educational outreach, awareness campaigns, and financial literacy programs to empower account holders to utilize banking services effectively. The scheme plays a crucial role in disbursing subsidies under various government schemes, ensuring transparency, reducing leakages, and fostering economic equality. By bridging the financial gap between urban and rural populations, PMJDY strengthens social security, encourages entrepreneurship, and supports the broader vision of an inclusive, cashless, and digital economy in India. It stands as a transformative step toward financial empowerment, economic security, and nationwide economic development.",
+      "PMJDY, launched in August 2014, is a flagship financial inclusion scheme providing universal banking access to all Indian citizens. Beneficiaries can open zero-balance accounts with a RuPay debit card, overdraft facility, insurance cover, and pension options. The scheme integrates marginalized populations into the formal financial system, facilitating DBT of subsidies and welfare benefits. PMJDY improves financial literacy, reduces reliance on informal lenders, and encourages savings. It has enabled millions to access banking services, contributing to economic empowerment, social security, and inclusive growth in India’s cashless and digital economy.",
   },
   {
     id: generateRandomId(),
     name: "Ayushman Bharat",
-    description: "Pradhan Mantri Jan Arogya Yojana",
-    fullName: "Ayushman Bharat – Pradhan Mantri Jan Arogya Yojana",
+    description:
+      "Pradhan Mantri Jan Arogya Yojana – Health insurance coverage for vulnerable families in India.",
+    fullName: "Ayushman Bharat – Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
     launched: "2018",
-    benefits: "Health insurance coverage up to ₹5 lakh per family per year",
-    eligibility: "Economically vulnerable families based on SECC database",
+    benefits:
+      "Health insurance coverage up to ₹5 lakh per family per year for secondary and tertiary hospitalization.",
+    eligibility:
+      "Economically vulnerable families identified using the SECC database.",
     officialSite: "https://www.pmjay.gov.in",
     logo: "fas fa-notes-medical",
-    category: "Health",
-    ministry: "Ministry of Health & Family Welfare",
+    category: "Health & Insurance",
+    ministry: "Ministry of Health & Family Welfare, Government of India",
     status: "Active",
     longDescription:
-      "Ayushman Bharat, also known as Pradhan Mantri Jan Arogya Yojana (PM-JAY), was launched in 2018 to provide financial protection and improve access to quality healthcare for economically vulnerable families in India. The scheme offers health insurance coverage of up to ₹5 lakh per family per year for secondary and tertiary hospitalization. Beneficiaries can access cashless treatment in empaneled hospitals across India, ensuring equitable healthcare services. Ayushman Bharat is based on the Socio-Economic Caste Census (SECC) database, targeting families in need without requiring prior enrollment fees or premiums. The scheme covers over 1,500 medical procedures, including surgeries, treatments for critical illnesses, and day-care services. It promotes preventive healthcare, early diagnosis, and timely treatment, reducing out-of-pocket expenditure that often pushes families into debt. Ayushman Bharat integrates digital technology for beneficiary identification, hospital empanelment, and claim management, ensuring transparency, efficiency, and accountability. Additionally, the scheme complements health and wellness centers under the broader Ayushman Bharat initiative, emphasizing comprehensive primary healthcare, nutrition, maternal and child health, and chronic disease management. The initiative not only improves healthcare access but also generates employment for healthcare providers and enhances hospital infrastructure in underserved areas. Since its launch, millions of families have benefited from free and cashless treatment, contributing significantly to reducing health-related financial distress and promoting universal health coverage. By bridging the gap between the formal healthcare system and vulnerable populations, Ayushman Bharat strengthens social security, ensures timely medical intervention, and supports India’s vision of accessible, affordable, and quality healthcare for all.",
+      "Ayushman Bharat (PM-JAY), launched in 2018, provides financial protection and access to quality healthcare for economically vulnerable families. The scheme offers cashless health insurance coverage of up to ₹5 lakh per family per year across empaneled hospitals in India. Covering over 1,500 medical procedures including surgeries, critical illness treatments, and day-care services, the program reduces out-of-pocket healthcare expenses and prevents debt accumulation. Digital systems ensure transparency and efficiency in beneficiary identification, hospital empanelment, and claim management. The initiative complements Health and Wellness Centres under Ayushman Bharat for comprehensive primary care, maternal and child health, and chronic disease management. Millions of families benefit annually, enhancing social security, improving access to healthcare, and supporting India’s vision of universal health coverage.",
   },
   {
     id: generateRandomId(),
     name: "Skill India",
-    description: "National Skill Development Mission",
+    description:
+      "National Skill Development Mission – Skill training and employment opportunities for Indian youth.",
     fullName: "Skill India – National Skill Development Mission",
     launched: "2015",
-    benefits: "Skill training, certifications, and employment opportunities",
-    eligibility: "Youth and working-age population seeking skill development",
+    benefits:
+      "Skill training, certification, and enhanced employment opportunities across multiple sectors.",
+    eligibility:
+      "Youth and working-age population seeking skill development and vocational training.",
     officialSite: "https://www.msde.gov.in",
     logo: "fas fa-graduation-cap",
-    category: "Skill Development",
-    ministry: "Ministry of Skill Development & Entrepreneurship",
+    category: "Skill Development & Employment",
+    ministry:
+      "Ministry of Skill Development & Entrepreneurship, Government of India",
     status: "Active",
     longDescription:
-      "Skill India, launched in 2015 under the National Skill Development Mission, aims to empower India’s youth and workforce with market-relevant skills, certifications, and employment opportunities. The mission addresses the growing demand for skilled manpower across various sectors, including manufacturing, services, healthcare, IT, and entrepreneurship. Skill India encompasses multiple programs such as Pradhan Mantri Kaushal Vikas Yojana (PMKVY), National Apprenticeship Promotion Scheme (NAPS), and the Recognition of Prior Learning (RPL), providing structured training pathways and formal recognition for acquired skills. The initiative collaborates with industry partners, training institutions, and state governments to ensure quality skill delivery, bridging the gap between education and employment. Skill India emphasizes hands-on practical training, digital literacy, and soft skills development, equipping beneficiaries for sustainable livelihoods. By promoting entrepreneurship and self-employment, the mission encourages innovation, small business development, and economic participation among youth. It also focuses on women empowerment, inclusion of marginalized communities, and regional skill development to reduce urban-rural employment disparities. Skill India leverages technology through online training platforms, e-certifications, and skill tracking systems to ensure scalability and efficiency. The program aims to create a workforce that meets national and global industry standards, enhances productivity, and contributes to India’s economic growth. Since its inception, millions of individuals have been trained and certified under Skill India, fostering employability, boosting confidence, and enabling upward social mobility. By integrating skill development with industrial and economic planning, the mission strengthens human capital, supports Make in India initiatives, and prepares the workforce for future opportunities in emerging sectors.",
+      "Skill India, launched under the National Skill Development Mission in 2015, empowers youth and workforce with industry-relevant skills, certifications, and employment opportunities. The mission includes programs such as Pradhan Mantri Kaushal Vikas Yojana (PMKVY), National Apprenticeship Promotion Scheme (NAPS), and Recognition of Prior Learning (RPL), bridging the gap between education and employment. Skill India promotes hands-on practical training, digital literacy, entrepreneurship, and soft skills. Collaborating with industry partners, training institutions, and state governments, it ensures quality skill delivery. The initiative targets women, marginalized communities, and rural populations, enhancing employability, fostering entrepreneurship, and contributing to economic growth. Millions have been trained, promoting inclusive social mobility and preparing the workforce for emerging sectors and global industry standards.",
   },
   {
     id: generateRandomId(),
     name: "PMAY-U",
-    description: "Pradhan Mantri Awas Yojana – Urban",
-    fullName: "Pradhan Mantri Awas Yojana – Urban",
+    description:
+      "Pradhan Mantri Awas Yojana – Urban – Affordable housing for urban poor and slum dwellers.",
+    fullName: "Pradhan Mantri Awas Yojana – Urban (PMAY-U)",
     launched: "2015",
-    benefits: "Affordable housing for urban poor and slum dwellers",
+    benefits:
+      "Financial assistance, credit-linked subsidies, and affordable housing solutions for EWS and LIG families.",
     eligibility:
-      "Economically Weaker Section (EWS) and Low-Income Group (LIG) families in urban areas",
+      "Economically Weaker Section (EWS) and Low-Income Group (LIG) families in urban areas.",
     officialSite: "https://pmaymis.gov.in",
     logo: "fas fa-home",
-    category: "Housing",
-    ministry: "Ministry of Housing & Urban Affairs",
+    category: "Housing & Urban Development",
+    ministry: "Ministry of Housing & Urban Affairs, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Awas Yojana – Urban (PMAY-U), launched in 2015, aims to provide affordable housing to urban poor, slum dwellers, and economically weaker sections (EWS) across India. The scheme addresses the critical need for housing in rapidly urbanizing cities, promoting social inclusion, improved living conditions, and sustainable urban development. PMAY-U offers financial assistance through credit-linked subsidies, direct construction support, and affordable rental housing to eligible EWS and Low-Income Group (LIG) families. The scheme emphasizes inclusive growth by integrating urban planning, infrastructure development, and access to basic amenities such as water, sanitation, and electricity. Beneficiaries can avail of subsidies under the Credit Linked Subsidy Scheme (CLSS) for home loans, reducing the financial burden of construction or purchase. PMAY-U promotes innovative construction technologies, eco-friendly building practices, and community participation to enhance affordability, quality, and sustainability. The initiative also supports slum rehabilitation, tenure security, and incremental housing models to ensure long-term housing stability. By providing safe and dignified housing, the scheme contributes to improved health, education, and socio-economic well-being of urban residents. Since its inception, millions of urban households have benefited under PMAY-U, fostering better quality of life, economic empowerment, and reduced urban inequalities. The program plays a crucial role in achieving the national vision of ‘Housing for All’ by 2022 and aligns with the Sustainable Development Goals related to sustainable cities, social inclusion, and poverty alleviation. PMAY-U strengthens urban resilience, community development, and local employment opportunities, supporting India’s broader agenda of inclusive and sustainable urban growth.",
+      "PMAY-U, launched in 2015, provides affordable housing for urban poor, slum dwellers, and EWS/LIG families across India. The scheme offers financial assistance via credit-linked subsidies, direct construction support, and affordable rental housing. PMAY-U emphasizes inclusive urban growth, access to basic amenities, eco-friendly construction, and community participation. Beneficiaries can leverage Credit Linked Subsidy Scheme (CLSS) for home loans. The initiative supports slum rehabilitation, tenure security, and sustainable housing models. Since inception, millions of urban households have benefited, improving living standards, health, and socio-economic well-being. The program aligns with ‘Housing for All’ goals, promoting inclusive urban development and reducing urban inequalities.",
   },
   {
     id: generateRandomId(),
     name: "Ujjwala Yojana",
-    description: "Pradhan Mantri Ujjwala Yojana",
-    fullName: "Pradhan Mantri Ujjwala Yojana",
+    description:
+      "Pradhan Mantri Ujjwala Yojana – Free LPG connections for women from BPL households in India.",
+    fullName: "Pradhan Mantri Ujjwala Yojana (PMUY)",
     launched: "2016",
-    benefits: "Free LPG connections to women from BPL households",
-    eligibility: "Women from Below Poverty Line (BPL) households",
+    benefits:
+      "Free LPG connections and support for clean cooking energy to BPL women.",
+    eligibility: "Women from Below Poverty Line (BPL) households.",
     officialSite: "https://pmuy.gov.in",
     logo: "fas fa-gas-pump",
-    category: "Energy",
-    ministry: "Ministry of Petroleum & Natural Gas",
+    category: "Energy & Social Welfare",
+    ministry: "Ministry of Petroleum & Natural Gas, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Ujjwala Yojana (PMUY), launched in 2016, is a flagship energy initiative aimed at providing clean cooking fuel in the form of LPG connections to women from Below Poverty Line (BPL) households. The scheme seeks to reduce the health hazards caused by traditional cooking fuels such as firewood, coal, and biomass, which contribute to indoor air pollution and respiratory diseases. Under PMUY, eligible women receive free LPG connections, and the program also facilitates financial assistance for the first refills. By enabling access to clean cooking energy, the scheme promotes women’s empowerment, time-saving, and improved quality of life. PMUY also encourages behavioral change, adoption of modern energy solutions, and energy efficiency. The initiative integrates with other social welfare schemes to enhance outreach and awareness in rural and remote areas, ensuring that marginalized communities benefit from sustainable energy solutions. The scheme’s success is measured by the large-scale distribution of LPG connections, reduction in traditional fuel usage, and improvement in health outcomes for women and children. By promoting clean cooking fuel, PMUY contributes to environmental sustainability, reduces deforestation, and supports India’s climate goals. Since its inception, millions of households across India have benefited, reducing drudgery, improving health, and enhancing economic participation of women. PMUY represents a transformative step towards universal access to clean energy, social equity, and inclusive development, aligning with national and global energy access objectives.",
+      "PMUY, launched in 2016, promotes clean cooking fuel by providing free LPG connections to women from BPL households. It reduces health hazards caused by traditional cooking fuels and promotes women’s empowerment, time-saving, and better quality of life. The scheme facilitates first refills and encourages modern energy adoption. PMUY integrates with other social welfare initiatives to reach marginalized communities, improves health outcomes, reduces deforestation, and supports climate goals. Millions of households have benefited, enhancing energy access, environmental sustainability, and socio-economic development.",
   },
   {
     id: generateRandomId(),
     name: "Digital India",
-    description: "Digital India Program",
+    description:
+      "Digital India Program – Transforming India into a digitally empowered society and knowledge economy.",
     fullName: "Digital India Program",
     launched: "2015",
-    benefits: "Digital infrastructure, services, and literacy for all citizens",
-    eligibility: "All Indian citizens and government departments",
+    benefits:
+      "Digital infrastructure, e-services, and digital literacy for all citizens and government departments.",
+    eligibility: "All Indian citizens and government departments.",
     officialSite: "https://www.digitalindia.gov.in",
     logo: "fas fa-network-wired",
     category: "Technology & Governance",
-    ministry: "Ministry of Electronics & Information Technology",
+    ministry:
+      "Ministry of Electronics & Information Technology, Government of India",
     status: "Active",
     longDescription:
-      "Digital India, launched in 2015, is a flagship program aimed at transforming India into a digitally empowered society and knowledge economy. The initiative focuses on three key vision areas: development of digital infrastructure, delivery of government services digitally, and promotion of digital literacy among citizens. Digital India encompasses various projects such as BharatNet, e-Governance initiatives, DigiLocker, MyGov, and electronic service delivery platforms to ensure seamless access to government services, transparency, and efficiency. The program promotes financial inclusion through digital payments, online banking, and mobile services, empowering citizens to participate in the digital economy. It also focuses on enabling digital skills, capacity-building, and innovation to enhance employability and entrepreneurship in the technology sector. Digital India aims to reduce the digital divide, ensure equitable access to technology in rural and urban areas, and improve public service delivery through e-Governance solutions. By leveraging technology, the initiative enhances citizen engagement, simplifies administrative processes, and promotes a paperless, cashless, and accountable governance model. Since its launch, Digital India has facilitated widespread adoption of digital services, increased broadband connectivity, and strengthened India’s position in the global digital economy. The program contributes to inclusive growth, technological innovation, and socio-economic development by enabling citizens, businesses, and government institutions to harness the benefits of digital transformation.",
+      "Digital India, launched in 2015, aims to transform India into a digitally empowered society. It focuses on digital infrastructure, e-governance, and digital literacy. Key initiatives include BharatNet, DigiLocker, MyGov, and electronic service delivery platforms, promoting transparency, efficiency, and access to government services. The program enhances financial inclusion through digital payments, mobile banking, and online services. By fostering digital skills, capacity-building, and innovation, it promotes employability and entrepreneurship. Digital India reduces the digital divide, enables citizen engagement, and strengthens the nation’s position in the global digital economy. Since launch, it has improved broadband connectivity, service delivery, and socio-economic development.",
   },
   {
     id: generateRandomId(),
     name: "Pradhan Mantri Shram Yogi Maan-dhan",
-    description: "Pension Scheme for Unorganized Workers",
-    fullName: "Pradhan Mantri Shram Yogi Maan-dhan Yojana",
+    description:
+      "Voluntary pension scheme providing ₹3,000/month for unorganized sector workers after 60.",
+    fullName: "Pradhan Mantri Shram Yogi Maan-dhan Yojana (PM-SYM)",
     launched: "2019",
     benefits: "Pension of ₹3,000 per month after 60 years of age",
     eligibility:
       "Unorganized sector workers aged 18–40 years with monthly income up to ₹15,000",
     officialSite: "https://www.pmsymidh.gov.in",
     logo: "fas fa-hand-holding-usd",
-    category: "Pension",
-    ministry: "Ministry of Labour & Employment",
+    category: "Pension & Social Security",
+    ministry: "Ministry of Labour & Employment, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Shram Yogi Maan-dhan (PM-SYM) is a voluntary and contributory pension scheme launched in 2019 to provide social security and financial stability to workers in the unorganized sector. This initiative addresses the lack of formal pension coverage for millions of laborers who contribute to the nation’s economy but remain outside the ambit of organized social security. Eligible workers aged 18–40 years with a monthly income of up to ₹15,000 can enroll and contribute a small monthly amount, which varies based on their age at the time of joining. After attaining the age of 60 years, beneficiaries receive a guaranteed pension of ₹3,000 per month, ensuring old-age financial support. PM-SYM integrates technology-driven registration, contribution tracking, and pension disbursal mechanisms, promoting transparency, ease of access, and accountability. The scheme is linked with Jan Dhan accounts and Aadhaar for seamless fund transfers and beneficiary identification. PM-SYM not only safeguards unorganized workers from financial insecurity during retirement but also fosters a culture of savings and long-term planning. It aligns with the broader social security agenda by complementing other welfare schemes such as life and health insurance programs for unorganized workers. By providing a reliable monthly pension, the scheme enhances social dignity, reduces dependency on family members, and improves the overall quality of life of participants. Since its inception, millions of workers have enrolled, contributing to inclusive social protection coverage and enabling economic empowerment of a traditionally underserved segment of society. PM-SYM represents a transformative step toward creating a comprehensive social safety net and promoting equitable growth in India.",
+      "Pradhan Mantri Shram Yogi Maan-dhan (PM-SYM) is a voluntary pension scheme launched in 2019 to provide financial security for unorganized sector workers. Eligible workers aged 18–40 with monthly income up to ₹15,000 contribute a small monthly amount. After 60 years, beneficiaries receive a guaranteed pension of ₹3,000 per month. The scheme integrates technology-driven registration, contribution tracking, and pension disbursal linked with Jan Dhan accounts and Aadhaar. PM-SYM fosters savings culture, long-term planning, and social security, enhancing dignity and reducing dependence on family members. Millions of workers have enrolled, contributing to inclusive social protection and equitable growth.",
   },
   {
     id: generateRandomId(),
     name: "Atal Pension Yojana",
-    description: "Government Pension Scheme",
+    description:
+      "Government-backed pension scheme guaranteeing minimum pension for citizens after 60.",
     fullName: "Atal Pension Yojana (APY)",
     launched: "2015",
     benefits:
       "Guaranteed minimum pension after 60 years based on contributions",
     eligibility:
-      "All Indian citizens aged 18–40 years, primarily targeting workers in the unorganized sector",
+      "All Indian citizens aged 18–40 years, primarily targeting unorganized sector workers",
     officialSite: "https://www.npscra.nsdl.co.in",
     logo: "fas fa-piggy-bank",
-    category: "Pension",
-    ministry: "Pension Fund Regulatory and Development Authority",
+    category: "Pension & Social Security",
+    ministry:
+      "Pension Fund Regulatory and Development Authority, Government of India",
     status: "Active",
     longDescription:
-      "Atal Pension Yojana (APY), launched in 2015, is a government-backed pension scheme aimed at providing financial security to citizens in their old age, particularly targeting workers in the unorganized sector. The scheme offers a guaranteed minimum pension ranging from ₹1,000 to ₹5,000 per month after the age of 60, based on the contribution level and the age at which the subscriber joins. APY is a voluntary and contributory program where subscribers make regular monthly contributions into their pension accounts, which are managed by the Pension Fund Regulatory and Development Authority (PFRDA). The scheme ensures continuity of contributions through flexible payment options, auto-debits, and digital access, making it convenient for participants. Subscribers who invest consistently benefit from compounding, while the government provides co-contributions for eligible individuals in the early years of enrollment, promoting wider participation. APY emphasizes financial literacy and retirement planning, helping citizens develop a habit of long-term savings and ensuring social security in later years. It covers unorganized sector workers, self-employed individuals, and other citizens without access to formal pension arrangements, thereby expanding social protection coverage in India. The initiative leverages technology for transparent account management, easy tracking of contributions, and timely disbursal of pensions. By promoting old-age financial security, Atal Pension Yojana enhances dignity, reduces dependency on family members, and fosters economic stability among subscribers. Since its launch, millions of Indians have enrolled under APY, contributing to a culture of retirement preparedness, inclusive growth, and a stronger social safety net for vulnerable populations. The scheme aligns with India’s broader vision of financial inclusion and universal social protection.",
+      "Atal Pension Yojana (APY), launched in 2015, provides financial security to Indian citizens, focusing on unorganized sector workers. Subscribers aged 18–40 contribute monthly to receive a guaranteed pension of ₹1,000–₹5,000 after 60, depending on contribution level. The scheme promotes long-term savings, retirement planning, and financial literacy. Managed by PFRDA, APY offers flexible contributions, auto-debits, co-contributions by the government for eligible participants, and digital account management. Millions of citizens have enrolled, enhancing retirement security, reducing family dependency, and expanding social protection coverage in India.",
   },
   {
     id: generateRandomId(),
     name: "Pradhan Mantri Fasal Bima Yojana",
-    description: "Crop Insurance Scheme",
+    description:
+      "Comprehensive crop insurance covering losses from natural calamities, pests, and diseases.",
     fullName: "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
     launched: "2016",
     benefits:
@@ -308,16 +348,17 @@ const schemes = [
     eligibility: "All farmers growing notified crops in notified areas",
     officialSite: "https://pmfby.gov.in",
     logo: "fas fa-seedling",
-    category: "Agriculture",
-    ministry: "Ministry of Agriculture & Farmers Welfare",
+    category: "Agriculture & Crop Insurance",
+    ministry: "Ministry of Agriculture & Farmers Welfare, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Fasal Bima Yojana (PMFBY), launched in 2016, is a comprehensive crop insurance scheme designed to provide financial support to farmers in the event of crop losses caused by natural calamities, pests, or diseases. The scheme aims to protect farmers from economic distress, ensure crop resilience, and promote agricultural sustainability. PMFBY offers uniform premium rates, with the government subsidizing a significant portion of the premium for farmers, making it affordable and accessible. The scheme covers all stages of crop growth, from pre-sowing to post-harvest, and applies to notified crops in designated areas. Farmers receive timely indemnity payments in case of crop damage, minimizing the financial impact of unforeseen events and enabling them to continue agricultural activities without disruption. PMFBY integrates modern technology, including satellite imagery, remote sensing, and mobile applications, for accurate crop assessment, loss estimation, and claim processing. It encourages participation of insurance companies, state governments, and banks to ensure effective implementation and financial inclusion of farmers. By mitigating risk, PMFBY enhances creditworthiness, supports farm investments, and promotes adoption of innovative farming practices. Since its inception, millions of farmers across India have benefited, contributing to rural economic stability, food security, and sustainable agricultural development. The scheme represents a significant step towards safeguarding farmer livelihoods, reducing vulnerability to climate-related risks, and strengthening India’s agricultural ecosystem.",
+      "Pradhan Mantri Fasal Bima Yojana (PMFBY), launched in 2016, provides financial protection to farmers against crop losses from natural calamities, pests, and diseases. With subsidized uniform premium rates, the scheme ensures affordability and accessibility. PMFBY covers all crop stages and offers timely indemnity payments to reduce economic distress. Modern technologies like satellite imagery, remote sensing, and mobile apps are used for crop assessment and claim processing. The scheme enhances creditworthiness, encourages innovative farming practices, and promotes rural economic stability. Millions of farmers benefit, ensuring food security and sustainable agricultural development across India.",
   },
   {
     id: generateRandomId(),
     name: "Pradhan Mantri Kaushal Vikas Yojana",
-    description: "Skill Development Program",
+    description:
+      "Skill training and certification for youth to improve employability.",
     fullName: "Pradhan Mantri Kaushal Vikas Yojana (PMKVY)",
     launched: "2015",
     benefits: "Short-term skill training and certification for youth",
@@ -325,16 +366,18 @@ const schemes = [
       "Indian youth aged 18–35 seeking employment or skill enhancement",
     officialSite: "https://www.pmkvyofficial.org",
     logo: "fas fa-chalkboard-teacher",
-    category: "Skill Development",
-    ministry: "Ministry of Skill Development & Entrepreneurship",
+    category: "Skill Development & Employment",
+    ministry:
+      "Ministry of Skill Development & Entrepreneurship, Government of India",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Kaushal Vikas Yojana (PMKVY), launched in 2015 under the Skill India mission, is a flagship program aimed at providing industry-relevant skill training and certification to Indian youth, enhancing their employability and promoting sustainable livelihoods. The scheme offers short-term skill courses aligned with the National Skill Qualification Framework (NSQF) in various sectors, including IT, manufacturing, healthcare, hospitality, and retail. Beneficiaries undergo structured training modules, hands-on practical learning, and assessment, culminating in nationally recognized certification. PMKVY collaborates with accredited training partners, industry experts, and state governments to ensure quality delivery and alignment with labor market demands. The initiative also incentivizes enrollment by providing financial rewards for successful completion, thereby encouraging youth participation and motivation. PMKVY emphasizes inclusive skill development, targeting marginalized communities, women, and differently-abled individuals to promote equitable access to opportunities. The program integrates digital technology for registration, course tracking, and certification issuance, ensuring transparency and efficiency. By bridging the gap between education and employment, PMKVY empowers youth to secure jobs, engage in entrepreneurship, and contribute meaningfully to the economy. Since its inception, millions of individuals have benefitted, acquiring skills, certifications, and employment opportunities, thereby enhancing productivity, competitiveness, and economic growth. PMKVY represents a transformative step towards building a skilled workforce, supporting Make in India initiatives, and fostering socio-economic development through human capital enhancement.",
+      "Pradhan Mantri Kaushal Vikas Yojana (PMKVY), launched in 2015, is a flagship skill development program under Skill India. It offers short-term, industry-aligned training and certification in sectors like IT, healthcare, manufacturing, hospitality, and retail. Beneficiaries receive hands-on practical training, assessment, and recognized certification. PMKVY collaborates with accredited training partners and industry to ensure quality delivery. The initiative incentivizes successful completion, promotes inclusion of marginalized communities, women, and differently-abled individuals, and leverages digital tools for registration and course tracking. Millions have benefited, gaining skills, certifications, and employment opportunities, supporting Make in India and socio-economic development.",
   },
   {
     id: generateRandomId(),
     name: "National Pension Scheme",
-    description: "Government Pension Plan",
+    description:
+      "Government-contributory pension plan offering retirement income based on contributions.",
     fullName: "National Pension Scheme (NPS)",
     launched: "2004",
     benefits: "Regular pension after retirement based on contributions",
@@ -342,11 +385,12 @@ const schemes = [
       "Indian citizens aged 18–65 years, including government and private sector employees",
     officialSite: "https://www.npscra.nsdl.co.in",
     logo: "fas fa-money-bill-wave",
-    category: "Pension",
-    ministry: "Pension Fund Regulatory and Development Authority",
+    category: "Pension & Retirement Planning",
+    ministry:
+      "Pension Fund Regulatory and Development Authority, Government of India",
     status: "Active",
     longDescription:
-      "National Pension Scheme (NPS), launched in 2004, is a government-sponsored pension program designed to provide retirement income to Indian citizens through a structured contribution-based model. The scheme targets employees from both government and private sectors, offering them an opportunity to accumulate retirement savings while earning market-linked returns. NPS operates on the principles of defined contribution, where subscribers contribute regularly to their pension accounts, which are managed by professional Pension Fund Managers under the supervision of the Pension Fund Regulatory and Development Authority (PFRDA). At retirement, subscribers can withdraw a portion of the corpus as a lump sum and use the remaining amount to purchase an annuity, ensuring a regular pension stream. NPS promotes financial literacy, disciplined savings, and long-term retirement planning. It offers multiple investment options, including equity, corporate bonds, and government securities, allowing participants to optimize returns based on their risk appetite. The scheme is portable across jobs and locations, making it flexible for a mobile workforce. Additionally, NPS provides tax benefits under relevant provisions, encouraging wider participation. Since its inception, millions of citizens have enrolled under NPS, building retirement security, financial independence, and a culture of long-term planning. By providing a structured framework for retirement income, NPS contributes to social security, economic stability, and inclusive growth, ensuring that citizens can maintain their quality of life post-retirement.",
+      "National Pension Scheme (NPS), launched in 2004, is a government-sponsored retirement savings program providing regular pension income through structured contributions. Subscribers from government and private sectors invest in pension accounts managed by professional fund managers under PFRDA supervision. At retirement, a portion can be withdrawn as lump sum and the remainder used to purchase an annuity, ensuring monthly pension. NPS promotes disciplined savings, financial literacy, and long-term planning, offering multiple investment options across equities, corporate bonds, and government securities. Millions of citizens participate, ensuring retirement security, economic stability, and inclusive social protection.",
   },
   {
     id: generateRandomId(),
@@ -363,7 +407,7 @@ const schemes = [
     ministry: "Ministry of Health & Family Welfare",
     status: "Active",
     longDescription:
-      "Ayushman Bharat – Pradhan Mantri Jan Arogya Yojana (PM-JAY) is a flagship health insurance scheme launched in 2018 to provide comprehensive and cashless health coverage to economically vulnerable families. The scheme targets low-income households identified through the Socio-Economic Caste Census (SECC) 2011 database, ensuring that the most marginalized populations gain access to quality healthcare. PM-JAY covers hospitalization expenses up to ₹5 lakh per family per year for secondary and tertiary care treatments, including surgeries, medical procedures, and pre-existing conditions. Beneficiaries can access treatment in empaneled public and private hospitals across India without any out-of-pocket expenditure, fostering financial protection and reducing health-related poverty. The scheme leverages technology through an integrated IT platform for beneficiary identification, hospital empanelment, claim management, and real-time monitoring, ensuring transparency and efficiency. PM-JAY emphasizes preventive healthcare and awareness campaigns to improve health outcomes and reduce disease burden. By providing equitable access to quality healthcare, the program enhances social inclusion, supports family well-being, and improves life expectancy. Since its inception, millions of families have benefited from cashless treatment, reducing the financial burden of medical emergencies and enhancing trust in public health systems. PM-JAY represents a transformative step towards universal health coverage in India, strengthening the health infrastructure, promoting public-private partnerships, and ensuring that no citizen is denied essential medical care due to financial constraints.",
+      "Ayushman Bharat – Pradhan Mantri Jan Arogya Yojana (PM-JAY) is a flagship health insurance scheme launched in 2018 to provide comprehensive and cashless health coverage to economically vulnerable families. The scheme targets low-income households identified through the SECC 2011 database, ensuring access to quality healthcare. PM-JAY covers hospitalization expenses up to ₹5 lakh per family per year for secondary and tertiary care, including surgeries and medical procedures. Beneficiaries can access treatment in empaneled hospitals across India without out-of-pocket expenses. Leveraging integrated IT platforms for beneficiary identification, hospital empanelment, claim management, and real-time monitoring, the scheme ensures transparency and efficiency. PM-JAY promotes preventive healthcare, social inclusion, and life improvement, benefiting millions since its inception.",
   },
   {
     id: generateRandomId(),
@@ -380,7 +424,7 @@ const schemes = [
     ministry: "Ministry of Petroleum & Natural Gas",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Ujjwala Yojana (PMUY), launched in 2016, is a transformative initiative aimed at providing clean cooking fuel, specifically LPG connections, to women from below poverty line (BPL) households across India. The scheme addresses health hazards caused by traditional cooking methods using firewood, coal, or dung cakes, which generate smoke and indoor air pollution, leading to respiratory and other chronic diseases. Under PMUY, eligible women receive a free LPG connection along with a stove, enabling safer and more efficient cooking practices. The government also promotes awareness campaigns on LPG usage, safety, and refilling to ensure effective adoption. PMUY contributes to gender empowerment by reducing the burden of fuel collection, improving convenience, and allowing women to engage in productive activities. The scheme is integrated with digital platforms for application, verification, and tracking, ensuring transparency, timely delivery, and grievance redressal. PMUY aligns with environmental goals by reducing deforestation and lowering household carbon emissions, promoting sustainable energy practices. Since its launch, millions of women have benefited, transforming rural and urban households by providing cleaner, safer, and more reliable cooking solutions. The program has significantly enhanced quality of life, health outcomes, and overall well-being, while fostering energy inclusivity and reducing the reliance on polluting fuels. PMUY exemplifies India’s commitment to social welfare, gender equity, and sustainable development through large-scale, technology-enabled interventions.",
+      "Pradhan Mantri Ujjwala Yojana (PMUY), launched in 2016, provides free LPG connections to women from BPL households, promoting clean cooking and reducing health hazards caused by traditional fuels. The scheme supports safer cooking practices, reduces indoor air pollution, and empowers women by saving time and labor. Digital platforms streamline application, verification, and tracking for transparency. PMUY also promotes environmental sustainability by reducing deforestation and carbon emissions. Since launch, millions of women have benefited, enhancing health, convenience, and socio-economic well-being while fostering energy inclusion and sustainable development.",
   },
   {
     id: generateRandomId(),
@@ -398,7 +442,7 @@ const schemes = [
     ministry: "Ministry of Housing and Urban Affairs & Ministry of Jal Shakti",
     status: "Active",
     longDescription:
-      "Swachh Bharat Mission (SBM), launched in 2014, is one of India’s largest cleanliness and sanitation campaigns aimed at transforming the country into a cleaner and healthier nation. The mission targets elimination of open defecation, improving solid waste management, and creating awareness about hygiene and sanitation practices across rural and urban areas. SBM focuses on constructing household and community toilets, providing sanitation infrastructure, and ensuring behavioral change through education and community engagement. The program encourages participation from citizens, local governance bodies, NGOs, and private sectors to collectively maintain cleanliness in public spaces, schools, and healthcare facilities. In rural areas, the mission prioritizes achieving Open Defecation Free (ODF) status, while in urban areas, it emphasizes solid waste management, cleanliness drives, and waste segregation initiatives. SBM employs technology for monitoring progress, mapping sanitation coverage, and incentivizing community participation through mobile apps and dashboards. The campaign has significantly reduced health hazards, prevented waterborne diseases, and enhanced quality of life for millions of citizens. By integrating environmental sustainability, public awareness, and behavioral change, Swachh Bharat Mission strengthens civic responsibility and community engagement. Since its inception, the program has constructed millions of toilets, improved waste management infrastructure, and motivated citizens to adopt hygienic practices, contributing to cleaner cities and villages, a healthier population, and a more sustainable environment. SBM represents a landmark initiative in India’s development agenda, showcasing the power of coordinated action, public participation, and innovative governance in driving nationwide change.",
+      "Swachh Bharat Mission (SBM), launched in 2014, is a nationwide cleanliness and sanitation campaign aimed at eliminating open defecation, improving solid waste management, and creating awareness about hygiene practices. The mission constructs household and community toilets, improves sanitation infrastructure, and fosters behavioral change through education and community engagement. Rural areas focus on achieving Open Defecation Free status, while urban areas prioritize solid waste management and cleanliness initiatives. Technology-enabled monitoring ensures transparency, progress tracking, and citizen participation. SBM has improved public health, environmental sustainability, and quality of life for millions, making it one of India’s landmark development initiatives.",
   },
   {
     id: generateRandomId(),
@@ -415,7 +459,7 @@ const schemes = [
     ministry: "Ministry of Rural Development",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Gram Sadak Yojana (PMGSY), launched in 2000, is a central government initiative aimed at providing all-weather road connectivity to unconnected rural habitations, thereby fostering socio-economic development and reducing rural isolation. The scheme targets rural villages and habitations based on population thresholds, ensuring inclusive infrastructure development. PMGSY focuses on constructing new roads, upgrading existing roads, and maintaining quality standards to ensure durability, safety, and accessibility. By connecting villages to markets, health facilities, educational institutions, and government services, the scheme facilitates economic growth, social mobility, and improved livelihoods. PMGSY emphasizes transparency, efficiency, and accountability in implementation through technology-enabled monitoring, including geo-tagging of road construction, online progress tracking, and performance audits. The initiative also promotes employment generation through local workforce engagement and skill development during construction activities. Improved rural connectivity under PMGSY has led to enhanced agricultural productivity, better access to essential services, and increased participation of rural communities in the broader economy. Since its inception, millions of kilometers of roads have been constructed, connecting thousands of habitations, reducing travel time, and improving transportation efficiency. PMGSY plays a pivotal role in bridging rural-urban divides, fostering inclusive development, and strengthening the nation’s physical infrastructure. By enabling seamless mobility, the scheme contributes to economic empowerment, social inclusion, and sustainable rural transformation.",
+      "Pradhan Mantri Gram Sadak Yojana (PMGSY), launched in 2000, provides all-weather road connectivity to unconnected rural habitations, fostering socio-economic development and reducing rural isolation. The scheme constructs new roads, upgrades existing ones, and ensures quality standards for durability and safety. Improved connectivity links villages to markets, healthcare, education, and government services, enhancing livelihoods and social mobility. Technology-enabled monitoring, geo-tagging, and performance audits ensure transparency and efficiency. PMGSY also generates local employment and skill development. Millions of kilometers of roads have been built, connecting thousands of habitations, improving transportation, and contributing to inclusive rural growth.",
   },
   {
     id: generateRandomId(),
@@ -434,7 +478,7 @@ const schemes = [
     ministry: "Ministry of Rural Development",
     status: "Active",
     longDescription:
-      "The Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA), enacted in 2005, is a landmark social security program designed to provide guaranteed wage employment to rural households in India. The scheme mandates the provision of at least 100 days of unskilled manual work per year to every adult member willing to participate, ensuring livelihood security and financial stability for rural communities. MGNREGA focuses on asset creation, including water conservation, land development, afforestation, and rural infrastructure projects, thereby enhancing local productivity and sustainability. The program promotes transparency, accountability, and timely wage payments through digital platforms, including Aadhaar-linked payment systems and real-time monitoring dashboards. MGNREGA empowers marginalized groups, including women and scheduled castes/tribes, by providing direct income, reducing dependency on informal labor markets, and fostering social inclusion. The scheme encourages active participation of local self-governments (Gram Panchayats) in planning and implementing projects, strengthening grassroots democracy and community engagement. Since its implementation, MGNREGA has significantly reduced rural poverty, enhanced food security, and improved access to essential services by creating durable community assets. The program also acts as an economic stabilizer during agrarian distress or natural calamities, providing a safety net for vulnerable households. MGNREGA represents a transformative approach to rural development, combining employment generation, infrastructure development, and social empowerment, contributing to equitable growth and poverty alleviation across India.",
+      "Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA), enacted in 2005, guarantees at least 100 days of unskilled manual labor per year to adult members of rural households, providing livelihood security and financial stability. The scheme focuses on asset creation such as water conservation, land development, and rural infrastructure, improving local productivity and sustainability. Digital platforms with Aadhaar-linked payments ensure transparency, accountability, and timely wage disbursement. MGNREGA empowers marginalized groups, strengthens local governance, reduces rural poverty, and enhances food security. The program also serves as an economic stabilizer during agrarian distress, creating durable community assets and contributing to equitable rural development across India.",
   },
   {
     id: generateRandomId(),
@@ -451,7 +495,7 @@ const schemes = [
     ministry: "Ministry of Skill Development and Entrepreneurship",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Kaushal Vikas Yojana (PMKVY), launched in 2015, is a flagship scheme aimed at empowering India’s youth by providing skill training and certification to enhance employability. The program is designed to bridge the gap between industry requirements and the skills possessed by young job seekers. PMKVY offers short-term skill courses in various sectors such as IT, manufacturing, hospitality, healthcare, and retail, aligned with the National Skills Qualification Framework (NSQF). Beneficiaries receive training from accredited training centers, followed by assessments and certification to validate their competencies. The scheme provides financial incentives to trainees, including rewards for successful course completion, reducing the economic burden on participants. PMKVY also emphasizes inclusive training, targeting women, differently-abled individuals, and marginalized communities to ensure equitable access to skill development opportunities. By equipping youth with industry-relevant skills, the program promotes entrepreneurship, self-employment, and wage employment, contributing to economic growth and reducing unemployment. The scheme leverages digital platforms for enrollment, progress tracking, and certification management, ensuring transparency and efficiency. PMKVY’s emphasis on practical, hands-on training enhances the readiness of youth for the workforce, aligning skill development with national priorities of Make in India and Atmanirbhar Bharat. Since its launch, millions of youth have benefited from the program, gaining certifications recognized by industries and employers across India. PMKVY strengthens the country’s human capital, improves livelihoods, and fosters social mobility by providing a clear pathway for skill acquisition, career advancement, and economic empowerment. The scheme demonstrates India’s commitment to creating a skilled, competitive, and future-ready workforce capable of driving national development.",
+      "Pradhan Mantri Kaushal Vikas Yojana (PMKVY), launched in 2015, empowers India’s youth by providing skill training and certification to enhance employability. The program bridges the gap between industry requirements and youth skills, offering short-term courses in IT, manufacturing, hospitality, healthcare, and retail aligned with the NSQF. Trainees receive hands-on training, assessment, and nationally recognized certification. Financial incentives and inclusive outreach target women, differently-abled individuals, and marginalized communities. PMKVY promotes entrepreneurship, wage employment, and self-employment, leveraging digital platforms for registration, progress tracking, and certification. Millions have benefited, acquiring industry-ready skills, boosting careers, livelihoods, and contributing to national economic growth.",
   },
   {
     id: generateRandomId(),
@@ -467,7 +511,7 @@ const schemes = [
     ministry: "Ministry of Electronics & Information Technology",
     status: "Active",
     longDescription:
-      "Digital India, launched in 2015, is a comprehensive initiative aimed at transforming India into a digitally empowered society and knowledge economy. The program focuses on three core areas: digital infrastructure as a utility to every citizen, delivering government services digitally, and fostering digital literacy. Digital India promotes the development of high-speed internet networks, common service centers, and mobile connectivity across urban and rural areas, bridging the digital divide. The program emphasizes digitization of public services, including government documents, e-governance initiatives, financial transactions, and healthcare services, enabling seamless access and transparency. Through skill development programs, workshops, and awareness campaigns, Digital India enhances digital literacy and equips citizens with the necessary skills to navigate online platforms safely and efficiently. The initiative also encourages innovation and entrepreneurship in the technology sector, supporting startups and tech-based solutions to national challenges. Key projects under Digital India include e-signatures, digital lockers, BharatNet for broadband connectivity, and the promotion of digital payments and financial inclusion. By integrating technology into governance, the program reduces paperwork, improves efficiency, and strengthens accountability across public service delivery. Digital India has revolutionized the way citizens interact with the government, access education, healthcare, and financial services, and participate in economic opportunities. The program empowers citizens, promotes transparency, fosters innovation, and accelerates India’s transformation into a knowledge-driven, inclusive, and technologically advanced nation. By leveraging digital tools and platforms, Digital India enhances the reach and efficiency of government programs, supports entrepreneurship, and ensures that technology becomes an enabler of social and economic development across India.",
+      "Digital India, launched in 2015, aims to transform India into a digitally empowered society and knowledge economy. The initiative focuses on three pillars: digital infrastructure for all, digital delivery of services, and digital literacy. It promotes high-speed internet, mobile connectivity, common service centers, and the digitization of government services for seamless access. Digital India enhances skill development, financial inclusion, innovation, and entrepreneurship in technology. Key projects include e-sign, digital lockers, BharatNet, and digital payments. By integrating technology into governance, the program improves efficiency, transparency, and citizen engagement. It strengthens public service delivery, fosters inclusive growth, and positions India as a knowledge-driven, technologically advanced nation.",
   },
   {
     id: generateRandomId(),
@@ -476,16 +520,15 @@ const schemes = [
     fullName: "Beti Bachao Beti Padhao (BBBP)",
     launched: "2015",
     benefits:
-      "Prevention of gender-based discrimination, education promotion for girls",
-    eligibility:
-      "All families, with special focus on regions with low child sex ratio",
+      "Prevention of gender-based discrimination, promotion of girls’ education",
+    eligibility: "All families, focusing on regions with low child sex ratio",
     officialSite: "https://wcd.nic.in/bbbp-schemes",
     logo: "fas fa-child",
     category: "Women & Child Development",
     ministry: "Ministry of Women & Child Development",
     status: "Active",
     longDescription:
-      "Beti Bachao Beti Padhao (BBBP), launched in 2015, is a flagship initiative aimed at addressing gender inequality, preventing female foeticide, and promoting the education and empowerment of girls in India. The program focuses on regions with low child sex ratio (CSR) and seeks to change societal attitudes through awareness campaigns, community engagement, and strict enforcement of laws against gender-based discrimination. BBBP integrates efforts from multiple ministries, including Women & Child Development, Health & Family Welfare, and Education, to create a comprehensive approach for the protection and development of the girl child. The scheme promotes equal opportunities in education, ensuring that girls have access to quality schooling, scholarships, and mentorship programs. It also emphasizes awareness campaigns targeting families, communities, and schools to sensitize them on the importance of the girl child and the benefits of gender equality. BBBP leverages technology, media, and outreach programs to reach remote and vulnerable communities, encouraging behavioral change and societal support for girls. The initiative monitors progress through data collection, evaluation, and reporting on child sex ratio, enrollment rates, and community participation. By reducing discrimination, enhancing education, and promoting empowerment, BBBP contributes to a more inclusive and equitable society. Since its launch, the scheme has positively impacted awareness levels, improved school enrollment rates for girls, and strengthened community-based advocacy for gender equality. Beti Bachao Beti Padhao exemplifies India’s commitment to safeguarding the rights of girls, promoting their well-being, and creating opportunities for them to contribute meaningfully to the nation’s growth and development.",
+      "Beti Bachao Beti Padhao (BBBP), launched in 2015, addresses gender inequality, prevents female foeticide, and promotes education and empowerment of girls. The program targets regions with low child sex ratio, combining awareness campaigns, community engagement, and strict enforcement of laws. BBBP integrates efforts from multiple ministries, ensuring equal opportunities, scholarships, and mentorship for girls. Technology, media, and outreach initiatives drive behavioral change, while monitoring and data collection track progress in CSR and enrollment rates. Since its launch, BBBP has increased awareness, improved school enrollment, and fostered community advocacy for gender equality, contributing to an inclusive and equitable society.",
   },
   {
     id: generateRandomId(),
@@ -494,7 +537,7 @@ const schemes = [
     fullName: "Pradhan Mantri Awas Yojana – Housing for All (Urban & Rural)",
     launched: "2015",
     benefits:
-      "Subsidized home loans, affordable housing construction for low-income families",
+      "Subsidized home loans and affordable housing construction for low-income families",
     eligibility: "Economically weaker sections, low and middle-income groups",
     officialSite: "https://pmaymis.gov.in",
     logo: "fas fa-home",
@@ -503,7 +546,7 @@ const schemes = [
       "Ministry of Housing and Urban Affairs & Ministry of Rural Development",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Awas Yojana (PMAY), launched in 2015, is a flagship initiative aimed at providing affordable housing to urban and rural populations, ensuring ‘Housing for All’ by 2022. The program targets economically weaker sections (EWS), low-income groups (LIG), and middle-income groups (MIG) who face difficulties in acquiring adequate housing. PMAY offers financial assistance in the form of interest subsidies on home loans, direct financial support for construction or enhancement of houses, and incentives for using green building technologies. In urban areas, the scheme emphasizes credit-linked subsidies, affordable rental housing, and promoting private sector participation to accelerate housing development. In rural areas, PMAY-Rural focuses on constructing pucca houses with basic amenities, leveraging local resources, labor, and community participation. The program incorporates technology for beneficiary identification, online application processing, and tracking progress, ensuring transparency and timely delivery of services. PMAY also emphasizes sustainable and inclusive urban planning by integrating housing with basic infrastructure, sanitation, and social amenities. By reducing housing shortages, improving living conditions, and empowering low-income families, PMAY enhances social welfare and quality of life. Since its launch, millions of households have benefited from safe and affordable housing, contributing to economic stability, community development, and overall social upliftment. The scheme reflects India’s commitment to inclusive growth, urban-rural integration, and ensuring that every citizen has access to dignified living conditions, fostering equitable development and national progress.",
+      "Pradhan Mantri Awas Yojana (PMAY), launched in 2015, provides affordable housing to urban and rural populations, ensuring ‘Housing for All’ by 2022. The program targets economically weaker sections, low- and middle-income groups, offering interest subsidies, financial support for construction, and incentives for green building technologies. PMAY integrates technology for beneficiary identification, online applications, and progress tracking. The scheme promotes sustainable urban planning, inclusive development, and improved living conditions. Millions of households have benefited, gaining safe and affordable homes, enhanced quality of life, and social empowerment, reflecting India’s commitment to equitable growth and dignified living.",
   },
   {
     id: generateRandomId(),
@@ -520,7 +563,7 @@ const schemes = [
     ministry: "Pension Fund Regulatory and Development Authority (PFRDA)",
     status: "Active",
     longDescription:
-      "Atal Pension Yojana (APY), launched in 2015, is a government-backed social security scheme designed to provide financial security and a guaranteed pension to workers in the unorganized sector upon reaching the age of 60. The program aims to encourage voluntary and regular contributions from subscribers, enabling them to accumulate a retirement corpus over their working life. APY offers a fixed monthly pension ranging from ₹1,000 to ₹5,000, depending on the contribution made and the age of joining. Subscribers can open APY accounts through banks and post offices, linking contributions to their bank accounts for automatic debit. The scheme is targeted at individuals aged 18–40 who work in informal sectors without formal retirement benefits, providing them with a reliable income source post-retirement. The government co-contributes 50% of the subscriber’s contribution or ₹1,000 per annum for eligible participants for the first five years, promoting wider participation. APY also emphasizes financial literacy, awareness campaigns, and ease of access through digital platforms, ensuring transparency, convenience, and accountability. By offering long-term financial security, APY protects workers from old-age poverty, promotes savings habits, and strengthens the social safety net for vulnerable populations. Since its launch, millions of unorganized workers have enrolled in the scheme, securing a pension that ensures dignity, stability, and peace of mind in their retirement years. APY reflects India’s commitment to inclusive social protection, empowering citizens to achieve financial independence and resilience in later life.",
+      "Atal Pension Yojana (APY), launched in 2015, provides financial security and a guaranteed pension to workers in the unorganized sector after age 60. The scheme encourages voluntary contributions, offering fixed monthly pensions of ₹1,000 to ₹5,000 based on contributions and joining age. Subscribers link accounts to banks or post offices for auto-debit of contributions. The government co-contributes for eligible participants during the first five years. APY promotes financial literacy, transparency, and ease of access through digital platforms. Millions have enrolled, securing post-retirement income, fostering savings habits, and strengthening the social safety net, empowering citizens to achieve dignity and financial independence.",
   },
   {
     id: generateRandomId(),
@@ -538,7 +581,7 @@ const schemes = [
     ministry: "Ministry of Health and Family Welfare",
     status: "Active",
     longDescription:
-      "The National Health Mission (NHM), launched in 2013, is a comprehensive program aimed at providing affordable, accessible, and quality healthcare services to all citizens of India, with a special focus on rural and underserved populations. NHM integrates the previous National Rural Health Mission (NRHM) and National Urban Health Mission (NUHM) to strengthen healthcare infrastructure, human resources, and service delivery across the country. The scheme emphasizes maternal and child health, preventive and promotive health interventions, disease control programs, and health system strengthening. NHM provides financial assistance for establishing primary health centers, sub-centers, and community health centers, ensuring availability of essential medicines, vaccines, and medical equipment. Accredited social health activists (ASHAs) and community health workers play a key role in outreach, awareness, and service delivery at the grassroots level. The program also promotes the use of technology for telemedicine, digital health records, and health information management, enhancing efficiency and monitoring outcomes. NHM ensures that vulnerable populations, including women, children, elderly, and marginalized communities, receive timely healthcare interventions. By focusing on preventive healthcare, immunization, nutrition, sanitation, and health education, NHM reduces disease burden and improves quality of life. The mission also emphasizes capacity building, training healthcare professionals, and integrating traditional and modern medical practices. Since its launch, NHM has contributed to lowering infant and maternal mortality rates, increasing immunization coverage, and improving access to essential health services, especially in remote and difficult-to-reach areas. The scheme represents India’s commitment to achieving universal health coverage, enhancing health equity, and fostering a healthier population capable of contributing to national development. NHM’s holistic approach strengthens the health system, promotes community participation, and ensures sustainable improvements in public health across India.",
+      "The National Health Mission (NHM), launched in 2013, provides affordable, accessible, and quality healthcare services to all citizens, focusing on rural and underserved populations. NHM integrates NRHM and NUHM to strengthen infrastructure, workforce, and service delivery. The program emphasizes maternal and child health, disease control, preventive care, and health system strengthening. Financial assistance supports primary health centers, sub-centers, and community health centers, ensuring medicines, vaccines, and equipment. ASHAs and community health workers facilitate outreach and awareness. NHM leverages telemedicine and digital health records for efficiency. It reduces disease burden, improves health equity, and fosters universal health coverage in India.",
   },
   {
     id: generateRandomId(),
@@ -556,7 +599,7 @@ const schemes = [
     ministry: "Ministry of Health and Family Welfare",
     status: "Active",
     longDescription:
-      "Ayushman Bharat, also known as Pradhan Mantri Jan Arogya Yojana (PM-JAY), launched in 2018, is India’s flagship health protection scheme aimed at providing financial coverage and access to quality healthcare for economically vulnerable families. The program provides health insurance coverage of up to ₹5 lakh per family per year for secondary and tertiary care hospitalization in empaneled public and private hospitals across the country. PM-JAY targets rural and urban poor families identified through the Socio-Economic Caste Census (SECC) database, ensuring that health protection reaches those most in need. The scheme offers cashless and paperless treatment, covering expenses such as hospitalization, surgery, diagnostics, medicines, and pre- and post-hospitalization care. Ayushman Bharat also emphasizes preventive care through wellness centers, which provide health check-ups, maternal and child health services, non-communicable disease management, and health education at the community level. The program leverages digital technology, including e-cards, hospital empanelment platforms, and real-time monitoring systems, to ensure transparency, efficiency, and accountability. By reducing out-of-pocket healthcare expenditure, Ayushman Bharat protects families from financial distress caused by medical emergencies and fosters equity in health service delivery. Since its launch, millions of families have benefited from cashless hospitalization, improving access to quality healthcare and enhancing health outcomes across India. Ayushman Bharat reflects the government’s commitment to universal health coverage, social protection, and building a healthier, more productive population capable of contributing to national development.",
+      "Ayushman Bharat (PM-JAY), launched in 2018, provides financial protection and access to quality healthcare for economically vulnerable families. It offers health insurance up to ₹5 lakh per family per year for hospitalization in empaneled public and private hospitals. PM-JAY targets families identified through SECC, offering cashless treatment for hospitalization, surgery, diagnostics, and pre- and post-care. The program includes wellness centers for preventive care, maternal and child health, and non-communicable disease management. Digital platforms ensure transparency and efficiency. Millions have benefited, reducing out-of-pocket healthcare expenditure and improving access to quality healthcare, supporting universal health coverage and social protection.",
   },
   {
     id: generateRandomId(),
@@ -573,7 +616,7 @@ const schemes = [
     ministry: "Ministry of Finance, Department of Posts",
     status: "Active",
     longDescription:
-      "Sukanya Samriddhi Yojana (SSY), launched in 2015, is a government-backed savings scheme designed to provide long-term financial security for the education and marriage of girl children in India. The scheme encourages parents and guardians to open a dedicated account for their girl child before she reaches 10 years of age, with one account permitted per child. SSY offers attractive interest rates, which are compounded annually, making it one of the most lucrative small savings instruments in India. Deposits can be made for a maximum of 15 years from the date of account opening, and the account matures after 21 years, providing substantial corpus for the girl’s higher education or marriage expenses. Partial withdrawals are permitted for educational purposes from the age of 18. The scheme promotes the financial empowerment of girls, encouraging savings habits among families while addressing gender disparity in education and social status. Contributions to SSY are eligible for tax benefits under Section 80C of the Income Tax Act, making it both a savings and tax-efficient investment tool. By ensuring that funds are specifically allocated for girls’ welfare, SSY fosters a sense of security and independence for the girl child, reducing economic barriers to education and opportunities. Since its inception, the scheme has gained widespread popularity, contributing to increased financial awareness among families and supporting national objectives of gender equality, education promotion, and women’s empowerment. Sukanya Samriddhi Yojana exemplifies India’s commitment to securing the future of its girl children through financial planning, inclusive growth, and sustainable socio-economic development.",
+      "Sukanya Samriddhi Yojana (SSY), launched in 2015, provides long-term financial security for girl children’s education and marriage. Parents or guardians open accounts for girls below 10 years, with one account per child. SSY offers attractive, compounded interest rates, deposits for up to 15 years, and maturity after 21 years. Partial withdrawals are allowed from age 18 for education. Contributions qualify for tax benefits under Section 80C. The scheme promotes savings habits, financial empowerment, and gender equality. Since inception, SSY has enhanced financial awareness among families and supported national goals of education, women’s empowerment, and socio-economic development.",
   },
   {
     id: generateRandomId(),
@@ -590,7 +633,7 @@ const schemes = [
     ministry: "Ministry of Petroleum and Natural Gas",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Ujjwala Yojana (PMUY), launched in 2016, is a landmark initiative aimed at providing clean cooking fuel to women from below-poverty-line (BPL) households, promoting health, safety, and environmental sustainability. The scheme facilitates free LPG connections for eligible women, reducing their dependence on traditional biomass fuels such as firewood, coal, and cow dung, which contribute to indoor air pollution and respiratory diseases. PMUY emphasizes women’s empowerment by recognizing them as the primary beneficiaries, enabling safer, cleaner, and more convenient cooking practices. The program also incorporates awareness campaigns on the benefits of LPG usage, safety measures, and efficient fuel utilization. PMUY provides financial support to cover security deposits, ensuring affordability for economically vulnerable households. By reducing indoor air pollution and drudgery associated with fuel collection, the scheme improves health outcomes, particularly for women and children, and contributes to environmental conservation. The initiative has been instrumental in reaching millions of households across rural and urban India, enhancing quality of life and promoting socio-economic development. PMUY also supports government objectives related to energy access, climate change mitigation, and inclusive growth. Since its launch, the program has successfully facilitated the adoption of clean cooking fuel, reduced health hazards, and empowered women through access to modern energy solutions. Pradhan Mantri Ujjwala Yojana demonstrates India’s commitment to sustainable development, public health improvement, and social equity by providing essential energy services to marginalized communities.",
+      "Pradhan Mantri Ujjwala Yojana (PMUY), launched in 2016, provides clean cooking fuel to women from BPL households, reducing dependence on biomass fuels. Eligible women receive free LPG connections, enhancing safety, convenience, and environmental sustainability. Awareness campaigns promote LPG usage, safety, and efficiency. The scheme reduces indoor air pollution, improves women’s health, and empowers them by easing fuel collection burdens. Millions of households have benefited, adopting cleaner cooking solutions, enhancing quality of life, and contributing to socio-economic development. PMUY supports energy access, climate goals, and inclusive growth.",
   },
   {
     id: generateRandomId(),
@@ -608,7 +651,7 @@ const schemes = [
     ministry: "Ministry of Agriculture & Farmers Welfare",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Fasal Bima Yojana (PMFBY), launched in 2016, is a flagship crop insurance scheme aimed at providing financial security to farmers against crop losses due to natural calamities, pests, and diseases. The program seeks to stabilize farmers’ incomes, encourage investment in agriculture, and enhance food security in India. PMFBY covers a wide range of crops, including cereals, pulses, oilseeds, horticultural, and commercial crops, depending on state notifications. Farmers pay a nominal premium, while the government provides substantial support to cover the balance of the actuarial premium, ensuring affordability. The scheme emphasizes prompt and accurate claims settlement through technology-enabled assessment, satellite imagery, crop cutting experiments, and mobile applications. PMFBY encourages farmers to adopt innovative practices, invest in quality inputs, and manage risks effectively, reducing distress caused by crop failures. The program also integrates financial literacy, awareness campaigns, and capacity-building initiatives to educate farmers about insurance benefits and processes. By providing timely compensation for crop losses, PMFBY protects farmers’ livelihoods, sustains agricultural productivity, and fosters rural development. Since its launch, the scheme has enrolled millions of farmers, covering vast agricultural areas and mitigating the financial impact of natural disasters. PMFBY represents India’s commitment to risk management, agricultural resilience, and inclusive growth by ensuring that farmers can maintain economic stability and continue contributing to national food security even in adverse conditions.",
+      "Pradhan Mantri Fasal Bima Yojana (PMFBY), launched in 2016, provides financial security to farmers against crop losses from natural calamities, pests, and diseases. Covering notified crops, PMFBY stabilizes farmers’ incomes, promotes investment in agriculture, and ensures food security. Farmers pay nominal premiums while the government supports the actuarial balance. The scheme uses satellite imagery, crop cutting experiments, and mobile apps for prompt claim settlement. PMFBY educates farmers on insurance benefits and risk management. Millions of farmers benefit, mitigating financial losses, sustaining productivity, and supporting rural development. The program strengthens agricultural resilience and inclusive growth.",
   },
   {
     id: generateRandomId(),
@@ -625,7 +668,7 @@ const schemes = [
     ministry: "Ministry of Finance",
     status: "Active",
     longDescription:
-      "The Stand Up India Scheme, launched in 2016, is designed to promote entrepreneurship among Scheduled Castes (SC), Scheduled Tribes (ST), and women by facilitating bank loans to start greenfield enterprises in manufacturing, services, or the trading sector. The scheme provides financial support ranging from ₹10 lakh to ₹1 crore for setting up new ventures, helping beneficiaries overcome the capital barriers that often prevent them from starting businesses. Stand Up India offers handholding support through dedicated platforms, guidance on project preparation, and assistance in navigating government schemes and regulatory procedures. The program aims to foster economic empowerment, job creation, and inclusive growth by enabling historically marginalized groups to participate actively in the economy. Beneficiaries receive easy access to bank credit through participating financial institutions, with simplified documentation and advisory services. The initiative also encourages mentorship, capacity building, and market linkages to ensure sustainability and profitability of the enterprises. By promoting entrepreneurship among SC/ST and women, Stand Up India enhances socio-economic mobility, reduces inequality, and strengthens the ecosystem for inclusive development. The scheme complements other government initiatives aimed at supporting micro, small, and medium enterprises (MSMEs) while fostering innovation, skill utilization, and economic diversification. Since its inception, Stand Up India has facilitated thousands of successful loans, helping beneficiaries establish sustainable businesses, generate employment opportunities, and contribute to local and national economic growth. The scheme embodies India’s commitment to social equity, empowerment of marginalized communities, and fostering a vibrant entrepreneurial culture across the country.",
+      "The Stand Up India Scheme, launched in 2016, promotes entrepreneurship among SC/ST and women by facilitating bank loans for greenfield enterprises in manufacturing, services, or trading. Loans range from ₹10 lakh to ₹1 crore, helping overcome capital barriers. The scheme offers handholding support, project guidance, and assistance navigating government schemes. Beneficiaries receive easy access to bank credit, simplified documentation, mentorship, capacity building, and market linkages. The initiative fosters economic empowerment, job creation, inclusive growth, and socio-economic mobility. Thousands of loans have been successfully facilitated, enabling sustainable businesses and contributing to local and national economic growth.",
   },
   {
     id: generateRandomId(),
@@ -642,7 +685,7 @@ const schemes = [
     ministry: "Ministry of Rural Development",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Gram Sadak Yojana (PMGSY), launched in 2000, is a nationwide program aimed at providing all-weather road connectivity to unconnected rural habitations across India. The scheme focuses on enhancing rural mobility, promoting economic development, and facilitating access to essential services such as healthcare, education, and markets. PMGSY prioritizes habitations with populations above specified thresholds, ensuring equitable distribution of infrastructure development. Roads constructed under the program adhere to quality standards, ensuring durability and sustainability, and integrate environmentally sensitive designs where required. The initiative promotes rural employment by involving local contractors, laborers, and self-help groups in construction and maintenance activities. PMGSY also strengthens transport linkages, enabling farmers to access markets efficiently, improving supply chains, and fostering rural entrepreneurship. The scheme contributes to reducing rural isolation, enhancing social inclusion, and supporting overall socio-economic development. By providing dependable road infrastructure, PMGSY facilitates faster movement of goods and people, improving quality of life and enabling better delivery of government schemes. Since its inception, the program has constructed thousands of kilometers of roads, connecting millions of rural citizens to the mainstream economy. PMGSY represents India’s commitment to rural development, infrastructure expansion, and inclusive growth by bridging the urban-rural divide and ensuring that every citizen has access to mobility, opportunity, and prosperity.",
+      "Pradhan Mantri Gram Sadak Yojana (PMGSY), launched in 2000, provides all-weather road connectivity to unconnected rural habitations. The scheme enhances rural mobility, economic development, and access to healthcare, education, and markets. It prioritizes habitations above population thresholds and ensures durable, sustainable roads. PMGSY promotes rural employment via local contractors and labor, strengthens transport linkages, and fosters rural entrepreneurship. Thousands of kilometers of roads have been built, connecting millions of rural citizens to the economy. PMGSY contributes to social inclusion, reduces rural isolation, and supports overall socio-economic development.",
   },
   {
     id: generateRandomId(),
@@ -660,7 +703,7 @@ const schemes = [
     ministry: "Ministry of Rural Development",
     status: "Active",
     longDescription:
-      "The National Social Assistance Programme (NSAP), launched in 1995, is a flagship social security initiative aimed at providing financial support to vulnerable sections of society, including the elderly, widows, and persons with disabilities living below the poverty line (BPL). The program seeks to ensure a minimum level of social protection, reduce economic distress, and improve the quality of life for disadvantaged individuals. NSAP consists of multiple sub-schemes such as Indira Gandhi National Old Age Pension Scheme (IGNOAPS), Indira Gandhi National Widow Pension Scheme (IGNWPS), and Indira Gandhi National Disability Pension Scheme (IGNDPS), providing periodic monetary assistance to eligible beneficiaries. The program also encourages state governments to supplement central assistance, fostering cooperative federalism and broader coverage. NSAP enhances social inclusion by targeting the most marginalized populations, promoting dignity and security for those who lack family or community support. Beneficiaries receive financial aid directly to their bank accounts, ensuring transparency and minimizing leakages. The initiative also incorporates awareness campaigns, grievance redressal mechanisms, and monitoring systems to strengthen service delivery. By providing a safety net, NSAP mitigates vulnerability due to old age, widowhood, or disability, enabling recipients to meet basic needs, access healthcare, and sustain livelihoods. Since its inception, the program has reached millions of beneficiaries, supporting India’s commitment to social welfare, inclusive development, and poverty alleviation. NSAP embodies the government’s vision of equitable growth, social justice, and economic empowerment of marginalized communities.",
+      "The National Social Assistance Programme (NSAP), launched in 1995, provides financial support to elderly, widows, and persons with disabilities from BPL households. NSAP includes schemes like IGNOAPS, IGNWPS, and IGNDPS, delivering periodic monetary assistance to eligible beneficiaries. The program enhances social inclusion, dignity, and security for marginalized populations. Financial aid is directly transferred to bank accounts for transparency. NSAP mitigates vulnerability due to age, widowhood, or disability, enabling recipients to meet basic needs, access healthcare, and sustain livelihoods. Millions of beneficiaries have been supported, reflecting India’s commitment to social welfare, inclusive development, and poverty alleviation.",
   },
   {
     id: generateRandomId(),
@@ -677,7 +720,7 @@ const schemes = [
     ministry: "Ministry of Electronics and Information Technology",
     status: "Active",
     longDescription:
-      "The Digital India Programme, launched in 2015, is a transformative initiative aimed at harnessing technology to improve governance, service delivery, and citizen engagement across India. The program seeks to create a digitally empowered society and knowledge economy by focusing on three key pillars: digital infrastructure as a core utility to every citizen, delivery of services digitally, and digital literacy. Under Digital India, initiatives include expanding broadband connectivity, establishing common service centers, providing e-governance solutions, promoting digital payments, and ensuring access to information through online platforms. The program emphasizes transparency, efficiency, and accountability in government operations while enabling citizens to access essential services from anywhere, anytime. Digital India also fosters innovation, entrepreneurship, and skill development in emerging technologies, bridging the digital divide between urban and rural areas. By promoting digital literacy and awareness, the initiative empowers individuals to utilize technology for education, healthcare, financial inclusion, and livelihood enhancement. The program integrates government departments, private sector partners, and community stakeholders to create scalable, sustainable, and citizen-centric solutions. Since its launch, Digital India has facilitated the widespread adoption of technology in governance, improved delivery of public services, enabled e-signatures, e-health, e-education, and promoted cashless transactions. The initiative strengthens India’s position as a global digital hub, promotes socio-economic development, and ensures that citizens are active participants in the digital economy. Digital India embodies the government’s vision of modern governance, inclusive growth, and technological empowerment for all.",
+      "Digital India, launched in 2015, leverages technology to improve governance, service delivery, and citizen engagement. The program focuses on digital infrastructure, e-service delivery, and digital literacy. Initiatives include broadband expansion, common service centers, e-governance solutions, digital payments, and information access. The scheme enhances transparency, efficiency, and accountability while empowering citizens to access services remotely. Digital India fosters innovation, entrepreneurship, skill development, and bridges urban-rural digital divides. The program integrates government, private, and community stakeholders to create sustainable solutions, enabling education, healthcare, financial inclusion, and livelihoods. It strengthens India’s position as a global digital hub and promotes inclusive socio-economic development.",
   },
   {
     id: generateRandomId(),
@@ -694,7 +737,7 @@ const schemes = [
     ministry: "Ministry of Finance",
     status: "Active",
     longDescription:
-      "Atal Pension Yojana (APY), launched in 2015, is a government-backed pension scheme designed to provide social security to citizens working in the unorganized sector. The scheme ensures a fixed monthly pension ranging from ₹1,000 to ₹5,000 after the subscriber reaches the age of 60, depending on the contributions made during the accumulation phase. APY promotes financial inclusion by allowing individuals with irregular or low income to save gradually for their retirement, thereby reducing dependency on family or government aid in old age. Contributions are flexible and can be made monthly, quarterly, or half-yearly through bank accounts linked with the subscriber’s unique ID. The government co-contributes 50% of the total contribution or ₹1,000 per annum for eligible subscribers for the first five years, enhancing the benefit and encouraging participation. APY also ensures transparency and safety as funds are managed through the National Pension System (NPS), regulated by the Pension Fund Regulatory and Development Authority (PFRDA). The scheme has a robust online enrollment process, regular account statements, and portability across banks, ensuring ease of access for subscribers. APY strengthens the social security net, protects against old-age financial vulnerability, and encourages a culture of disciplined savings. Since its inception, it has attracted millions of subscribers across urban and rural areas, contributing to economic empowerment and inclusive growth. By offering a guaranteed pension, APY aligns with the government’s vision of providing a secure financial future for all citizens and reducing inequality in retirement preparedness. It integrates modern banking, technology, and governance to create a scalable, reliable, and sustainable pension system for India’s unorganized workforce.",
+      "Atal Pension Yojana (APY), launched in 2015, provides social security for unorganized sector workers. Subscribers receive fixed pensions from ₹1,000 to ₹5,000 after age 60, depending on contributions. Flexible contributions are allowed through linked bank accounts, with government co-contribution for eligible subscribers in the first five years. Managed under NPS by PFRDA, APY ensures transparency and safety. The scheme offers online enrollment, account portability, and regular statements. APY protects against old-age financial vulnerability, encourages disciplined savings, and promotes economic empowerment. Millions of urban and rural citizens have benefited, securing retirement income and fostering inclusive growth.",
   },
   {
     id: generateRandomId(),
@@ -712,7 +755,7 @@ const schemes = [
     ministry: "Ministry of Housing and Urban Affairs",
     status: "Active",
     longDescription:
-      "Pradhan Mantri Awas Yojana (PMAY), launched in 2015, is a flagship initiative by the Government of India aimed at providing affordable housing to urban and rural citizens, with a vision of 'Housing for All' by 2022. The scheme covers both urban (PMAY-U) and rural (PMAY-G) areas, targeting economically weaker sections (EWS), low-income groups (LIG), and middle-income groups (MIG) to enable them to own a pucca house with basic amenities. PMAY offers financial support in the form of interest subsidies on housing loans, direct financial assistance for construction or enhancement, and incentives for adopting energy-efficient technologies. The program encourages private sector participation and leverages innovative financing models to scale affordable housing. PMAY also emphasizes inclusivity by prioritizing women-headed households, senior citizens, and differently-abled individuals. Beneficiaries can avail themselves of loans from banks and housing finance institutions at subsidized rates, ensuring financial feasibility. The scheme integrates technology for transparent application processing, fund disbursement, and monitoring of construction quality, ensuring accountability and efficiency. PMAY aims to improve living conditions, reduce slum prevalence, and contribute to socio-economic development by providing secure shelter and fostering community infrastructure. Since its inception, millions of homes have been sanctioned and constructed under PMAY, benefiting low-income families across the country. The scheme aligns with India’s sustainable development goals by promoting affordable housing, improving urban planning, and ensuring that all citizens have access to safe, dignified, and quality living spaces. PMAY represents a critical step toward inclusive growth, urban transformation, and poverty alleviation.",
+      "Pradhan Mantri Awas Yojana (PMAY), launched in 2015, is a flagship initiative aimed at providing affordable housing to urban and rural citizens with a vision of 'Housing for All' by 2022. The scheme covers PMAY-U and PMAY-G, targeting EWS, LIG, and MIG groups. It offers financial support via interest subsidies, direct assistance, and incentives for energy-efficient construction. PMAY prioritizes women-headed households, senior citizens, and differently-abled individuals. Beneficiaries can access loans at subsidized rates, with transparent application processing and monitoring. Millions of homes have been sanctioned and constructed, improving living conditions, reducing slum prevalence, and fostering socio-economic development.",
   },
   {
     id: generateRandomId(),
@@ -729,7 +772,7 @@ const schemes = [
     ministry: "Ministry of Health and Family Welfare",
     status: "Active",
     longDescription:
-      "The National Health Mission (NHM), launched in 2013, is a comprehensive government program aimed at strengthening healthcare delivery across India, particularly in rural areas and underserved regions. NHM integrates the earlier National Rural Health Mission (NRHM) and National Urban Health Mission (NUHM), ensuring equitable access to quality healthcare for all citizens. The program focuses on maternal and child health, immunization, disease prevention, health system infrastructure, and capacity building of healthcare professionals. NHM promotes public-private partnerships to enhance service delivery, improve availability of medical equipment and essential medicines, and upgrade health facilities. The initiative also emphasizes community participation through health committees, awareness campaigns, and mobilization of local health workers such as Accredited Social Health Activists (ASHAs). NHM addresses communicable and non-communicable diseases through targeted programs, vaccination drives, and preventive healthcare measures. It integrates technology for data management, monitoring, and telemedicine services, expanding access to specialized care in remote locations. By providing free or subsidized healthcare services, NHM reduces financial barriers, promotes early diagnosis and treatment, and contributes to better health outcomes. The mission also supports health education, behavior change initiatives, and emergency preparedness to improve public health resilience. Since its inception, NHM has enhanced access to healthcare for millions of citizens, reduced maternal and infant mortality, and strengthened India’s health infrastructure. The initiative aligns with the government’s commitment to universal health coverage, sustainable development, and equitable access to healthcare for all, ensuring healthier, more productive communities.",
+      "The National Health Mission (NHM), launched in 2013, strengthens healthcare delivery across India, particularly in rural areas. Integrating NRHM and NUHM, NHM ensures equitable access to quality healthcare. Focus areas include maternal and child health, immunization, disease prevention, and health system infrastructure. The program leverages public-private partnerships, technology for data and telemedicine, and community participation via ASHAs. NHM reduces financial barriers, promotes early diagnosis, and improves health outcomes. Since its inception, it has enhanced healthcare access, reduced maternal and infant mortality, and strengthened India’s health infrastructure.",
   },
   {
     id: generateRandomId(),
@@ -747,7 +790,7 @@ const schemes = [
     ministry: "Ministry of Health and Family Welfare",
     status: "Active",
     longDescription:
-      "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (PM-JAY), launched in 2018, is India’s largest health insurance scheme aimed at providing financial protection and access to quality healthcare for vulnerable families. The scheme offers cashless treatment for secondary and tertiary healthcare services in empaneled hospitals across the country, covering over 10 crore families with an annual health insurance coverage of up to ₹5 lakh per family. PM-JAY targets economically weaker populations in rural and urban areas, reducing the financial burden of hospitalization and improving health outcomes. The program integrates digital technologies for beneficiary identification, hospital empanelment, claims management, and real-time monitoring to ensure transparency, efficiency, and quick service delivery. PM-JAY covers a wide range of medical procedures, including surgeries, treatments for chronic illnesses, maternity care, and critical care services, ensuring comprehensive healthcare support. The scheme also promotes public-private partnerships, leveraging existing health infrastructure and expertise to expand service reach. By eliminating out-of-pocket expenses, PM-JAY safeguards families from catastrophic health expenditures, strengthens health system resilience, and enhances trust in public healthcare services. Since its launch, millions of treatments have been availed under PM-JAY, benefiting citizens from marginalized communities and remote regions. Ayushman Bharat contributes to India’s goal of universal health coverage, inclusive development, and equitable access to quality healthcare, ensuring that no citizen is deprived of essential medical services due to financial constraints.",
+      "Ayushman Bharat PM-JAY, launched in 2018, is India’s largest health insurance scheme, providing financial protection and access to quality healthcare. Covering over 10 crore families, it offers cashless secondary and tertiary care up to ₹5 lakh annually. Targeting economically weaker populations, PM-JAY reduces financial burdens of hospitalization. The scheme integrates digital technologies for beneficiary identification, hospital empanelment, claims management, and monitoring. It covers surgeries, chronic illnesses, maternity, and critical care. Millions of treatments have been availed, promoting universal health coverage, inclusive development, and equitable access to healthcare.",
   },
   {
     id: generateRandomId(),
@@ -764,7 +807,7 @@ const schemes = [
     ministry: "Ministry of Women and Child Development",
     status: "Active",
     longDescription:
-      "Beti Bachao Beti Padhao (BBBP), launched in 2015, is a government initiative aimed at addressing the declining child sex ratio, promoting girls’ education, and empowering the girl child in India. The program focuses on three key pillars: prevention of gender-biased sex-selective elimination, ensuring survival and protection of the girl child, and promoting education and participation in socio-economic development. BBBP combines advocacy, awareness campaigns, policy interventions, and community engagement to change societal attitudes and improve the status of girls in India. The scheme collaborates with health, education, and law enforcement departments to implement measures for early detection of gender bias, timely medical care, and enforcement of laws against female feticide. BBBP also promotes enrollment, retention, and quality education for girls, providing scholarships, mentoring, and skill development opportunities to empower them. Community-based programs encourage parental support, reduce discrimination, and ensure access to healthcare and nutrition. The initiative engages media, civil society, and local authorities to spread awareness and mobilize societal support for gender equality. Since its inception, BBBP has contributed to improving the child sex ratio in several districts, increased awareness about the value of the girl child, and promoted inclusive participation in education and social development. By focusing on protection, education, and empowerment, Beti Bachao Beti Padhao strengthens gender equality, reduces discrimination, and fosters a more equitable society. It aligns with India’s vision of empowering women, promoting human development, and building a progressive, inclusive nation.",
+      "Beti Bachao Beti Padhao (BBBP), launched in 2015, addresses declining child sex ratio, promotes girls’ education, and empowers the girl child. The program focuses on prevention of gender-biased elimination, survival, protection, and education. BBBP combines advocacy, awareness campaigns, policy interventions, and community engagement. It collaborates with health, education, and law enforcement to prevent female feticide. The scheme provides scholarships, mentoring, and skill development. Since inception, BBBP has improved child sex ratio, increased awareness, and promoted inclusive education, reducing discrimination and fostering gender equality.",
   },
   {
     id: generateRandomId(),
@@ -782,7 +825,7 @@ const schemes = [
     ministry: "Ministry of Women and Child Development",
     status: "Active",
     longDescription:
-      "The National Nutrition Mission, or Poshan Abhiyaan, launched in 2018, is a flagship government initiative aimed at improving nutritional outcomes for children, pregnant women, and lactating mothers in India. The mission focuses on reducing stunting, undernutrition, anemia, and low birth weight through interventions such as supplementary nutrition, immunization, health check-ups, and behavior change communication. Poshan Abhiyaan leverages technology, real-time monitoring, and digital platforms to track service delivery, identify gaps, and ensure accountability. The program engages Anganwadi workers, community leaders, and local governance institutions to implement nutrition-related activities effectively at the grassroots level. Awareness campaigns, capacity building, and community mobilization are integral components to promote healthy eating habits, hygiene, and maternal care. By addressing malnutrition early in life, the mission contributes to improved cognitive development, physical health, and long-term educational and economic outcomes. Poshan Abhiyaan also integrates initiatives for micronutrient supplementation, growth monitoring, and health education, fostering holistic child development. The mission aligns with India’s Sustainable Development Goals (SDGs), targeting improved health, well-being, and social equity, while strengthening institutional frameworks for nutrition governance. Through Poshan Abhiyaan, the government aims to create a healthier, more productive, and resilient population, reducing the burden of malnutrition and fostering sustainable human development across communities.",
+      "The National Nutrition Mission (Poshan Abhiyaan), launched in 2018, aims to improve nutrition for children, pregnant women, and lactating mothers. It reduces stunting, undernutrition, anemia, and low birth weight via supplementary nutrition, immunization, health check-ups, and behavior change communication. Leveraging technology and real-time monitoring, the program engages Anganwadi workers and local governance. Awareness campaigns, capacity building, and community mobilization promote healthy habits. Poshan Abhiyaan contributes to cognitive, physical, and long-term socio-economic development, aligning with India’s SDGs for health and social equity.",
   },
   {
     id: generateRandomId(),
@@ -799,7 +842,7 @@ const schemes = [
     ministry: "Ministry of Power",
     status: "Active",
     longDescription:
-      "Deen Dayal Upadhyaya Gram Jyoti Yojana (DDUGJY), launched in 2015, is a government initiative aimed at providing continuous and reliable electricity to rural India while enhancing infrastructure for agricultural and household power needs. The scheme focuses on feeder separation for agricultural and domestic consumption, strengthening sub-transmission and distribution networks, and electrifying unconnected villages. DDUGJY promotes energy access, economic development, and quality of life improvements in rural areas. By leveraging modern technology, smart metering, and real-time monitoring, the scheme ensures efficient electricity distribution and reduces power losses. Rural households benefit from reliable lighting, energy for appliances, and improved educational and healthcare facilities. Farmers gain access to uninterrupted electricity for irrigation and farm-related activities, enhancing productivity and income. DDUGJY also encourages private sector participation, capacity building, and employment opportunities in rural electrification projects. Since its launch, thousands of villages have been electrified, contributing to socio-economic upliftment and bridging urban-rural energy gaps. The scheme supports sustainable development, environmental considerations, and energy security. By delivering modern electricity infrastructure, DDUGJY empowers rural communities, stimulates economic growth, and fosters inclusive development across India’s countryside.",
+      "Deen Dayal Upadhyaya Gram Jyoti Yojana (DDUGJY), launched in 2015, provides continuous electricity to rural India. The scheme includes feeder separation, strengthening transmission and distribution networks, and electrifying unconnected villages. It enhances energy access, economic development, and quality of life. Modern technology, smart metering, and monitoring improve efficiency and reduce losses. Farmers and households benefit from reliable electricity. Thousands of villages have been electrified, bridging urban-rural energy gaps and promoting inclusive development.",
   },
   {
     id: generateRandomId(),
@@ -817,7 +860,7 @@ const schemes = [
     ministry: "Ministry of Housing and Urban Affairs",
     status: "Active",
     longDescription:
-      "The Smart Cities Mission, launched in 2015 by the Government of India, is a transformative urban development initiative aimed at creating 100 smart cities across the country that are citizen-centric, sustainable, and technologically advanced. The mission seeks to improve urban living by integrating core infrastructure elements such as adequate water supply, efficient sanitation, reliable energy, intelligent transport systems, and robust IT connectivity. Smart Cities are designed to be economically productive, environmentally sustainable, and socially inclusive, focusing on improving the quality of life for residents. The mission encourages cities to adopt innovative solutions for urban mobility, waste management, energy efficiency, and public safety using digital technologies and data-driven governance. Citizen participation is central to the initiative, empowering residents to be actively involved in planning, monitoring, and decision-making processes. Smart Cities leverage public-private partnerships (PPP) to implement sustainable infrastructure projects and enhance investment opportunities. The program also emphasizes green spaces, clean air initiatives, and climate-resilient planning to promote environmental well-being. By fostering innovation, the mission supports local entrepreneurship, job creation, and skill development. Since its inception, numerous cities have undertaken projects such as smart traffic management, e-governance platforms, smart water meters, urban mobility solutions, and digitally connected public services, demonstrating measurable improvements in efficiency, transparency, and citizen satisfaction. The Smart Cities Mission aligns with India’s vision of sustainable urbanization, economic growth, and enhanced livability, transforming the urban landscape while addressing the challenges posed by rapid population growth, urban congestion, and environmental stress. By integrating technology, governance, and citizen engagement, the Smart Cities Mission seeks to build urban spaces that are resilient, inclusive, and capable of supporting the aspirations of present and future generations.",
+      "The Smart Cities Mission, launched in 2015, aims to create 100 smart cities that are citizen-centric, sustainable, and technologically advanced. Core infrastructure includes water supply, sanitation, energy, intelligent transport, and IT connectivity. Cities adopt innovative solutions for mobility, waste management, energy efficiency, and public safety using digital technologies. Citizen participation is central to planning and monitoring. PPP models implement sustainable projects, promote investment, and improve livability. Since inception, projects include smart traffic management, e-governance, smart meters, and digitally connected services. The mission aligns with India’s sustainable urbanization, economic growth, and improved quality of life.",
   },
   {
     id: generateRandomId(),
@@ -834,58 +877,63 @@ const schemes = [
     ministry: "Ministry of Communications",
     status: "Active",
     longDescription:
-      "The BharatNet Project, launched in 2011, is India’s flagship initiative to provide high-speed broadband connectivity to all 2.5 lakh gram panchayats in rural areas, creating a foundation for Digital India. The mission aims to bridge the digital divide between urban and rural regions, enabling equitable access to digital services, education, health, governance, and economic opportunities. The project is implemented through a combination of optical fiber networks, wireless technologies, and last-mile connectivity solutions, ensuring reliable internet access to remote and underserved villages. BharatNet facilitates e-governance by enabling online delivery of government services, digital financial inclusion through access to banking and digital payment platforms, and enhanced educational and skill development opportunities for rural populations. The project also empowers farmers, entrepreneurs, and small businesses to leverage online markets, e-commerce platforms, and digital supply chains, fostering rural entrepreneurship and socio-economic development. Health services are improved via telemedicine initiatives and digital health platforms, reducing the gap in quality healthcare access between urban and rural areas. Furthermore, BharatNet supports smart village and smart agriculture initiatives, contributing to sustainable rural development. With a focus on affordability, accessibility, and scalability, the project is designed to support a wide range of applications, including public Wi-Fi hotspots, digital literacy programs, and community information centers. By providing a robust digital backbone, BharatNet enhances communication, collaboration, and innovation across rural India, positioning the country to harness the benefits of the digital economy. The mission is not only transforming connectivity but also enabling socio-economic empowerment, bridging information gaps, and fostering inclusive growth for rural communities, ensuring that no citizen is left behind in the digital era.",
+      "The BharatNet Project, launched in 2011, provides high-speed broadband to all gram panchayats, bridging the rural-urban digital divide. The project uses optical fiber, wireless, and last-mile solutions for reliable internet in remote villages. BharatNet enables e-governance, digital financial inclusion, education, skill development, and rural entrepreneurship. Telemedicine, smart village initiatives, and community centers enhance access to healthcare and economic opportunities. The scheme fosters socio-economic empowerment, inclusivity, and innovation, enabling rural populations to fully participate in the digital economy.",
   },
   {
-  id: generateRandomId(),
-  name: "PM Viksit Bharat Yojna",
-  description: "Holistic Development Mission for a Developed India by 2047",
-  fullName: "Pradhan Mantri Viksit Bharat Yojna",
-  launched: "2023",
-  benefits:
-    "Comprehensive growth across infrastructure, digital empowerment, healthcare, education, agriculture, and employment to achieve the vision of a developed India by 2047",
-  eligibility: "All citizens of India; special focus on rural, youth, women, and marginalized communities",
-  officialSite: "https://www.india.gov.in",
-  logo: "fas fa-flag",
-  category: "National Development",
-  ministry: "NITI Aayog / Multiple Ministries",
-  status: "Active",
-  longDescription:
-    "The Pradhan Mantri Viksit Bharat Yojna, launched in 2023, is a visionary initiative aimed at transforming India into a fully developed nation by 2047, marking 100 years of independence. The mission takes a holistic and inclusive approach to development, focusing on economic growth, infrastructure modernization, digital innovation, sustainable agriculture, healthcare reforms, educational empowerment, skill development, and social welfare. The scheme emphasizes people-centric governance, ensuring that progress reaches the grassroots level and benefits all sections of society, particularly the poor, women, youth, and rural communities. Under the program, India is envisioned as a hub for global manufacturing, technology innovation, and green energy, while ensuring self-reliance (Atmanirbhar Bharat) across critical sectors. The initiative promotes large-scale infrastructure development including highways, smart cities, renewable energy projects, and digital infrastructure. It fosters entrepreneurship and employment opportunities by supporting startups, MSMEs, and rural enterprises. Education and skill development form key pillars of the scheme, with a strong push toward digital literacy, modern curricula, and vocational training aligned with future job markets. Healthcare is strengthened through universal health coverage, telemedicine services, and improved rural health infrastructure. The scheme also integrates climate action and sustainability, encouraging renewable energy, smart agriculture, and environmental conservation. Through participatory governance and public engagement, citizens are empowered to contribute to the nation’s development vision. By aligning with the principles of inclusivity, sustainability, and innovation, the PM Viksit Bharat Yojna aims to position India as a developed nation by 2047, bridging socio-economic divides, fostering prosperity, and ensuring dignity, opportunity, and progress for every citizen."
-},
-  {
-  id: generateRandomId(),
-  name: "Viksit Bharat Rojgar Yojna",
-  description: "Employment Generation and Skill Development Mission",
-  fullName: "Pradhan Mantri Viksit Bharat Rojgar Yojna",
-  launched: "2024",
-  benefits:
-    "Youth will receive financial assistance between ₹5,000 to ₹15,000 per month during training and job placement, along with subsidies, loans for self-employment, and entrepreneurship support.",
-  eligibility: "Unemployed youth, job seekers, entrepreneurs, and workers in both rural and urban areas",
-  officialSite: "https://www.india.gov.in",
-  logo: "fas fa-briefcase",
-  category: "Employment & Skill Development",
-  ministry: "Ministry of Labour and Employment",
-  status: "Active",
-  longDescription:
-    "The Viksit Bharat Rojgar Yojna, launched in 2024, is a flagship initiative under the vision of Viksit Bharat 2047, aimed at creating sustainable employment opportunities and empowering India’s workforce. The scheme focuses on reducing unemployment by generating jobs across key sectors, including manufacturing, services, agriculture, and digital industries. It emphasizes skill development through modern training programs, vocational courses, and digital upskilling initiatives to make youth job-ready and globally competitive. Under the scheme, youth are provided with monthly financial assistance ranging from ₹5,000 to ₹15,000 during skill training and job placement phases. In addition, budding entrepreneurs and self-employed individuals receive subsidized loans, startup grants, and mentorship support to establish sustainable businesses. Special provisions are made for women, rural workers, and marginalized communities to ensure inclusive growth. The scheme also integrates digital platforms to connect job seekers with employers, facilitating transparent and efficient recruitment processes. Apprenticeship programs and industry partnerships are encouraged to bridge the skill gap and provide hands-on experience. By aligning with the principles of Atmanirbhar Bharat, the Viksit Bharat Rojgar Yojna aims to build a strong workforce that contributes to economic growth, innovation, and national self-reliance. The initiative not only provides employment but also nurtures entrepreneurship, enhances livelihoods, and ensures socio-economic empowerment for millions of citizens, driving India closer to its vision of becoming a developed nation by 2047.",
+    id: generateRandomId(),
+    name: "PM Viksit Bharat Yojna",
+    description: "Holistic Development Mission for a Developed India by 2047",
+    fullName: "Pradhan Mantri Viksit Bharat Yojna",
+    launched: "2023",
+    benefits:
+      "Comprehensive growth across infrastructure, digital empowerment, healthcare, education, agriculture, and employment to achieve the vision of a developed India by 2047",
+    eligibility:
+      "All citizens of India; special focus on rural, youth, women, and marginalized communities",
+    officialSite: "https://www.india.gov.in",
+    logo: "fas fa-flag",
+    category: "National Development",
+    ministry: "NITI Aayog / Multiple Ministries",
+    status: "Active",
+    longDescription:
+      "Pradhan Mantri Viksit Bharat Yojna, launched in 2023, aims to transform India into a developed nation by 2047. The scheme focuses on infrastructure, digital innovation, healthcare, education, agriculture, and employment. It prioritizes inclusive growth for women, youth, rural, and marginalized communities. The initiative fosters entrepreneurship, skill development, green energy, and technology innovation. Large-scale projects include highways, smart cities, and digital infrastructure. Participatory governance ensures citizens contribute to development. The scheme aligns with sustainability, inclusivity, and innovation, bridging socio-economic divides and empowering every citizen.",
   },
   {
-  id: generateRandomId(),
-  name: "PM Dhan-Dhanya Krishi Yojana",
-  description: "Pradhan Mantri Dhan-Dhanya Krishi Yojana 2025 – A central government scheme to boost crop productivity, diversification, and sustainable agriculture in India.",
-  fullName: "Pradhan Mantri Dhan-Dhanya Krishi Yojana (PM-DDKY)",
-  launched: "2025",
-  benefits: "Focused agricultural development with financial assistance for crop diversification, better productivity, sustainable practices, and improved farmer income across 100 selected districts.",
-  eligibility: "Farmers in identified districts across India, including small and marginal farmers. The scheme primarily targets around 1.7 crore beneficiaries.",
-  officialSite: "https://agricoop.gov.in",
-  logo: "fas fa-seedling",
-  category: "Agriculture & Rural Development",
-  ministry: "Ministry of Agriculture & Farmers Welfare, Government of India",
-  status: "Active",
-  longDescription: "The Pradhan Mantri Dhan-Dhanya Krishi Yojana (PM-DDKY) is a new agricultural development scheme approved by the Government of India in July 2025 with an allocation of ₹24,000 crore for six years. The program focuses on boosting crop productivity, encouraging crop diversification, and promoting sustainable farming practices across 100 specially chosen districts.\n\nThe scheme aims to benefit around 1.7 crore farmers by providing targeted support for better seeds, modern farming techniques, improved irrigation, and sustainable practices that reduce dependency on chemical inputs. By enhancing productivity and promoting diversification beyond traditional crops, PM-DDKY seeks to increase farmers' income and strengthen India’s food security.\n\nPM-DDKY complements existing initiatives such as Pradhan Mantri Fasal Bima Yojana (PMFBY) and PM Krishi Sinchayee Yojana by creating an integrated ecosystem for farmer welfare. It promotes climate-resilient agriculture, better post-harvest management, and efficient use of resources to ensure long-term sustainability.\n\nOne of the scheme’s key strengths is its district-based approach, allowing for customized interventions based on local agro-climatic conditions. It not only empowers small and marginal farmers but also supports rural communities by creating jobs, improving supply chains, and strengthening rural markets.\n\nWith a clear focus on sustainable development, PM-DDKY represents a major step toward achieving the government’s vision of doubling farmers’ income, reducing rural poverty, and ensuring resilient agricultural growth. Farmers and stakeholders can find guidelines, updates, and application details on the Ministry of Agriculture & Farmers Welfare’s official website: https://agricoop.gov.in"
-}
-
+    id: generateRandomId(),
+    name: "Viksit Bharat Rojgar Yojna",
+    description: "Employment Generation and Skill Development Mission",
+    fullName: "Pradhan Mantri Viksit Bharat Rojgar Yojna",
+    launched: "2024",
+    benefits:
+      "Youth receive financial assistance ₹5,000–₹15,000/month during training, plus subsidies, loans, and entrepreneurship support",
+    eligibility:
+      "Unemployed youth, job seekers, entrepreneurs, and workers in rural and urban areas",
+    officialSite: "https://www.india.gov.in",
+    logo: "fas fa-briefcase",
+    category: "Employment & Skill Development",
+    ministry: "Ministry of Labour and Employment",
+    status: "Active",
+    longDescription:
+      "Viksit Bharat Rojgar Yojna, launched in 2024, creates sustainable employment and empowers India’s workforce. It generates jobs in manufacturing, services, agriculture, and digital sectors while emphasizing skill development and digital upskilling. Youth receive financial support during training, and entrepreneurs get loans, grants, and mentorship. Special focus is on women, rural workers, and marginalized communities. Digital platforms connect job seekers with employers. Apprenticeships and industry partnerships bridge skill gaps. The scheme fosters employment, entrepreneurship, livelihoods, and socio-economic empowerment, supporting India’s vision of a developed nation by 2047.",
+  },
+  {
+    id: generateRandomId(),
+    name: "PM Dhan-Dhanya Krishi Yojana",
+    description:
+      "Pradhan Mantri Dhan-Dhanya Krishi Yojana 2025 – A central government scheme to boost crop productivity, diversification, and sustainable agriculture in India",
+    fullName: "Pradhan Mantri Dhan-Dhanya Krishi Yojana (PM-DDKY)",
+    launched: "2025",
+    benefits:
+      "Financial support for crop diversification, productivity, sustainable practices, and improved farmer income across 100 districts",
+    eligibility:
+      "Farmers in identified districts, including small and marginal farmers (~1.7 crore beneficiaries)",
+    officialSite: "https://agricoop.gov.in",
+    logo: "fas fa-seedling",
+    category: "Agriculture & Rural Development",
+    ministry: "Ministry of Agriculture & Farmers Welfare",
+    status: "Active",
+    longDescription:
+      "PM Dhan-Dhanya Krishi Yojana (PM-DDKY), approved in 2025 with ₹24,000 crore allocation, boosts crop productivity, diversification, and sustainable farming across 100 districts. Targeting ~1.7 crore farmers, it provides seeds, modern techniques, improved irrigation, and sustainable practices. The scheme complements PMFBY and PM Krishi Sinchayee Yojana, promoting climate-resilient agriculture and better post-harvest management. District-based interventions allow localized support, benefiting small and marginal farmers and rural communities by creating jobs and improving supply chains. PM-DDKY advances sustainable development, increases farmer income, reduces rural poverty, and strengthens agricultural growth. Guidelines and updates are available at https://agricoop.gov.in.",
+  },
 ];
 
 // DOM elements
@@ -913,8 +961,8 @@ let currentScheme = null;
 function createSlug(text) {
   return text
     .toLowerCase()
-    .replace(/[^\w ]+/g, '')
-    .replace(/ +/g, '-');
+    .replace(/[^\w ]+/g, "")
+    .replace(/ +/g, "-");
 }
 
 // Function to render scheme cards
@@ -936,7 +984,8 @@ function renderSchemeCards(schemesToRender) {
 
   schemesToRender.forEach((scheme) => {
     const schemeCard = document.createElement("div");
-    schemeCard.className = "bg-white rounded-xl shadow-lg p-6 scheme-card cursor-pointer";
+    schemeCard.className =
+      "bg-white rounded-xl shadow-lg p-6 scheme-card cursor-pointer";
     schemeCard.innerHTML = `
       <div class="flex items-start mb-4">
         <i class="${scheme.logo} text-3xl text-orange-600 mr-4"></i>
@@ -982,7 +1031,8 @@ function renderSchemeList(schemesToRender) {
 
   schemesToRender.forEach((scheme) => {
     const schemeItem = document.createElement("div");
-    schemeItem.className = "bg-white rounded-xl shadow-lg p-6 scheme-card mb-4 cursor-pointer";
+    schemeItem.className =
+      "bg-white rounded-xl shadow-lg p-6 scheme-card mb-4 cursor-pointer";
     schemeItem.innerHTML = `
       <div class="flex justify-between items-start">
         <div class="flex items-start">
@@ -1022,7 +1072,7 @@ function showSchemeDetails(scheme) {
   // Update browser URL without reloading the page
   const schemeSlug = createSlug(scheme.name);
   const newUrl = `${window.location.origin}${window.location.pathname}?scheme=${schemeSlug}`;
-  window.history.pushState({ scheme: schemeSlug }, '', newUrl);
+  window.history.pushState({ scheme: schemeSlug }, "", newUrl);
 
   // Update WhatsApp share link
   const shareText = `Check out this PM Scheme: ${scheme.name} - ${scheme.description}. Learn more at: ${newUrl}`;
@@ -1079,7 +1129,9 @@ function showSchemeDetails(scheme) {
   `;
 
   // Add event listener for share button
-  document.getElementById("share-btn").addEventListener("click", () => shareScheme(scheme));
+  document
+    .getElementById("share-btn")
+    .addEventListener("click", () => shareScheme(scheme));
 
   // Scroll to top
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1114,21 +1166,30 @@ function checkUrlParams() {
 // Function to share scheme
 function shareScheme(scheme) {
   if (navigator.share) {
-    navigator.share({
-      title: scheme.name,
-      text: scheme.description,
-      url: `${window.location.origin}${window.location.pathname}?scheme=${createSlug(scheme.name)}`
-    }).catch((error) => {
-      console.log("Error sharing:", error);
-    });
+    navigator
+      .share({
+        title: scheme.name,
+        text: scheme.description,
+        url: `${window.location.origin}${
+          window.location.pathname
+        }?scheme=${createSlug(scheme.name)}`,
+      })
+      .catch((error) => {
+        console.log("Error sharing:", error);
+      });
   } else {
     // Fallback: Copy to clipboard
-    const shareUrl = `${window.location.origin}${window.location.pathname}?scheme=${createSlug(scheme.name)}`;
-    navigator.clipboard.writeText(shareUrl).then(() => {
-      alert("Link copied to clipboard!");
-    }).catch(err => {
-      console.error('Could not copy text: ', err);
-    });
+    const shareUrl = `${window.location.origin}${
+      window.location.pathname
+    }?scheme=${createSlug(scheme.name)}`;
+    navigator.clipboard
+      .writeText(shareUrl)
+      .then(() => {
+        alert("Link copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("Could not copy text: ", err);
+      });
   }
 }
 
@@ -1171,7 +1232,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // If we have a scheme in URL, show it, otherwise show list
     const urlParams = new URLSearchParams(window.location.search);
     const schemeParam = urlParams.get("scheme");
-    
+
     if (schemeParam) {
       const scheme = schemes.find((s) => createSlug(s.name) === schemeParam);
       if (scheme) {
@@ -1306,74 +1367,77 @@ function submitButton() {
   }
 }
 
+// disable right-click menu
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
 
-  // disable right-click menu
-    document.addEventListener('contextmenu', function(e) {
-      e.preventDefault();
-    });
+// block common developer-shortcuts and view-source
+document.addEventListener("keydown", function (e) {
+  // Normalize key (modern browsers)
+  const key = e.key || e.keyCode;
 
-    // block common developer-shortcuts and view-source
-    document.addEventListener('keydown', function(e) {
-      // Normalize key (modern browsers)
-      const key = e.key || e.keyCode;
+  // Block F12
+  if (key === "F12" || key === 123) {
+    e.preventDefault();
+    return false;
+  }
 
-      // Block F12
-      if (key === 'F12' || key === 123) {
-        e.preventDefault();
-        return false;
+  // Block Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C
+  if (
+    e.ctrlKey &&
+    e.shiftKey &&
+    (key === "I" ||
+      key === "J" ||
+      key === "C" ||
+      key === 73 ||
+      key === 74 ||
+      key === 67)
+  ) {
+    e.preventDefault();
+    return false;
+  }
+
+  // Block Ctrl+U (view source), Ctrl+S (save), Ctrl+Shift+S, Ctrl+P (print)
+  if (
+    (e.ctrlKey || e.metaKey) &&
+    (key === "U" ||
+      key === "S" ||
+      key === "P" ||
+      key === "u" ||
+      key === "s" ||
+      key === "p" ||
+      key === 85 ||
+      key === 83 ||
+      key === 80)
+  ) {
+    e.preventDefault();
+    return false;
+  }
+
+  // Block Ctrl+Shift+K (firefox webconsole), Ctrl+Shift+K keyCode fallback
+  if (e.ctrlKey && e.shiftKey && (key === "K" || key === 75 || key === "k")) {
+    e.preventDefault();
+    return false;
+  }
+});
+
+// Optional: mild devtools-open detection (heuristic, unreliable)
+(function detectDevTools() {
+  const threshold = 160;
+  let open = false;
+  function check() {
+    const widthDiff = window.outerWidth - window.innerWidth;
+    const heightDiff = window.outerHeight - window.innerHeight;
+    if (widthDiff > threshold || heightDiff > threshold) {
+      if (!open) {
+        open = true;
+        console.log("DevTools likely opened");
+        // Do NOT forcibly redirect users — that is hostile. You can log or show UI instead.
       }
-
-      // Block Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C
-      if (e.ctrlKey && e.shiftKey && (key === 'I' || key === 'J' || key === 'C' || key === 73 || key === 74 || key === 67)) {
-        e.preventDefault();
-        return false;
-      }
-
-      // Block Ctrl+U (view source), Ctrl+S (save), Ctrl+Shift+S, Ctrl+P (print)
-      if ((e.ctrlKey || e.metaKey) && (key === 'U' || key === 'S' || key === 'P' || key === 'u' || key === 's' || key === 'p' || key === 85 || key === 83 || key === 80)) {
-        e.preventDefault();
-        return false;
-      }
-
-      // Block Ctrl+Shift+K (firefox webconsole), Ctrl+Shift+K keyCode fallback
-      if (e.ctrlKey && e.shiftKey && (key === 'K' || key === 75 || key === 'k')) {
-        e.preventDefault();
-        return false;
-      }
-    });
-
-    // Optional: mild devtools-open detection (heuristic, unreliable)
-    (function detectDevTools() {
-      const threshold = 160;
-      let open = false;
-      function check() {
-        const widthDiff = window.outerWidth - window.innerWidth;
-        const heightDiff = window.outerHeight - window.innerHeight;
-        if (widthDiff > threshold || heightDiff > threshold) {
-          if (!open) {
-            open = true;
-            console.log('DevTools likely opened');
-            // Do NOT forcibly redirect users — that is hostile. You can log or show UI instead.
-          }
-        } else {
-          open = false;
-        }
-      }
-      setInterval(check, 1000);
-    })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    } else {
+      open = false;
+    }
+  }
+  setInterval(check, 1000);
+})();
